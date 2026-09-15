@@ -1,0 +1,31 @@
+{
+  "caused_by": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "confidence": "unresolved",
+  "confirmed_by": "evidence:sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "did": "assert_semantic_relation",
+  "edge_layer": "domain",
+  "from": "node:a",
+  "from_receipt": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "graph_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "hashes": {
+    "algorithm": "sha256",
+    "content_hash": "a96c8ed370cfe843db3b39c13e989a9379420b46c5de5bc68e27f82b5240799b",
+    "tuple_hash": "d5b6e963deeb363fde93ef1d510a9501141a1a9f62ee5e7f33807d2b868a249a"
+  },
+  "id": "a96c8ed370cfe843db3b39c13e989a9379420b46c5de5bc68e27f82b5240799b",
+  "if_doubt": "resolve_semantic_relation",
+  "if_not": "reject_semantic_relation",
+  "if_ok": "publish_semantic_relation",
+  "json_canonicalization": "jcs-rfc8785",
+  "receipt_version": "logline.receipt.v0",
+  "relation": "calls",
+  "semantic_id": "edge:bad-status",
+  "semantic_kind": "edge",
+  "semantic_profile": "logline.semantic-graph.v0",
+  "status": "confirmed",
+  "this": "edge:bad-status",
+  "to": "node:missing",
+  "to_receipt": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "when": "graph:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "who": "continuity:semantic-graph"
+}

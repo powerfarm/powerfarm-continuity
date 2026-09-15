@@ -1,0 +1,2 @@
+Pinned test fixtures copied from LogLine-Foundation/conformance vectors/receipt/valid supplied with this build.
+The transport Envelope vector is intentionally excluded: this package verifies receipts at rest.

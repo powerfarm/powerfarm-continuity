@@ -1,0 +1,16 @@
+{
+  "edgeCount": 1412,
+  "files": [
+    "graph.json",
+    "nodes.jsonl",
+    "edges.jsonl",
+    "domain.json",
+    "runtime.json",
+    "code.json",
+    "domain.dot",
+    "README.md"
+  ],
+  "module": "powerfarm.dev/continuity/v2",
+  "nodeCount": 548,
+  "schemaVersion": "powerfarm.semantic-graph/v0.1"
+}

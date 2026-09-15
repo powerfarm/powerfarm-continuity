@@ -1,0 +1,32 @@
+{
+  "apiVersion": "continuity.powerfarm.dev/v2alpha1",
+  "kind": "CapabilityProfile",
+  "metadata": {
+    "name": "service.restart",
+    "version": "2"
+  },
+  "spec": {
+    "contract": {
+      "kind": "mcp",
+      "ref": "mcp://continuity-agent/os",
+      "op": "service_restart"
+    },
+    "effect": {
+      "class": "reconcilable",
+      "verification": {
+        "capability": "service.status",
+        "with": { "service": "${input.service}", "place": "${input.place}" },
+        "expect": { "running": true },
+        "timeout": "30s"
+      }
+    },
+    "authorization": {
+      "mode": "policy"
+    },
+    "placement": {
+      "selector": {
+        "powerfarm.dev/role": "lab-agent"
+      }
+    }
+  }
+}

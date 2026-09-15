@@ -1,0 +1,39 @@
+{
+  "profile": "logline.semantic-change.v0",
+  "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+  "graph_digest": "425a4fc60c730eb3f797fc68beb65488563823d6db00f5919cec95285c759185",
+  "receipt": {
+    "base_graph_digest": "0e489c2f0024b176751c7d0547714d18b6c2ec4fe668e96d648294353a84ec0d",
+    "candidate_graph_digest": "425a4fc60c730eb3f797fc68beb65488563823d6db00f5919cec95285c759185",
+    "confirmed_by": "evidence:sha256:bc543a71b6708448332455cccad99dbaf4904907f3e32405adc4a49109f0a3c9",
+    "did": "accept_semantic_change",
+    "hashes": {
+      "algorithm": "sha256",
+      "content_hash": "8185632dc898c4072f8453e177b6285837581436d4698c4859856d49dc67e3de",
+      "tuple_hash": "004d0e79c0c419b00d7c8820b7a7ec95e0741aa6fc9946695b268b9d5866f772"
+    },
+    "id": "8185632dc898c4072f8453e177b6285837581436d4698c4859856d49dc67e3de",
+    "if_doubt": "hold_for_review",
+    "if_not": "reject_candidate",
+    "if_ok": "activate_candidate",
+    "json_canonicalization": "jcs-rfc8785",
+    "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+    "receipt_version": "logline.receipt.v0",
+    "semantic_change_profile": "logline.semantic-change.v0",
+    "status": "accepted",
+    "this": "proposal:a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+    "when": "graph:425a4fc60c730eb3f797fc68beb65488563823d6db00f5919cec95285c759185",
+    "who": "human:operator"
+  },
+  "evidence": {
+    "id": "bc543a71b6708448332455cccad99dbaf4904907f3e32405adc4a49109f0a3c9",
+    "kind": "semantic-change.acceptance.v0",
+    "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+    "payload": {
+      "candidate_graph_digest": "425a4fc60c730eb3f797fc68beb65488563823d6db00f5919cec95285c759185",
+      "confirmation": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "graph_digest": "425a4fc60c730eb3f797fc68beb65488563823d6db00f5919cec95285c759185",
+      "who": "human:operator"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "apiVersion": "continuity.powerfarm.dev/v2alpha1",
+  "kind": "CapabilityProfile",
+  "metadata": {
+    "name": "service.status",
+    "version": "1"
+  },
+  "spec": {
+    "contract": {
+      "kind": "mcp",
+      "ref": "mcp://continuity-agent/os",
+      "op": "service_status"
+    },
+    "effect": {
+      "class": "observe"
+    },
+    "authorization": {
+      "mode": "automatic"
+    },
+    "placement": {
+      "selector": {
+        "powerfarm.dev/role": "lab-agent"
+      }
+    }
+  }
+}

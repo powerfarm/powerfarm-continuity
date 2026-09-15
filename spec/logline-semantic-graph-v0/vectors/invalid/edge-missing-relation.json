@@ -1,0 +1,30 @@
+{
+  "caused_by": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "confidence": "exact",
+  "confirmed_by": "evidence:sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "did": "assert_semantic_relation",
+  "edge_layer": "domain",
+  "from": "node:a",
+  "from_receipt": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "graph_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "hashes": {
+    "algorithm": "sha256",
+    "content_hash": "ec8ad48607e4dff0894c3e73ae46fdac5041b4156ee3b8263a1498ee2bbb4178",
+    "tuple_hash": "d5743399c9482cd0842a0be0fae6addd5f215632018871e455cd09b290c9eed7"
+  },
+  "id": "ec8ad48607e4dff0894c3e73ae46fdac5041b4156ee3b8263a1498ee2bbb4178",
+  "if_doubt": "resolve_semantic_relation",
+  "if_not": "reject_semantic_relation",
+  "if_ok": "publish_semantic_relation",
+  "json_canonicalization": "jcs-rfc8785",
+  "receipt_version": "logline.receipt.v0",
+  "semantic_id": "edge:missing-relation",
+  "semantic_kind": "edge",
+  "semantic_profile": "logline.semantic-graph.v0",
+  "status": "confirmed",
+  "this": "edge:missing-relation",
+  "to": "node:b",
+  "to_receipt": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "when": "graph:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "who": "continuity:semantic-graph"
+}

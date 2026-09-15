@@ -1,0 +1,4786 @@
+{
+  "profile": "logline.semantic-change.v0",
+  "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+  "base_graph_digest": "0e489c2f0024b176751c7d0547714d18b6c2ec4fe668e96d648294353a84ec0d",
+  "candidate_graph_digest": "425a4fc60c730eb3f797fc68beb65488563823d6db00f5919cec95285c759185",
+  "eligible_for_acceptance": true,
+  "applied_changes": [
+    {
+      "kind": "replace_text",
+      "path": "internal/semanticchange/types.go",
+      "target_semantic_id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+      "before_sha256": "dee99ad62fcae086ca4ee1e3fca6f5b3aaccc4ed35304ea5a229753721f0acf8",
+      "after_sha256": "98cc4624320f41f5924a31e7112194ea77cc274851240775e5aef6b2f5d343b1"
+    },
+    {
+      "kind": "replace_text",
+      "path": "internal/semanticchange/types.go",
+      "target_semantic_id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+      "before_sha256": "98cc4624320f41f5924a31e7112194ea77cc274851240775e5aef6b2f5d343b1",
+      "after_sha256": "118cc1c6bac5b7ff01dade826728673c8ed1142649e8fe5c8650ec7cb5eb430c"
+    },
+    {
+      "kind": "replace_text",
+      "path": "internal/semanticchange/change.go",
+      "target_semantic_id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+      "before_sha256": "a5d3f9a2e2eb2ce6b88a7877e158c971e62126d52420d178331916c62b5b9a56",
+      "after_sha256": "6d123380e12115d2350434af3e86b9a2dc82027f33047d056f835bb22885376a"
+    },
+    {
+      "kind": "replace_text",
+      "path": "internal/semanticchange/change.go",
+      "target_semantic_id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+      "before_sha256": "6d123380e12115d2350434af3e86b9a2dc82027f33047d056f835bb22885376a",
+      "after_sha256": "65ca1af4d5478f1943272c43d8486827cc7973bbdeedd2973b1877b7b130d02e"
+    },
+    {
+      "kind": "replace_text",
+      "path": "internal/semanticchange/change.go",
+      "target_semantic_id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+      "before_sha256": "65ca1af4d5478f1943272c43d8486827cc7973bbdeedd2973b1877b7b130d02e",
+      "after_sha256": "8f090261b7ef794ba8642bba343651311b37f06961cde192a26164db6865e6a8"
+    }
+  ],
+  "expectations": [
+    {
+      "expectation": {
+        "kind": "node_exists",
+        "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeState"
+      },
+      "passed": true,
+      "reason": "satisfied"
+    },
+    {
+      "expectation": {
+        "kind": "node_exists",
+        "id": "const:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeStateCandidate"
+      },
+      "passed": true,
+      "reason": "satisfied"
+    },
+    {
+      "expectation": {
+        "kind": "node_exists",
+        "id": "const:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeStateDoubt"
+      },
+      "passed": true,
+      "reason": "satisfied"
+    },
+    {
+      "expectation": {
+        "kind": "edge_exists",
+        "relation": "references_type",
+        "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+        "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeState"
+      },
+      "passed": true,
+      "reason": "satisfied"
+    }
+  ],
+  "semantic_diff": {
+    "before_schema": "powerfarm.semantic-graph/v0.1",
+    "after_schema": "powerfarm.semantic-graph/v0.1",
+    "nodes_added": [
+      {
+        "id": "const:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeStateCandidate",
+        "kind": "const",
+        "name": "ChangeStateCandidate",
+        "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.ChangeStateCandidate",
+        "layer": "code",
+        "source": "internal/semanticchange/types.go",
+        "span": {
+          "startLine": 13,
+          "endLine": 13
+        }
+      },
+      {
+        "id": "const:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeStateDoubt",
+        "kind": "const",
+        "name": "ChangeStateDoubt",
+        "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.ChangeStateDoubt",
+        "layer": "code",
+        "source": "internal/semanticchange/types.go",
+        "span": {
+          "startLine": 14,
+          "endLine": 14
+        }
+      },
+      {
+        "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeState",
+        "kind": "type",
+        "name": "ChangeState",
+        "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.ChangeState",
+        "layer": "code",
+        "source": "internal/semanticchange/types.go",
+        "span": {
+          "startLine": 10,
+          "endLine": 10
+        }
+      }
+    ],
+    "nodes_removed": null,
+    "nodes_changed": [
+      {
+        "before": {
+          "id": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:000:inspect",
+          "kind": "bundle_step",
+          "name": "inspect",
+          "qualified": "service.status@1",
+          "layer": "runtime",
+          "source": "examples/rescue.workflow.json",
+          "span": {},
+          "attributes": {
+            "authorization": {
+              "mode": "automatic"
+            },
+            "contract": {
+              "kind": "mcp",
+              "op": "service_status",
+              "ref": "mcp://continuity-agent/os"
+            },
+            "effect": {
+              "class": "observe"
+            },
+            "placement": {
+              "selector": {
+                "powerfarm.dev/role": "lab-agent"
+              }
+            },
+            "with": {
+              "place": "lab-512",
+              "service": "zelador"
+            }
+          }
+        },
+        "after": {
+          "id": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:000:inspect",
+          "kind": "bundle_step",
+          "name": "inspect",
+          "qualified": "service.status@1",
+          "layer": "runtime",
+          "source": "examples/rescue.workflow.json",
+          "span": {},
+          "attributes": {
+            "authorization": {
+              "mode": "automatic"
+            },
+            "contract": {
+              "kind": "mcp",
+              "op": "service_status",
+              "ref": "mcp://continuity-agent/os"
+            },
+            "effect": {
+              "class": "observe"
+            },
+            "placement": {
+              "selector": {
+                "powerfarm.dev/role": "lab-agent"
+              }
+            },
+            "with": {
+              "place": "lab-512",
+              "service": "zelador"
+            }
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:001:restart",
+          "kind": "bundle_step",
+          "name": "restart",
+          "qualified": "service.restart@2",
+          "layer": "runtime",
+          "source": "examples/rescue.workflow.json",
+          "span": {},
+          "attributes": {
+            "authorization": {
+              "mode": "policy"
+            },
+            "contract": {
+              "kind": "mcp",
+              "op": "service_restart",
+              "ref": "mcp://continuity-agent/os"
+            },
+            "effect": {
+              "class": "reconcilable",
+              "verification": {
+                "capability": "service.status",
+                "expect": {
+                  "running": true
+                },
+                "timeout": "30s",
+                "with": {
+                  "place": "${input.place}",
+                  "service": "${input.service}"
+                }
+              }
+            },
+            "placement": {
+              "selector": {
+                "powerfarm.dev/role": "lab-agent"
+              }
+            },
+            "with": {
+              "place": "lab-512",
+              "service": "zelador"
+            }
+          }
+        },
+        "after": {
+          "id": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:001:restart",
+          "kind": "bundle_step",
+          "name": "restart",
+          "qualified": "service.restart@2",
+          "layer": "runtime",
+          "source": "examples/rescue.workflow.json",
+          "span": {},
+          "attributes": {
+            "authorization": {
+              "mode": "policy"
+            },
+            "contract": {
+              "kind": "mcp",
+              "op": "service_restart",
+              "ref": "mcp://continuity-agent/os"
+            },
+            "effect": {
+              "class": "reconcilable",
+              "verification": {
+                "capability": "service.status",
+                "expect": {
+                  "running": true
+                },
+                "timeout": "30s",
+                "with": {
+                  "place": "${input.place}",
+                  "service": "${input.service}"
+                }
+              }
+            },
+            "placement": {
+              "selector": {
+                "powerfarm.dev/role": "lab-agent"
+              }
+            },
+            "with": {
+              "place": "lab-512",
+              "service": "zelador"
+            }
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:002:verify",
+          "kind": "bundle_step",
+          "name": "verify",
+          "qualified": "service.status@1",
+          "layer": "runtime",
+          "source": "examples/rescue.workflow.json",
+          "span": {},
+          "attributes": {
+            "authorization": {
+              "mode": "automatic"
+            },
+            "contract": {
+              "kind": "mcp",
+              "op": "service_status",
+              "ref": "mcp://continuity-agent/os"
+            },
+            "effect": {
+              "class": "observe"
+            },
+            "placement": {
+              "selector": {
+                "powerfarm.dev/role": "lab-agent"
+              }
+            },
+            "with": {
+              "place": "lab-512",
+              "service": "zelador"
+            }
+          }
+        },
+        "after": {
+          "id": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:002:verify",
+          "kind": "bundle_step",
+          "name": "verify",
+          "qualified": "service.status@1",
+          "layer": "runtime",
+          "source": "examples/rescue.workflow.json",
+          "span": {},
+          "attributes": {
+            "authorization": {
+              "mode": "automatic"
+            },
+            "contract": {
+              "kind": "mcp",
+              "op": "service_status",
+              "ref": "mcp://continuity-agent/os"
+            },
+            "effect": {
+              "class": "observe"
+            },
+            "placement": {
+              "selector": {
+                "powerfarm.dev/role": "lab-agent"
+              }
+            },
+            "with": {
+              "place": "lab-512",
+              "service": "zelador"
+            }
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "kind": "function",
+          "name": "Accept",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 138,
+            "endLine": 219
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "kind": "function",
+          "name": "Accept",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 142,
+            "endLine": 223
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "kind": "function",
+          "name": "ApplyChanges",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 221,
+            "endLine": 280
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "kind": "function",
+          "name": "ApplyChanges",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 225,
+            "endLine": 284
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.SortedTargets",
+          "kind": "function",
+          "name": "SortedTargets",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.SortedTargets",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 582,
+            "endLine": 586
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.SortedTargets",
+          "kind": "function",
+          "name": "SortedTargets",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.SortedTargets",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 586,
+            "endLine": 590
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+          "kind": "function",
+          "name": "Stage",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 77,
+            "endLine": 136
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+          "kind": "function",
+          "name": "Stage",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 77,
+            "endLine": 140
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "kind": "function",
+          "name": "VerifyCandidate",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 610,
+            "endLine": 649
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "kind": "function",
+          "name": "VerifyCandidate",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 614,
+            "endLine": 660
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "kind": "function",
+          "name": "VerifyEvidence",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 651,
+            "endLine": 663
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "kind": "function",
+          "name": "VerifyEvidence",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 662,
+            "endLine": 674
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "kind": "function",
+          "name": "buildGraphWithCandidate",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 588,
+            "endLine": 608
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "kind": "function",
+          "name": "buildGraphWithCandidate",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 592,
+            "endLine": 612
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "kind": "function",
+          "name": "candidateReceipts",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 326,
+            "endLine": 365
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "kind": "function",
+          "name": "candidateReceipts",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 330,
+            "endLine": 369
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.checkExpectations",
+          "kind": "function",
+          "name": "checkExpectations",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.checkExpectations",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 282,
+            "endLine": 324
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.checkExpectations",
+          "kind": "function",
+          "name": "checkExpectations",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.checkExpectations",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 286,
+            "endLine": 328
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "kind": "function",
+          "name": "copyTree",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 501,
+            "endLine": 555
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "kind": "function",
+          "name": "copyTree",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 505,
+            "endLine": 559
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.isHex",
+          "kind": "function",
+          "name": "isHex",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.isHex",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 428,
+            "endLine": 428
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.isHex",
+          "kind": "function",
+          "name": "isHex",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.isHex",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 432,
+            "endLine": 432
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "kind": "function",
+          "name": "newEvidence",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 367,
+            "endLine": 375
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "kind": "function",
+          "name": "newEvidence",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 371,
+            "endLine": 379
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "kind": "function",
+          "name": "restoreSnapshots",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 490,
+            "endLine": 500
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "kind": "function",
+          "name": "restoreSnapshots",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 494,
+            "endLine": 504
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "kind": "function",
+          "name": "safeRel",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 414,
+            "endLine": 427
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "kind": "function",
+          "name": "safeRel",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 418,
+            "endLine": 431
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.shaBytes",
+          "kind": "function",
+          "name": "shaBytes",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.shaBytes",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 429,
+            "endLine": 429
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.shaBytes",
+          "kind": "function",
+          "name": "shaBytes",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.shaBytes",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 433,
+            "endLine": 433
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.skipCopyDir",
+          "kind": "function",
+          "name": "skipCopyDir",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.skipCopyDir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 556,
+            "endLine": 563
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.skipCopyDir",
+          "kind": "function",
+          "name": "skipCopyDir",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.skipCopyDir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 560,
+            "endLine": 567
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "kind": "function",
+          "name": "snapshotPaths",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 461,
+            "endLine": 489
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "kind": "function",
+          "name": "snapshotPaths",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 465,
+            "endLine": 493
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateChange",
+          "kind": "function",
+          "name": "validateChange",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.validateChange",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 377,
+            "endLine": 398
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateChange",
+          "kind": "function",
+          "name": "validateChange",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.validateChange",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 381,
+            "endLine": 402
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateExpectation",
+          "kind": "function",
+          "name": "validateExpectation",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.validateExpectation",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 399,
+            "endLine": 413
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateExpectation",
+          "kind": "function",
+          "name": "validateExpectation",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.validateExpectation",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 403,
+            "endLine": 417
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "kind": "function",
+          "name": "writeAcceptance",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 565,
+            "endLine": 580
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "kind": "function",
+          "name": "writeAcceptance",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 569,
+            "endLine": 584
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "kind": "function",
+          "name": "writeAtomic",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 430,
+            "endLine": 452
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        },
+        "after": {
+          "id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "kind": "function",
+          "name": "writeAtomic",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 434,
+            "endLine": 456
+          },
+          "attributes": {
+            "receiver": "",
+            "test": false
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "placement:da6eac01af62893f",
+          "kind": "placement_selector",
+          "name": "{\"powerfarm.dev/role\":\"lab-agent\"}",
+          "layer": "runtime",
+          "source": "examples/capabilities/service.restart.json",
+          "span": {},
+          "attributes": {
+            "selector": {
+              "powerfarm.dev/role": "lab-agent"
+            }
+          }
+        },
+        "after": {
+          "id": "placement:da6eac01af62893f",
+          "kind": "placement_selector",
+          "name": "{\"powerfarm.dev/role\":\"lab-agent\"}",
+          "layer": "runtime",
+          "source": "examples/capabilities/service.restart.json",
+          "span": {},
+          "attributes": {
+            "selector": {
+              "powerfarm.dev/role": "lab-agent"
+            }
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Acceptance",
+          "kind": "type",
+          "name": "Acceptance",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Acceptance",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 72,
+            "endLine": 78
+          }
+        },
+        "after": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Acceptance",
+          "kind": "type",
+          "name": "Acceptance",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Acceptance",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 80,
+            "endLine": 86
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.AppliedChange",
+          "kind": "type",
+          "name": "AppliedChange",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.AppliedChange",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 38,
+            "endLine": 44
+          }
+        },
+        "after": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.AppliedChange",
+          "kind": "type",
+          "name": "AppliedChange",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.AppliedChange",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 45,
+            "endLine": 51
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "kind": "type",
+          "name": "Candidate",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 59,
+            "endLine": 70
+          }
+        },
+        "after": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "kind": "type",
+          "name": "Candidate",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 66,
+            "endLine": 78
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Evidence",
+          "kind": "type",
+          "name": "Evidence",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Evidence",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 52,
+            "endLine": 57
+          }
+        },
+        "after": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Evidence",
+          "kind": "type",
+          "name": "Evidence",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Evidence",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 59,
+            "endLine": 64
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Expectation",
+          "kind": "type",
+          "name": "Expectation",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Expectation",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 30,
+            "endLine": 36
+          }
+        },
+        "after": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Expectation",
+          "kind": "type",
+          "name": "Expectation",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Expectation",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 37,
+            "endLine": 43
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ExpectationResult",
+          "kind": "type",
+          "name": "ExpectationResult",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.ExpectationResult",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 46,
+            "endLine": 50
+          }
+        },
+        "after": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ExpectationResult",
+          "kind": "type",
+          "name": "ExpectationResult",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.ExpectationResult",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 53,
+            "endLine": 57
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Proposal",
+          "kind": "type",
+          "name": "Proposal",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Proposal",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 10,
+            "endLine": 18
+          }
+        },
+        "after": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Proposal",
+          "kind": "type",
+          "name": "Proposal",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.Proposal",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 17,
+            "endLine": 25
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.SourceChange",
+          "kind": "type",
+          "name": "SourceChange",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.SourceChange",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 20,
+            "endLine": 28
+          }
+        },
+        "after": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.SourceChange",
+          "kind": "type",
+          "name": "SourceChange",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.SourceChange",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "span": {
+            "startLine": 27,
+            "endLine": 35
+          }
+        }
+      },
+      {
+        "before": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.snapshot",
+          "kind": "type",
+          "name": "snapshot",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.snapshot",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 454,
+            "endLine": 459
+          }
+        },
+        "after": {
+          "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.snapshot",
+          "kind": "type",
+          "name": "snapshot",
+          "qualified": "powerfarm.dev/continuity/v2/internal/semanticchange.snapshot",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "span": {
+            "startLine": 458,
+            "endLine": 463
+          }
+        }
+      }
+    ],
+    "edges_added": [
+      {
+        "id": "edge:defines:09167fbbadf5668c",
+        "kind": "defines",
+        "from": "file:internal/semanticchange/types.go",
+        "to": "const:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeStateCandidate",
+        "layer": "code",
+        "source": "internal/semanticchange/types.go",
+        "line": 13,
+        "confidence": "exact"
+      },
+      {
+        "id": "edge:defines:a574ab49348ca171",
+        "kind": "defines",
+        "from": "file:internal/semanticchange/types.go",
+        "to": "const:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeStateDoubt",
+        "layer": "code",
+        "source": "internal/semanticchange/types.go",
+        "line": 14,
+        "confidence": "exact"
+      },
+      {
+        "id": "edge:defines:cc2a575fb8a9c32b",
+        "kind": "defines",
+        "from": "file:internal/semanticchange/types.go",
+        "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeState",
+        "layer": "code",
+        "source": "internal/semanticchange/types.go",
+        "line": 10,
+        "confidence": "exact"
+      },
+      {
+        "id": "edge:references_type:ac59bf70a695389a",
+        "kind": "references_type",
+        "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+        "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeState",
+        "layer": "code",
+        "source": "internal/semanticchange/types.go",
+        "line": 68,
+        "confidence": "exact"
+      }
+    ],
+    "edges_removed": null,
+    "edges_changed": [
+      {
+        "before": {
+          "id": "edge:calls:0041c9f69bdd5fc6",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "to": "symbol:os.MkdirAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 431,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:0041c9f69bdd5fc6",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "to": "symbol:os.MkdirAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 435,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:0337d5cd0e7a148c",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.isHex",
+          "to": "symbol:encoding/hex.DecodeString",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 428,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:0337d5cd0e7a148c",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.isHex",
+          "to": "symbol:encoding/hex.DecodeString",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 432,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:0809cd63dc8f6820",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateChange",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 378,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:0809cd63dc8f6820",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateChange",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 382,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:0b97073f49a8cfb3",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:path/filepath.WalkDir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 507,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:0b97073f49a8cfb3",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:path/filepath.WalkDir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 511,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:106008f0828ff9aa",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:io.Copy",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 548,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:106008f0828ff9aa",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:io.Copy",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 552,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:1089d0f6835a3caa",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:path/filepath.Join",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 228,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:1089d0f6835a3caa",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:path/filepath.Join",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 232,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:119d13a0169ac3d2",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "to": "symbol:path/filepath.Dir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 434,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:119d13a0169ac3d2",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "to": "symbol:path/filepath.Dir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 438,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:152614066e2a6080",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:os.MkdirAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 256,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:152614066e2a6080",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:os.MkdirAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 260,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:19e2bd2d1992463f",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/actgraph.GraphDigest",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 625,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:19e2bd2d1992463f",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/actgraph.GraphDigest",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 636,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:1a4210f11e74f849",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/logline.New",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 210,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:1a4210f11e74f849",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/logline.New",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 214,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:1c3694d7f870403a",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 215,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:1c3694d7f870403a",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 219,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:21a110a12d6cdef0",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 275,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:21a110a12d6cdef0",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 279,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:26d6e551468e0b14",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/logline.Verify",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 638,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:26d6e551468e0b14",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/logline.Verify",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 649,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:2aa3c9901f6c0807",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:os.IsNotExist",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 251,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:2aa3c9901f6c0807",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:os.IsNotExist",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 255,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:2c630be2b8dcebd1",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 660,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:2c630be2b8dcebd1",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 671,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:2f48d67547d089fd",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:bytes.Replace",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 243,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:2f48d67547d089fd",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:bytes.Replace",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 247,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:3023e4e6c53b5f13",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 529,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:3023e4e6c53b5f13",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 533,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:3081cf64ba3dac5d",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.skipCopyDir",
+          "to": "symbol:strings.HasPrefix",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 558,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:3081cf64ba3dac5d",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.skipCopyDir",
+          "to": "symbol:strings.HasPrefix",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 562,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:31c192b52ede8946",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "to": "symbol:path/filepath.Join",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 473,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:31c192b52ede8946",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "to": "symbol:path/filepath.Join",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 477,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:32c4faab4fc5216c",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:os.Environ",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 596,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:32c4faab4fc5216c",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:os.Environ",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 600,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:34be1d574176b409",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "to": "symbol:crypto/sha256.Sum256",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 373,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:34be1d574176b409",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "to": "symbol:crypto/sha256.Sum256",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 377,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:3931f21da33d506b",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:os.MkdirTemp",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 589,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:3931f21da33d506b",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:os.MkdirTemp",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 593,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:397014da5c39fd35",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 127,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:397014da5c39fd35",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 131,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:3f548b37201a363e",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "to": "symbol:encoding/json.MarshalIndent",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 571,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:3f548b37201a363e",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "to": "symbol:encoding/json.MarshalIndent",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 575,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:404653de58542fa7",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.LoadCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 140,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:404653de58542fa7",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.LoadCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 144,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:4880589c61d392a6",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:strings.HasPrefix",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 511,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:4880589c61d392a6",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:strings.HasPrefix",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 515,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:4951311b2c9d3ed2",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "to": "symbol:os.Stat",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 474,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:4951311b2c9d3ed2",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "to": "symbol:os.Stat",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 478,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:4b4319bcccbdf123",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 192,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:4b4319bcccbdf123",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 196,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:50e0f52bf55189a2",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateChange",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 395,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:50e0f52bf55189a2",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateChange",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 399,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:51dde66fb3c5606f",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 655,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:51dde66fb3c5606f",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 666,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:562ef477c4d6d564",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/logline.ID",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 645,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:562ef477c4d6d564",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/logline.ID",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 656,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:58a5f068a6c7542e",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.shaBytes",
+          "to": "symbol:crypto/sha256.Sum256",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 429,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:58a5f068a6c7542e",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.shaBytes",
+          "to": "symbol:crypto/sha256.Sum256",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 433,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:5bdd0eff55288c7c",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:os.Lstat",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 249,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:5bdd0eff55288c7c",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:os.Lstat",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 253,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:5bf8aff76fe24706",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:path/filepath.Dir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 256,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:5bf8aff76fe24706",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:path/filepath.Dir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 260,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:5dcbdb8114588355",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "to": "symbol:strings.HasPrefix",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 423,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:5dcbdb8114588355",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "to": "symbol:strings.HasPrefix",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 427,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:60981fc6b2d06bda",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "to": "func:powerfarm.dev/continuity/v2/internal/logline.New",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 358,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:60981fc6b2d06bda",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "to": "func:powerfarm.dev/continuity/v2/internal/logline.New",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 362,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:61c2c147a40a749c",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticgraph.Load",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 603,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:61c2c147a40a749c",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticgraph.Load",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 607,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:620a08ac9888593e",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "to": "func:powerfarm.dev/continuity/v2/internal/logline.Canonicalize",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 369,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:620a08ac9888593e",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "to": "func:powerfarm.dev/continuity/v2/internal/logline.Canonicalize",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 373,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:6221923b94c99ca3",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:bytes.Count",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 240,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:6221923b94c99ca3",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:bytes.Count",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 244,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:622bd89e5ad89e37",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "to": "symbol:path/filepath.IsAbs",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 415,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:622bd89e5ad89e37",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "to": "symbol:path/filepath.IsAbs",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 419,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:62439d91ac81d61c",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:path/filepath.Join",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 603,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:62439d91ac81d61c",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:path/filepath.Join",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 607,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:629c747e13555b23",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "to": "symbol:os.Remove",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 439,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:629c747e13555b23",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "to": "symbol:os.Remove",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 443,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:65549c0c5c76694b",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:path/filepath.ToSlash",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 521,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:65549c0c5c76694b",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:path/filepath.ToSlash",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 525,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:666a82f17645bfa9",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.skipCopyDir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 523,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:666a82f17645bfa9",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.skipCopyDir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 527,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:66e6786a8ee70a21",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.LoadCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 611,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:66e6786a8ee70a21",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.LoadCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 615,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:6849d8ca5964e765",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.SortedTargets",
+          "to": "symbol:sort.Strings",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 584,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:6849d8ca5964e765",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.SortedTargets",
+          "to": "symbol:sort.Strings",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 588,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:6c5f54167c698086",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.shaBytes",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 267,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:6c5f54167c698086",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.shaBytes",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 271,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:6ea6361dd63f4ca7",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "to": "symbol:path/filepath.ToSlash",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 422,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:6ea6361dd63f4ca7",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "to": "symbol:path/filepath.ToSlash",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 426,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:74e6b96fc92f9b18",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 601,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:74e6b96fc92f9b18",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 605,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:75079a439cc48732",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.isHex",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 652,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:75079a439cc48732",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.isHex",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 663,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:77afcd65d79c4a92",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:strings.TrimSpace",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 601,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:77afcd65d79c4a92",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:strings.TrimSpace",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 605,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:78c22b71d57e14ca",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "to": "symbol:os.Rename",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 451,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:78c22b71d57e14ca",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "to": "symbol:os.Rename",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 455,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:7aefa4adf63cdea4",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:os/exec.Command",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 594,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:7aefa4adf63cdea4",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:os/exec.Command",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 598,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:7c944b7eca5edff2",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "to": "symbol:os.IsNotExist",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 475,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:7c944b7eca5edff2",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "to": "symbol:os.IsNotExist",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 479,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:7ca6d8cdd8e6819a",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.WriteCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 132,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:7ca6d8cdd8e6819a",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.WriteCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 136,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:81b144335a360145",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 645,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:81b144335a360145",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 656,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:82d828b0336f76d0",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "to": "symbol:path/filepath.Clean",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 418,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:82d828b0336f76d0",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "to": "symbol:path/filepath.Clean",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 422,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:835216b504954d2b",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateChange",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.isHex",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 391,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:835216b504954d2b",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateChange",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.isHex",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 395,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:87387428251df92e",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 188,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:87387428251df92e",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 192,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:89d8085d7f5c76c8",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:path/filepath.Dir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 541,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:89d8085d7f5c76c8",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:path/filepath.Dir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 545,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:8bb5440577cf0bf0",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 350,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:8bb5440577cf0bf0",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 354,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:8e4c674832704da0",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "symbol:os.MkdirTemp",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 162,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:8e4c674832704da0",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "symbol:os.MkdirTemp",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 166,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:8fc9126c462bb3a2",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 184,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:8fc9126c462bb3a2",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 188,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:9582346d9f9a7cab",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:os.ReadFile",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 263,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:9582346d9f9a7cab",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:os.ReadFile",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 267,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:96585c5ba9a633a7",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:path/filepath.Join",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 540,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:96585c5ba9a633a7",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:path/filepath.Join",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 544,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:98031f09a5c11894",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "to": "symbol:os.MkdirAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 567,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:98031f09a5c11894",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "to": "symbol:os.MkdirAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 571,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:9f082169ec56ec19",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "to": "symbol:path/filepath.Dir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 497,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:9f082169ec56ec19",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "to": "symbol:path/filepath.Dir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 501,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:a0eef2bcc42df409",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "to": "symbol:path/filepath.Join",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 492,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:a0eef2bcc42df409",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "to": "symbol:path/filepath.Join",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 496,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:a2ec6f7273d48887",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "to": "symbol:os.WriteFile",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 575,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:a2ec6f7273d48887",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "to": "symbol:os.WriteFile",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 579,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:a35f96b2888a9b44",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:os.Open",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 531,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:a35f96b2888a9b44",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:os.Open",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 535,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:a645f233dea3931a",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 206,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:a645f233dea3931a",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 210,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:a6f6d28ebd0a482d",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "to": "func:powerfarm.dev/continuity/v2/internal/logline.ID",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 358,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:a6f6d28ebd0a482d",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "to": "func:powerfarm.dev/continuity/v2/internal/logline.ID",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 362,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:ae9ba028a0a378bc",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ProposalID",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 618,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:ae9ba028a0a378bc",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ProposalID",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 629,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:b44a1375686b2961",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "to": "symbol:os.Remove",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 494,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:b44a1375686b2961",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "to": "symbol:os.Remove",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 498,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:b6b5c731c88783db",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:path/filepath.Rel",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 517,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:b6b5c731c88783db",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:path/filepath.Rel",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 521,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:ba73c57ab13077d7",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateExpectation",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 410,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:ba73c57ab13077d7",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateExpectation",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 414,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:ba8d622ff250703c",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 224,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:ba8d622ff250703c",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 228,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:bb9f74fdb2134167",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticgraph.Build",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 150,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:bb9f74fdb2134167",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticgraph.Build",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 154,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:be46a57b54766aca",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:path/filepath.ToSlash",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 229,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:be46a57b54766aca",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:path/filepath.ToSlash",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 233,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:c2bee97e11d312ea",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/actgraph.GraphDigest",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 197,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:c2bee97e11d312ea",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/actgraph.GraphDigest",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 201,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:c318efa4cbaf31ec",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "to": "symbol:encoding/hex.EncodeToString",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 374,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:c318efa4cbaf31ec",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "to": "symbol:encoding/hex.EncodeToString",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 378,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:c36bcb445275aa19",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 259,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:c36bcb445275aa19",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 263,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:c4c5ccd17c15c47a",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 633,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:c4c5ccd17c15c47a",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 644,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:c774fedf65b3bce7",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.shaBytes",
+          "to": "symbol:encoding/hex.EncodeToString",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 429,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:c774fedf65b3bce7",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.shaBytes",
+          "to": "symbol:encoding/hex.EncodeToString",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 433,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:ca94e166aeabe584",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "to": "symbol:os.MkdirAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 497,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:ca94e166aeabe584",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "to": "symbol:os.MkdirAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 501,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:cc51af640baa65e8",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:os.MkdirAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 541,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:cc51af640baa65e8",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:os.MkdirAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 545,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:cc7f4be3cd4cc2c7",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "to": "symbol:os.ReadFile",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 482,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:cc7f4be3cd4cc2c7",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "to": "symbol:os.ReadFile",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 486,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:cd38253de47c1a2b",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 203,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:cd38253de47c1a2b",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 207,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:ce5bec9a8b8c05af",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:os.RemoveAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 593,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:ce5bec9a8b8c05af",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "to": "symbol:os.RemoveAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 597,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:d6f7222522d4b424",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 167,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:d6f7222522d4b424",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 171,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:da0518b27c989e76",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "symbol:strings.TrimSpace",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 147,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:da0518b27c989e76",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "symbol:strings.TrimSpace",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 151,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:dd653c3bca6a6b92",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 465,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:dd653c3bca6a6b92",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 469,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:dfdc45c28b61868a",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:os.OpenFile",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 544,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:dfdc45c28b61868a",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:os.OpenFile",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 548,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:dfe9ec0ebdcf8d89",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 498,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:dfe9ec0ebdcf8d89",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 502,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:e2950c89f2c880c4",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:path/filepath.Abs",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 505,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:e2950c89f2c880c4",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "to": "symbol:path/filepath.Abs",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 509,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:e63e460a66c4893a",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 204,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:e63e460a66c4893a",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 208,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:eaa3a9ebafbb0f95",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "to": "symbol:path/filepath.Join",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 575,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:eaa3a9ebafbb0f95",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "to": "symbol:path/filepath.Join",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 579,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:eeda75e300cdb9eb",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "symbol:os.RemoveAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 166,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:eeda75e300cdb9eb",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "to": "symbol:os.RemoveAll",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 170,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:f54b8c9d069196f1",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 424,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:f54b8c9d069196f1",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "to": "symbol:fmt.Errorf",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 428,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:f76a9b783b04beda",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:os.Remove",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 271,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:f76a9b783b04beda",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "to": "symbol:os.Remove",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 275,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:calls:f8e0ef31879ab770",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "to": "symbol:os.CreateTemp",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 434,
+          "confidence": "static"
+        },
+        "after": {
+          "id": "edge:calls:f8e0ef31879ab770",
+          "kind": "calls",
+          "from": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "to": "symbol:os.CreateTemp",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 438,
+          "confidence": "static"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:0482c4830925193f",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.SortedTargets",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 582,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:0482c4830925193f",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.SortedTargets",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 586,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:0501bfcd6b0e4762",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 461,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:0501bfcd6b0e4762",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.snapshotPaths",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 465,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:16397e3a588a3517",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.AppliedChange",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 38,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:16397e3a588a3517",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.AppliedChange",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 45,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:31b27515e51712b8",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.checkExpectations",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 282,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:31b27515e51712b8",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.checkExpectations",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 286,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:3d28cab83ca06d79",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.shaBytes",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 429,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:3d28cab83ca06d79",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.shaBytes",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 433,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:42e5c9724307432f",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Proposal",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 10,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:42e5c9724307432f",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Proposal",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 17,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:474b19f76088c71a",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.SourceChange",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 20,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:474b19f76088c71a",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.SourceChange",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 27,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:4d47dd51fb12d4fc",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.skipCopyDir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 556,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:4d47dd51fb12d4fc",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.skipCopyDir",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 560,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:67e34e2b5dd09bf5",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateExpectation",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 399,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:67e34e2b5dd09bf5",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateExpectation",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 403,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:85020efc68cb7ef1",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 651,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:85020efc68cb7ef1",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 662,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:8de6b36ae8b14ed4",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 221,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:8de6b36ae8b14ed4",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.ApplyChanges",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 225,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:9438625022e8a444",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 490,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:9438625022e8a444",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.restoreSnapshots",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 494,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:a0eaf2c661e1f0c0",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 367,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:a0eaf2c661e1f0c0",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.newEvidence",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 371,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:afb0a1e2bf238cda",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 430,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:afb0a1e2bf238cda",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAtomic",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 434,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:b3e3b0ccb740c7d2",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Evidence",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 52,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:b3e3b0ccb740c7d2",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Evidence",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 59,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:b81014cde7361d4b",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Expectation",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 30,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:b81014cde7361d4b",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Expectation",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 37,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:bddfe0d082d5aacd",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 588,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:bddfe0d082d5aacd",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.buildGraphWithCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 592,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:bf5e1e2109c28d11",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateChange",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 377,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:bf5e1e2109c28d11",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.validateChange",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 381,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:d15b65f32ae375aa",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 138,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:d15b65f32ae375aa",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Accept",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 142,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:d65ef07349c440dd",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 414,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:d65ef07349c440dd",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.safeRel",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 418,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:d7281aa96228e4bc",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.snapshot",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 454,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:d7281aa96228e4bc",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.snapshot",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 458,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:d937ebd7e9cacb0f",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 59,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:d937ebd7e9cacb0f",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 66,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:e2693714d5f6972d",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 326,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:e2693714d5f6972d",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.candidateReceipts",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 330,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:e4d3b84bd19608c4",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 610,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:e4d3b84bd19608c4",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 614,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:e717b554e35bb39d",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Acceptance",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 72,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:e717b554e35bb39d",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Acceptance",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 80,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:e7adcd742c58a359",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ExpectationResult",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 46,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:e7adcd742c58a359",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/types.go",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ExpectationResult",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 53,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:eead34b97aaee33a",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 565,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:eead34b97aaee33a",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.writeAcceptance",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 569,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:f189fef8e90c6022",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 501,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:f189fef8e90c6022",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.copyTree",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 505,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:defines:f56d6e07a185ea3c",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.isHex",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 428,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:defines:f56d6e07a185ea3c",
+          "kind": "defines",
+          "from": "file:internal/semanticchange/change.go",
+          "to": "func:powerfarm.dev/continuity/v2/internal/semanticchange.isHex",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 432,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:references_type:034be3ea79817602",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "to": "type:powerfarm.dev/continuity/v2/internal/logline.Receipt",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 68,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:references_type:034be3ea79817602",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "to": "type:powerfarm.dev/continuity/v2/internal/logline.Receipt",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 76,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:references_type:151a91051a4a162d",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticgraph.Diff",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 67,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:references_type:151a91051a4a162d",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticgraph.Diff",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 75,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:references_type:18361a2675e13ebd",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ExpectationResult",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 66,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:references_type:18361a2675e13ebd",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ExpectationResult",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 74,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:references_type:1c173240eade9c3a",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.AppliedChange",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 65,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:references_type:1c173240eade9c3a",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.AppliedChange",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 73,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:references_type:392ad2ec65513c55",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Proposal",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Expectation",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 17,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:references_type:392ad2ec65513c55",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Proposal",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Expectation",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 24,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:references_type:9322f123f0cc542a",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Acceptance",
+          "to": "type:powerfarm.dev/continuity/v2/internal/logline.Receipt",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 76,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:references_type:9322f123f0cc542a",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Acceptance",
+          "to": "type:powerfarm.dev/continuity/v2/internal/logline.Receipt",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 84,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:references_type:b0038f58e6483288",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Evidence",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 69,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:references_type:b0038f58e6483288",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Evidence",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 77,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:references_type:b48159eae3134f68",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ExpectationResult",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Expectation",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 47,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:references_type:b48159eae3134f68",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ExpectationResult",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Expectation",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 54,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:references_type:c1ee64042cf0169f",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.snapshot",
+          "to": "type:io/fs.FileMode",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 457,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:references_type:c1ee64042cf0169f",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.snapshot",
+          "to": "type:io/fs.FileMode",
+          "layer": "code",
+          "source": "internal/semanticchange/change.go",
+          "line": 461,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:references_type:f2ea768dc5ee460e",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Proposal",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.SourceChange",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 16,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:references_type:f2ea768dc5ee460e",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Proposal",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.SourceChange",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 23,
+          "confidence": "exact"
+        }
+      },
+      {
+        "before": {
+          "id": "edge:references_type:fbb7272e496f4f7b",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Acceptance",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Evidence",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 77,
+          "confidence": "exact"
+        },
+        "after": {
+          "id": "edge:references_type:fbb7272e496f4f7b",
+          "kind": "references_type",
+          "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Acceptance",
+          "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Evidence",
+          "layer": "code",
+          "source": "internal/semanticchange/types.go",
+          "line": 85,
+          "confidence": "exact"
+        }
+      }
+    ]
+  },
+  "receipts": [
+    {
+      "base_graph_digest": "0e489c2f0024b176751c7d0547714d18b6c2ec4fe668e96d648294353a84ec0d",
+      "confirmed_by": "evidence:sha256:83fc6b7c0dc6466ca75668e0ee41049742c599b064c2ac53f18b392c7eed1300",
+      "did": "propose_semantic_change",
+      "hashes": {
+        "algorithm": "sha256",
+        "content_hash": "f08227644cf5a3c1293f079ad633f00bbcab521ce5ffb3dfd24ad89224bacca8",
+        "tuple_hash": "be2dd555f89b4fc17f34d9e27bf93c3e18a944012f6c52ebd8c95266657921d3"
+      },
+      "id": "f08227644cf5a3c1293f079ad633f00bbcab521ce5ffb3dfd24ad89224bacca8",
+      "if_doubt": "review_proposal",
+      "if_not": "reject_proposal",
+      "if_ok": "stage_candidate",
+      "intent": "Make semantic-change candidate lifecycle state explicit and machine-readable, with candidate/doubt state verified against eligibility.",
+      "json_canonicalization": "jcs-rfc8785",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "receipt_version": "logline.receipt.v0",
+      "semantic_change_profile": "logline.semantic-change.v0",
+      "status": "proposed",
+      "targets": [
+        "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+        "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+        "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate"
+      ],
+      "this": "proposal:a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "when": "graph:0e489c2f0024b176751c7d0547714d18b6c2ec4fe668e96d648294353a84ec0d",
+      "who": "llm:chatgpt-gpt-5.6-sol"
+    },
+    {
+      "after_sha256": "98cc4624320f41f5924a31e7112194ea77cc274851240775e5aef6b2f5d343b1",
+      "before_sha256": "dee99ad62fcae086ca4ee1e3fca6f5b3aaccc4ed35304ea5a229753721f0acf8",
+      "caused_by": "f08227644cf5a3c1293f079ad633f00bbcab521ce5ffb3dfd24ad89224bacca8",
+      "change_index": 0,
+      "change_kind": "replace_text",
+      "confirmed_by": "evidence:sha256:263eaeec4cd491667d8ca681bffd2ef23a64db2b2c4db5b481b1158428467c4a",
+      "did": "stage_source_change",
+      "hashes": {
+        "algorithm": "sha256",
+        "content_hash": "f0b3c21be3f98f06e5e39374faf9857f987b4ba2b5a280af60d6390125d78cba",
+        "tuple_hash": "2cd08c146643d5ff429cff037e7e013253f806487bdb43f21723aa4b74adb48d"
+      },
+      "id": "f0b3c21be3f98f06e5e39374faf9857f987b4ba2b5a280af60d6390125d78cba",
+      "if_doubt": "inspect_source_change",
+      "if_not": "reject_source_change",
+      "if_ok": "rebuild_semantic_graph",
+      "json_canonicalization": "jcs-rfc8785",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "receipt_version": "logline.receipt.v0",
+      "semantic_change_profile": "logline.semantic-change.v0",
+      "status": "staged",
+      "target_semantic_id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+      "this": "internal/semanticchange/types.go",
+      "when": "proposal:a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "who": "continuity:semantic-change"
+    },
+    {
+      "after_sha256": "118cc1c6bac5b7ff01dade826728673c8ed1142649e8fe5c8650ec7cb5eb430c",
+      "before_sha256": "98cc4624320f41f5924a31e7112194ea77cc274851240775e5aef6b2f5d343b1",
+      "caused_by": "f08227644cf5a3c1293f079ad633f00bbcab521ce5ffb3dfd24ad89224bacca8",
+      "change_index": 1,
+      "change_kind": "replace_text",
+      "confirmed_by": "evidence:sha256:d0893b3ea504e140fe5a77b241b6e951444621da2b15704550b6c7c0f451934e",
+      "did": "stage_source_change",
+      "hashes": {
+        "algorithm": "sha256",
+        "content_hash": "2dd571c8299ddfa402a21887b26cc3497ae83a5ca8651b449a41a649c056821b",
+        "tuple_hash": "f209f49ea57962b6cbe8b45dea1b66708df482d349d21c5c616ccefa56c3f2b7"
+      },
+      "id": "2dd571c8299ddfa402a21887b26cc3497ae83a5ca8651b449a41a649c056821b",
+      "if_doubt": "inspect_source_change",
+      "if_not": "reject_source_change",
+      "if_ok": "rebuild_semantic_graph",
+      "json_canonicalization": "jcs-rfc8785",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "receipt_version": "logline.receipt.v0",
+      "semantic_change_profile": "logline.semantic-change.v0",
+      "status": "staged",
+      "target_semantic_id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+      "this": "internal/semanticchange/types.go",
+      "when": "proposal:a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "who": "continuity:semantic-change"
+    },
+    {
+      "after_sha256": "6d123380e12115d2350434af3e86b9a2dc82027f33047d056f835bb22885376a",
+      "before_sha256": "a5d3f9a2e2eb2ce6b88a7877e158c971e62126d52420d178331916c62b5b9a56",
+      "caused_by": "f08227644cf5a3c1293f079ad633f00bbcab521ce5ffb3dfd24ad89224bacca8",
+      "change_index": 2,
+      "change_kind": "replace_text",
+      "confirmed_by": "evidence:sha256:c1b800cb6cc09c27994dde197b5df015d854a983f0053b354f3c38dcdd22e71e",
+      "did": "stage_source_change",
+      "hashes": {
+        "algorithm": "sha256",
+        "content_hash": "d4134f71cdfb558e6f03090c04c3d51610448a36eeb69af17853b5d776040cf4",
+        "tuple_hash": "bfeeaeae210277354b4c0cefecd2950ae09fccce1c611270f49625e1b4f274c6"
+      },
+      "id": "d4134f71cdfb558e6f03090c04c3d51610448a36eeb69af17853b5d776040cf4",
+      "if_doubt": "inspect_source_change",
+      "if_not": "reject_source_change",
+      "if_ok": "rebuild_semantic_graph",
+      "json_canonicalization": "jcs-rfc8785",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "receipt_version": "logline.receipt.v0",
+      "semantic_change_profile": "logline.semantic-change.v0",
+      "status": "staged",
+      "target_semantic_id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+      "this": "internal/semanticchange/change.go",
+      "when": "proposal:a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "who": "continuity:semantic-change"
+    },
+    {
+      "after_sha256": "65ca1af4d5478f1943272c43d8486827cc7973bbdeedd2973b1877b7b130d02e",
+      "before_sha256": "6d123380e12115d2350434af3e86b9a2dc82027f33047d056f835bb22885376a",
+      "caused_by": "f08227644cf5a3c1293f079ad633f00bbcab521ce5ffb3dfd24ad89224bacca8",
+      "change_index": 3,
+      "change_kind": "replace_text",
+      "confirmed_by": "evidence:sha256:1790d3a6ddb28fa86cc40e5f09688f980907adcfe6ff82f7bb16f5312e67fceb",
+      "did": "stage_source_change",
+      "hashes": {
+        "algorithm": "sha256",
+        "content_hash": "2cf5f1c67cea8aec4b3dae71a52e8b767687f8f543539a4a53bfa7ff8b478fa2",
+        "tuple_hash": "c1364381246fb75b6f0ab7641d00c85b0012a208a3129fba8083638aea294de8"
+      },
+      "id": "2cf5f1c67cea8aec4b3dae71a52e8b767687f8f543539a4a53bfa7ff8b478fa2",
+      "if_doubt": "inspect_source_change",
+      "if_not": "reject_source_change",
+      "if_ok": "rebuild_semantic_graph",
+      "json_canonicalization": "jcs-rfc8785",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "receipt_version": "logline.receipt.v0",
+      "semantic_change_profile": "logline.semantic-change.v0",
+      "status": "staged",
+      "target_semantic_id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+      "this": "internal/semanticchange/change.go",
+      "when": "proposal:a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "who": "continuity:semantic-change"
+    },
+    {
+      "after_sha256": "8f090261b7ef794ba8642bba343651311b37f06961cde192a26164db6865e6a8",
+      "before_sha256": "65ca1af4d5478f1943272c43d8486827cc7973bbdeedd2973b1877b7b130d02e",
+      "caused_by": "f08227644cf5a3c1293f079ad633f00bbcab521ce5ffb3dfd24ad89224bacca8",
+      "change_index": 4,
+      "change_kind": "replace_text",
+      "confirmed_by": "evidence:sha256:f18c42d2f12a3fff1e200189d22103d677e9e73331bdd000c89d6ed2fbc66c6c",
+      "did": "stage_source_change",
+      "hashes": {
+        "algorithm": "sha256",
+        "content_hash": "a7ed997058964911bb9612012b625827ba21ef739b6a19b1765ae07dc8dbd653",
+        "tuple_hash": "d82008d64af5059ce7349e827ca0d563f7dbffeb0dcda6dcba86cbaf65b4c7c4"
+      },
+      "id": "a7ed997058964911bb9612012b625827ba21ef739b6a19b1765ae07dc8dbd653",
+      "if_doubt": "inspect_source_change",
+      "if_not": "reject_source_change",
+      "if_ok": "rebuild_semantic_graph",
+      "json_canonicalization": "jcs-rfc8785",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "receipt_version": "logline.receipt.v0",
+      "semantic_change_profile": "logline.semantic-change.v0",
+      "status": "staged",
+      "target_semantic_id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+      "this": "internal/semanticchange/change.go",
+      "when": "proposal:a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "who": "continuity:semantic-change"
+    },
+    {
+      "base_graph_digest": "0e489c2f0024b176751c7d0547714d18b6c2ec4fe668e96d648294353a84ec0d",
+      "candidate_graph_digest": "425a4fc60c730eb3f797fc68beb65488563823d6db00f5919cec95285c759185",
+      "caused_by": "f08227644cf5a3c1293f079ad633f00bbcab521ce5ffb3dfd24ad89224bacca8",
+      "confirmed_by": "evidence:sha256:691137e2e24ba3cc3c5a853acb8a8f74e66027a1c3a96315ab056fca5f69a60c",
+      "did": "validate_semantic_candidate",
+      "eligible_for_acceptance": true,
+      "hashes": {
+        "algorithm": "sha256",
+        "content_hash": "8a27dab00d3b2504207c19e2c562cd9d00e6e46c3d748e42f01e948ebcf857f8",
+        "tuple_hash": "b2b63f7f035d67089d76e3a1b61b3cdf97702a9bb129264e4bbde0eb557406ca"
+      },
+      "id": "8a27dab00d3b2504207c19e2c562cd9d00e6e46c3d748e42f01e948ebcf857f8",
+      "if_doubt": "review_semantic_diff",
+      "if_not": "reject_candidate",
+      "if_ok": "await_acceptance",
+      "json_canonicalization": "jcs-rfc8785",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "receipt_version": "logline.receipt.v0",
+      "semantic_change_profile": "logline.semantic-change.v0",
+      "status": "candidate",
+      "this": "proposal:a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "when": "graph:425a4fc60c730eb3f797fc68beb65488563823d6db00f5919cec95285c759185",
+      "who": "continuity:semantic-change"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "83fc6b7c0dc6466ca75668e0ee41049742c599b064c2ac53f18b392c7eed1300",
+      "kind": "semantic-change.proposal.v0",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "payload": {
+        "base_graph_digest": "0e489c2f0024b176751c7d0547714d18b6c2ec4fe668e96d648294353a84ec0d",
+        "change_count": 5,
+        "intent": "Make semantic-change candidate lifecycle state explicit and machine-readable, with candidate/doubt state verified against eligibility.",
+        "targets": [
+          "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+          "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+          "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate"
+        ]
+      }
+    },
+    {
+      "id": "263eaeec4cd491667d8ca681bffd2ef23a64db2b2c4db5b481b1158428467c4a",
+      "kind": "semantic-change.source-mutation.v0",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "payload": {
+        "after_sha256": "98cc4624320f41f5924a31e7112194ea77cc274851240775e5aef6b2f5d343b1",
+        "before_sha256": "dee99ad62fcae086ca4ee1e3fca6f5b3aaccc4ed35304ea5a229753721f0acf8",
+        "index": 0,
+        "kind": "replace_text",
+        "path": "internal/semanticchange/types.go",
+        "target_semantic_id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate"
+      }
+    },
+    {
+      "id": "d0893b3ea504e140fe5a77b241b6e951444621da2b15704550b6c7c0f451934e",
+      "kind": "semantic-change.source-mutation.v0",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "payload": {
+        "after_sha256": "118cc1c6bac5b7ff01dade826728673c8ed1142649e8fe5c8650ec7cb5eb430c",
+        "before_sha256": "98cc4624320f41f5924a31e7112194ea77cc274851240775e5aef6b2f5d343b1",
+        "index": 1,
+        "kind": "replace_text",
+        "path": "internal/semanticchange/types.go",
+        "target_semantic_id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate"
+      }
+    },
+    {
+      "id": "c1b800cb6cc09c27994dde197b5df015d854a983f0053b354f3c38dcdd22e71e",
+      "kind": "semantic-change.source-mutation.v0",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "payload": {
+        "after_sha256": "6d123380e12115d2350434af3e86b9a2dc82027f33047d056f835bb22885376a",
+        "before_sha256": "a5d3f9a2e2eb2ce6b88a7877e158c971e62126d52420d178331916c62b5b9a56",
+        "index": 2,
+        "kind": "replace_text",
+        "path": "internal/semanticchange/change.go",
+        "target_semantic_id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage"
+      }
+    },
+    {
+      "id": "1790d3a6ddb28fa86cc40e5f09688f980907adcfe6ff82f7bb16f5312e67fceb",
+      "kind": "semantic-change.source-mutation.v0",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "payload": {
+        "after_sha256": "65ca1af4d5478f1943272c43d8486827cc7973bbdeedd2973b1877b7b130d02e",
+        "before_sha256": "6d123380e12115d2350434af3e86b9a2dc82027f33047d056f835bb22885376a",
+        "index": 3,
+        "kind": "replace_text",
+        "path": "internal/semanticchange/change.go",
+        "target_semantic_id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage"
+      }
+    },
+    {
+      "id": "f18c42d2f12a3fff1e200189d22103d677e9e73331bdd000c89d6ed2fbc66c6c",
+      "kind": "semantic-change.source-mutation.v0",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "payload": {
+        "after_sha256": "8f090261b7ef794ba8642bba343651311b37f06961cde192a26164db6865e6a8",
+        "before_sha256": "65ca1af4d5478f1943272c43d8486827cc7973bbdeedd2973b1877b7b130d02e",
+        "index": 4,
+        "kind": "replace_text",
+        "path": "internal/semanticchange/change.go",
+        "target_semantic_id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate"
+      }
+    },
+    {
+      "id": "691137e2e24ba3cc3c5a853acb8a8f74e66027a1c3a96315ab056fca5f69a60c",
+      "kind": "semantic-change.validation.v0",
+      "proposal_id": "a2d4d74f516c6e8f30e4df62371d004f96b7c03060003a7782a890f243594087",
+      "payload": {
+        "base_graph_digest": "0e489c2f0024b176751c7d0547714d18b6c2ec4fe668e96d648294353a84ec0d",
+        "candidate_graph_digest": "425a4fc60c730eb3f797fc68beb65488563823d6db00f5919cec95285c759185",
+        "edges_added": 4,
+        "edges_changed": 141,
+        "edges_removed": 0,
+        "eligible": true,
+        "expectations": [
+          {
+            "expectation": {
+              "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeState",
+              "kind": "node_exists"
+            },
+            "passed": true,
+            "reason": "satisfied"
+          },
+          {
+            "expectation": {
+              "id": "const:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeStateCandidate",
+              "kind": "node_exists"
+            },
+            "passed": true,
+            "reason": "satisfied"
+          },
+          {
+            "expectation": {
+              "id": "const:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeStateDoubt",
+              "kind": "node_exists"
+            },
+            "passed": true,
+            "reason": "satisfied"
+          },
+          {
+            "expectation": {
+              "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+              "kind": "edge_exists",
+              "relation": "references_type",
+              "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeState"
+            },
+            "passed": true,
+            "reason": "satisfied"
+          }
+        ],
+        "nodes_added": 3,
+        "nodes_changed": 34,
+        "nodes_removed": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://powerfarm.dev/schemas/logline.semantic-graph.v0.schema.json",
+  "title": "LogLineSemanticGraphV0",
+  "description": "Continuity semantic-graph profile over LogLine Foundation logline.receipt.v0.",
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/LogLine-Foundation/conformance/main/schemas/logline.receipt.v0.schema.json"
+    },
+    {
+      "type": "object",
+      "required": ["semantic_profile", "semantic_kind", "semantic_id", "graph_digest"],
+      "properties": {
+        "semantic_profile": { "const": "logline.semantic-graph.v0" },
+        "semantic_kind": { "enum": ["graph_build", "node", "edge"] },
+        "semantic_id": { "type": "string", "minLength": 1 },
+        "graph_digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "caused_by": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "from_receipt": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "to_receipt": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "confidence": { "enum": ["exact", "static", "executed", "unresolved"] }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "semantic_kind": { "const": "node" } }, "required": ["semantic_kind"] },
+          "then": { "required": ["node_kind", "node_layer", "caused_by"] }
+        },
+        {
+          "if": { "properties": { "semantic_kind": { "const": "edge" } }, "required": ["semantic_kind"] },
+          "then": { "required": ["relation", "from", "to", "edge_layer", "confidence", "caused_by", "from_receipt", "to_receipt"] }
+        }
+      ]
+    }
+  ]
+}

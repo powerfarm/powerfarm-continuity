@@ -1,0 +1,27 @@
+{
+  "confirmed_by": "evidence:sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "did": "compile_semantic_graph",
+  "edge_count": "1",
+  "graph_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "graph_schema_version": "continuity.semantic-graph.v0.1",
+  "hashes": {
+    "algorithm": "sha256",
+    "content_hash": "be2d5098d73fa66b6337968a24a1d11de4d0564fa013aaf98d39890de78062b9",
+    "tuple_hash": "bf7f06ad93b3e8a87f92e6257b857a024c516683552dad48c0c627bc5660782e"
+  },
+  "id": "be2d5098d73fa66b6337968a24a1d11de4d0564fa013aaf98d39890de78062b9",
+  "if_doubt": "review_semantic_graph",
+  "if_not": "reject_semantic_graph",
+  "if_ok": "emit_semantic_assertions",
+  "json_canonicalization": "jcs-rfc8785",
+  "module": "example",
+  "node_count": "2",
+  "receipt_version": "logline.receipt.v0",
+  "semantic_id": "repo:example",
+  "semantic_kind": "graph_build",
+  "semantic_profile": "logline.semantic-graph.v0",
+  "status": "compiled",
+  "this": "repo:example",
+  "when": "graph:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "who": "continuity:semantic-graph"
+}

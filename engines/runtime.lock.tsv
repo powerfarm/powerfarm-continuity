@@ -1,0 +1,5 @@
+# name	version	purpose
+opa	1.20.2	policy server
+nats-server	2.14.6	edge/event transport
+temporal-cli	1.8.1	local Temporal development service; production server target is 1.32.0
+cue	0.17.1	constraint/schema CLI

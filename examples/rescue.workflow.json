@@ -1,0 +1,28 @@
+{
+  "document": {
+    "dsl": "1.0.3",
+    "namespace": "powerfarm.continuity",
+    "name": "restart-service",
+    "version": "0.1.0"
+  },
+  "do": [
+    {
+      "inspect": {
+        "call": "service.status",
+        "with": { "service": "zelador", "place": "lab-512" }
+      }
+    },
+    {
+      "restart": {
+        "call": "service.restart",
+        "with": { "service": "zelador", "place": "lab-512" }
+      }
+    },
+    {
+      "verify": {
+        "call": "service.status",
+        "with": { "service": "zelador", "place": "lab-512" }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3204 @@
+{
+  "schemaVersion": "powerfarm.semantic-graph/v0.1",
+  "module": "powerfarm.dev/continuity/v2",
+  "root": ".",
+  "nodes": [
+    {
+      "id": "authorization_mode:automatic",
+      "kind": "authorization_mode",
+      "name": "automatic",
+      "layer": "policy",
+      "span": {}
+    },
+    {
+      "id": "authorization_mode:policy",
+      "kind": "authorization_mode",
+      "name": "policy",
+      "layer": "policy",
+      "span": {}
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Acknowledge",
+      "kind": "const",
+      "name": "Acknowledge",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Acknowledge",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 32,
+        "endLine": 32
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Acknowledged",
+      "kind": "const",
+      "name": "Acknowledged",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Acknowledged",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 21,
+        "endLine": 21
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.AtMostOnce",
+      "kind": "const",
+      "name": "AtMostOnce",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.AtMostOnce",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 11,
+        "endLine": 11
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Authorize",
+      "kind": "const",
+      "name": "Authorize",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Authorize",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 30,
+        "endLine": 30
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Authorized",
+      "kind": "const",
+      "name": "Authorized",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Authorized",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 19,
+        "endLine": 19
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Dispatch",
+      "kind": "const",
+      "name": "Dispatch",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Dispatch",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 31,
+        "endLine": 31
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Dispatched",
+      "kind": "const",
+      "name": "Dispatched",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Dispatched",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 20,
+        "endLine": 20
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Fail",
+      "kind": "const",
+      "name": "Fail",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Fail",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 35,
+        "endLine": 35
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Failed",
+      "kind": "const",
+      "name": "Failed",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Failed",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 24,
+        "endLine": 24
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.HumanDecision",
+      "kind": "const",
+      "name": "HumanDecision",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.HumanDecision",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 43,
+        "endLine": 43
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Idempotent",
+      "kind": "const",
+      "name": "Idempotent",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Idempotent",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 9,
+        "endLine": 9
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Irreversible",
+      "kind": "const",
+      "name": "Irreversible",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Irreversible",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 12,
+        "endLine": 12
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.LoseCertainty",
+      "kind": "const",
+      "name": "LoseCertainty",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.LoseCertainty",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 34,
+        "endLine": 34
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.NoAction",
+      "kind": "const",
+      "name": "NoAction",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.NoAction",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 44,
+        "endLine": 44
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Observe",
+      "kind": "const",
+      "name": "Observe",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Observe",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 8,
+        "endLine": 8
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.ObserveFirst",
+      "kind": "const",
+      "name": "ObserveFirst",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.ObserveFirst",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 42,
+        "endLine": 42
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Planned",
+      "kind": "const",
+      "name": "Planned",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Planned",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 18,
+        "endLine": 18
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Reconcilable",
+      "kind": "const",
+      "name": "Reconcilable",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Reconcilable",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 10,
+        "endLine": 10
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Retry",
+      "kind": "const",
+      "name": "Retry",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Retry",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 41,
+        "endLine": 41
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Uncertain",
+      "kind": "const",
+      "name": "Uncertain",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Uncertain",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 23,
+        "endLine": 23
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.Verified",
+      "kind": "const",
+      "name": "Verified",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Verified",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 22,
+        "endLine": 22
+      }
+    },
+    {
+      "id": "const:powerfarm.dev/continuity/v2/internal/effects.VerifyMatch",
+      "kind": "const",
+      "name": "VerifyMatch",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.VerifyMatch",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 33,
+        "endLine": 33
+      }
+    },
+    {
+      "id": "effect_class:at_most_once",
+      "kind": "effect_class",
+      "name": "at_most_once",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_class:idempotent",
+      "kind": "effect_class",
+      "name": "idempotent",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_class:irreversible",
+      "kind": "effect_class",
+      "name": "irreversible",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_class:observe",
+      "kind": "effect_class",
+      "name": "observe",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_class:reconcilable",
+      "kind": "effect_class",
+      "name": "reconcilable",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_event:acknowledge",
+      "kind": "effect_event",
+      "name": "acknowledge",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_event:authorize",
+      "kind": "effect_event",
+      "name": "authorize",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_event:dispatch",
+      "kind": "effect_event",
+      "name": "dispatch",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_event:fail",
+      "kind": "effect_event",
+      "name": "fail",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_event:lose_certainty",
+      "kind": "effect_event",
+      "name": "lose_certainty",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_event:verify_match",
+      "kind": "effect_event",
+      "name": "verify_match",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_state:acknowledged",
+      "kind": "effect_state",
+      "name": "acknowledged",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_state:authorized",
+      "kind": "effect_state",
+      "name": "authorized",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_state:dispatched",
+      "kind": "effect_state",
+      "name": "dispatched",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_state:failed",
+      "kind": "effect_state",
+      "name": "failed",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_state:planned",
+      "kind": "effect_state",
+      "name": "planned",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_state:uncertain",
+      "kind": "effect_state",
+      "name": "uncertain",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "effect_state:verified",
+      "kind": "effect_state",
+      "name": "verified",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:000:inspect",
+      "kind": "bundle_step",
+      "name": "inspect",
+      "qualified": "service.status@1",
+      "layer": "runtime",
+      "source": "examples/rescue.workflow.json",
+      "span": {},
+      "attributes": {
+        "authorization": {
+          "mode": "automatic"
+        },
+        "contract": {
+          "kind": "mcp",
+          "ref": "mcp://continuity-agent/os",
+          "op": "service_status"
+        },
+        "effect": {
+          "class": "observe"
+        },
+        "placement": {
+          "selector": {
+            "powerfarm.dev/role": "lab-agent"
+          }
+        },
+        "with": {
+          "place": "lab-512",
+          "service": "zelador"
+        }
+      }
+    },
+    {
+      "id": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:001:restart",
+      "kind": "bundle_step",
+      "name": "restart",
+      "qualified": "service.restart@2",
+      "layer": "runtime",
+      "source": "examples/rescue.workflow.json",
+      "span": {},
+      "attributes": {
+        "authorization": {
+          "mode": "policy"
+        },
+        "contract": {
+          "kind": "mcp",
+          "ref": "mcp://continuity-agent/os",
+          "op": "service_restart"
+        },
+        "effect": {
+          "class": "reconcilable",
+          "verification": {
+            "capability": "service.status",
+            "with": {
+              "place": "${input.place}",
+              "service": "${input.service}"
+            },
+            "expect": {
+              "running": true
+            },
+            "timeout": "30s"
+          }
+        },
+        "placement": {
+          "selector": {
+            "powerfarm.dev/role": "lab-agent"
+          }
+        },
+        "with": {
+          "place": "lab-512",
+          "service": "zelador"
+        }
+      }
+    },
+    {
+      "id": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:002:verify",
+      "kind": "bundle_step",
+      "name": "verify",
+      "qualified": "service.status@1",
+      "layer": "runtime",
+      "source": "examples/rescue.workflow.json",
+      "span": {},
+      "attributes": {
+        "authorization": {
+          "mode": "automatic"
+        },
+        "contract": {
+          "kind": "mcp",
+          "ref": "mcp://continuity-agent/os",
+          "op": "service_status"
+        },
+        "effect": {
+          "class": "observe"
+        },
+        "placement": {
+          "selector": {
+            "powerfarm.dev/role": "lab-agent"
+          }
+        },
+        "with": {
+          "place": "lab-512",
+          "service": "zelador"
+        }
+      }
+    },
+    {
+      "id": "file:internal/bus/nats.go",
+      "kind": "file",
+      "name": "nats.go",
+      "qualified": "internal/bus/nats.go",
+      "layer": "transport",
+      "source": "internal/bus/nats.go",
+      "span": {},
+      "attributes": {
+        "test": false
+      }
+    },
+    {
+      "id": "file:internal/bus/nats_test.go",
+      "kind": "file",
+      "name": "nats_test.go",
+      "qualified": "internal/bus/nats_test.go",
+      "layer": "transport",
+      "source": "internal/bus/nats_test.go",
+      "span": {},
+      "attributes": {
+        "test": true
+      }
+    },
+    {
+      "id": "file:internal/effects/effects.go",
+      "kind": "file",
+      "name": "effects.go",
+      "qualified": "internal/effects/effects.go",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {},
+      "attributes": {
+        "test": false
+      }
+    },
+    {
+      "id": "file:internal/effects/effects_test.go",
+      "kind": "file",
+      "name": "effects_test.go",
+      "qualified": "internal/effects/effects_test.go",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects_test.go",
+      "span": {},
+      "attributes": {
+        "test": true
+      }
+    },
+    {
+      "id": "file:internal/journal/sqlite.go",
+      "kind": "file",
+      "name": "sqlite.go",
+      "qualified": "internal/journal/sqlite.go",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {},
+      "attributes": {
+        "test": false
+      }
+    },
+    {
+      "id": "file:internal/journal/sqlite_test.go",
+      "kind": "file",
+      "name": "sqlite_test.go",
+      "qualified": "internal/journal/sqlite_test.go",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite_test.go",
+      "span": {},
+      "attributes": {
+        "test": true
+      }
+    },
+    {
+      "id": "file:internal/policy/client.go",
+      "kind": "file",
+      "name": "client.go",
+      "qualified": "internal/policy/client.go",
+      "layer": "policy",
+      "source": "internal/policy/client.go",
+      "span": {},
+      "attributes": {
+        "test": false
+      }
+    },
+    {
+      "id": "file:internal/policy/client_test.go",
+      "kind": "file",
+      "name": "client_test.go",
+      "qualified": "internal/policy/client_test.go",
+      "layer": "policy",
+      "source": "internal/policy/client_test.go",
+      "span": {},
+      "attributes": {
+        "test": true
+      }
+    },
+    {
+      "id": "file:internal/runtime/executor.go",
+      "kind": "file",
+      "name": "executor.go",
+      "qualified": "internal/runtime/executor.go",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "span": {},
+      "attributes": {
+        "test": false
+      }
+    },
+    {
+      "id": "file:internal/runtime/executor_test.go",
+      "kind": "file",
+      "name": "executor_test.go",
+      "qualified": "internal/runtime/executor_test.go",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "span": {},
+      "attributes": {
+        "test": true
+      }
+    },
+    {
+      "id": "file:internal/runtime/smoke.go",
+      "kind": "file",
+      "name": "smoke.go",
+      "qualified": "internal/runtime/smoke.go",
+      "layer": "runtime",
+      "source": "internal/runtime/smoke.go",
+      "span": {},
+      "attributes": {
+        "test": false
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/bus.Publish",
+      "kind": "function",
+      "name": "Publish",
+      "qualified": "powerfarm.dev/continuity/v2/internal/bus.Publish",
+      "layer": "transport",
+      "source": "internal/bus/nats.go",
+      "span": {
+        "startLine": 15,
+        "endLine": 87
+      },
+      "summary": "Publish sends one message using the core NATS text protocol.",
+      "attributes": {
+        "receiver": "",
+        "test": false
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/bus.TestPublish",
+      "kind": "function",
+      "name": "TestPublish",
+      "qualified": "powerfarm.dev/continuity/v2/internal/bus.TestPublish",
+      "layer": "transport",
+      "source": "internal/bus/nats_test.go",
+      "span": {
+        "startLine": 11,
+        "endLine": 80
+      },
+      "attributes": {
+        "receiver": "",
+        "test": true
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/effects.Next",
+      "kind": "function",
+      "name": "Next",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Next",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 49,
+        "endLine": 88
+      },
+      "summary": "Next advances only the certainty lifecycle.",
+      "attributes": {
+        "receiver": "",
+        "test": false
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/effects.Recover",
+      "kind": "function",
+      "name": "Recover",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Recover",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 93,
+        "endLine": 104
+      },
+      "summary": "Recover is the core rule Continuity applies when dispatch may have happened but the outcome is unknown.",
+      "attributes": {
+        "receiver": "",
+        "test": false
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/effects.TestLostAcknowledgementDoesNotBecomeFailed",
+      "kind": "function",
+      "name": "TestLostAcknowledgementDoesNotBecomeFailed",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.TestLostAcknowledgementDoesNotBecomeFailed",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects_test.go",
+      "span": {
+        "startLine": 27,
+        "endLine": 35
+      },
+      "attributes": {
+        "receiver": "",
+        "test": true
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/effects.TestObservationCanResolveUncertainty",
+      "kind": "function",
+      "name": "TestObservationCanResolveUncertainty",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.TestObservationCanResolveUncertainty",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects_test.go",
+      "span": {
+        "startLine": 37,
+        "endLine": 45
+      },
+      "attributes": {
+        "receiver": "",
+        "test": true
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/effects.TestUncertainRecovery",
+      "kind": "function",
+      "name": "TestUncertainRecovery",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.TestUncertainRecovery",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects_test.go",
+      "span": {
+        "startLine": 5,
+        "endLine": 25
+      },
+      "attributes": {
+        "receiver": "",
+        "test": true
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/journal.Open",
+      "kind": "function",
+      "name": "Open",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.Open",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 49,
+        "endLine": 68
+      },
+      "attributes": {
+        "receiver": "",
+        "test": false
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/journal.TestCrashRecoveryPreservesUncertainty",
+      "kind": "function",
+      "name": "TestCrashRecoveryPreservesUncertainty",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.TestCrashRecoveryPreservesUncertainty",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite_test.go",
+      "span": {
+        "startLine": 10,
+        "endLine": 71
+      },
+      "attributes": {
+        "receiver": "",
+        "test": true
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/journal.TestDuplicateEffectIDRejected",
+      "kind": "function",
+      "name": "TestDuplicateEffectIDRejected",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.TestDuplicateEffectIDRejected",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite_test.go",
+      "span": {
+        "startLine": 73,
+        "endLine": 86
+      },
+      "attributes": {
+        "receiver": "",
+        "test": true
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/journal.bindText",
+      "kind": "function",
+      "name": "bindText",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.bindText",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 310,
+        "endLine": 317
+      },
+      "attributes": {
+        "receiver": "",
+        "test": false
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/journal.columnText",
+      "kind": "function",
+      "name": "columnText",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.columnText",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 319,
+        "endLine": 325
+      },
+      "attributes": {
+        "receiver": "",
+        "test": false
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/policy.TestDecide",
+      "kind": "function",
+      "name": "TestDecide",
+      "qualified": "powerfarm.dev/continuity/v2/internal/policy.TestDecide",
+      "layer": "policy",
+      "source": "internal/policy/client_test.go",
+      "span": {
+        "startLine": 11,
+        "endLine": 27
+      },
+      "attributes": {
+        "receiver": "",
+        "test": true
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/runtime.Smoke",
+      "kind": "function",
+      "name": "Smoke",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.Smoke",
+      "layer": "runtime",
+      "source": "internal/runtime/smoke.go",
+      "span": {
+        "startLine": 19,
+        "endLine": 50
+      },
+      "attributes": {
+        "receiver": "",
+        "test": false
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/runtime.TestExecutorDoesNotReplayInFlightEffect",
+      "kind": "function",
+      "name": "TestExecutorDoesNotReplayInFlightEffect",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.TestExecutorDoesNotReplayInFlightEffect",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "span": {
+        "startLine": 66,
+        "endLine": 100
+      },
+      "attributes": {
+        "receiver": "",
+        "test": true
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/runtime.TestExecutorVerifiesRealEffect",
+      "kind": "function",
+      "name": "TestExecutorVerifiesRealEffect",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.TestExecutorVerifiesRealEffect",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "span": {
+        "startLine": 45,
+        "endLine": 64
+      },
+      "attributes": {
+        "receiver": "",
+        "test": true
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/runtime.effectIdentity",
+      "kind": "function",
+      "name": "effectIdentity",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.effectIdentity",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "span": {
+        "startLine": 162,
+        "endLine": 170
+      },
+      "attributes": {
+        "receiver": "",
+        "test": false
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/runtime.sha",
+      "kind": "function",
+      "name": "sha",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.sha",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "span": {
+        "startLine": 172,
+        "endLine": 172
+      },
+      "attributes": {
+        "receiver": "",
+        "test": false
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/runtime.stringsDigest",
+      "kind": "function",
+      "name": "stringsDigest",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.stringsDigest",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "span": {
+        "startLine": 173,
+        "endLine": 173
+      },
+      "attributes": {
+        "receiver": "",
+        "test": false
+      }
+    },
+    {
+      "id": "func:powerfarm.dev/continuity/v2/internal/runtime.testBundleStep",
+      "kind": "function",
+      "name": "testBundleStep",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.testBundleStep",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "span": {
+        "startLine": 35,
+        "endLine": 43
+      },
+      "attributes": {
+        "receiver": "",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Close",
+      "kind": "method",
+      "name": "Close",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.Journal.Close",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 70,
+        "endLine": 82
+      },
+      "attributes": {
+        "receiver": "Journal",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Create",
+      "kind": "method",
+      "name": "Create",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.Journal.Create",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 115,
+        "endLine": 146
+      },
+      "attributes": {
+        "receiver": "Journal",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Events",
+      "kind": "method",
+      "name": "Events",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.Journal.Events",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 229,
+        "endLine": 257
+      },
+      "attributes": {
+        "receiver": "Journal",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Get",
+      "kind": "method",
+      "name": "Get",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.Journal.Get",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 148,
+        "endLine": 152
+      },
+      "attributes": {
+        "receiver": "Journal",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Transition",
+      "kind": "method",
+      "name": "Transition",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.Journal.Transition",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 154,
+        "endLine": 227
+      },
+      "attributes": {
+        "receiver": "Journal",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.err",
+      "kind": "method",
+      "name": "err",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.Journal.err",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 306,
+        "endLine": 308
+      },
+      "attributes": {
+        "receiver": "Journal",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.exec",
+      "kind": "method",
+      "name": "exec",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.Journal.exec",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 290,
+        "endLine": 304
+      },
+      "attributes": {
+        "receiver": "Journal",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.getLocked",
+      "kind": "method",
+      "name": "getLocked",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.Journal.getLocked",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 259,
+        "endLine": 278
+      },
+      "attributes": {
+        "receiver": "Journal",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.init",
+      "kind": "method",
+      "name": "init",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.Journal.init",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 84,
+        "endLine": 113
+      },
+      "attributes": {
+        "receiver": "Journal",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.prepare",
+      "kind": "method",
+      "name": "prepare",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.Journal.prepare",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 280,
+        "endLine": 288
+      },
+      "attributes": {
+        "receiver": "Journal",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/policy.Client.Decide",
+      "kind": "method",
+      "name": "Decide",
+      "qualified": "powerfarm.dev/continuity/v2/internal/policy.Client.Decide",
+      "layer": "policy",
+      "source": "internal/policy/client.go",
+      "span": {
+        "startLine": 24,
+        "endLine": 57
+      },
+      "attributes": {
+        "receiver": "Client",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/runtime.Executor.ExecuteStep",
+      "kind": "method",
+      "name": "ExecuteStep",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.Executor.ExecuteStep",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "span": {
+        "startLine": 49,
+        "endLine": 144
+      },
+      "attributes": {
+        "receiver": "Executor",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/runtime.Executor.authorize",
+      "kind": "method",
+      "name": "authorize",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.Executor.authorize",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "span": {
+        "startLine": 146,
+        "endLine": 160
+      },
+      "attributes": {
+        "receiver": "Executor",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/runtime.allowAuthorizer.Decide",
+      "kind": "method",
+      "name": "Decide",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.allowAuthorizer.Decide",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "span": {
+        "startLine": 17,
+        "endLine": 19
+      },
+      "attributes": {
+        "receiver": "allowAuthorizer",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher.Invoke",
+      "kind": "method",
+      "name": "Invoke",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher.Invoke",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "span": {
+        "startLine": 27,
+        "endLine": 30
+      },
+      "attributes": {
+        "receiver": "fakeDispatcher",
+        "test": false
+      }
+    },
+    {
+      "id": "method:powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher.Verify",
+      "kind": "method",
+      "name": "Verify",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher.Verify",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "span": {
+        "startLine": 31,
+        "endLine": 33
+      },
+      "attributes": {
+        "receiver": "fakeDispatcher",
+        "test": false
+      }
+    },
+    {
+      "id": "pkg:powerfarm.dev/continuity/v2/internal/bus",
+      "kind": "package",
+      "name": "bus",
+      "qualified": "powerfarm.dev/continuity/v2/internal/bus",
+      "layer": "transport",
+      "source": "internal/bus",
+      "span": {}
+    },
+    {
+      "id": "pkg:powerfarm.dev/continuity/v2/internal/effects",
+      "kind": "package",
+      "name": "effects",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects",
+      "layer": "effect-semantics",
+      "source": "internal/effects",
+      "span": {}
+    },
+    {
+      "id": "pkg:powerfarm.dev/continuity/v2/internal/journal",
+      "kind": "package",
+      "name": "journal",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal",
+      "layer": "persistence",
+      "source": "internal/journal",
+      "span": {}
+    },
+    {
+      "id": "pkg:powerfarm.dev/continuity/v2/internal/policy",
+      "kind": "package",
+      "name": "policy",
+      "qualified": "powerfarm.dev/continuity/v2/internal/policy",
+      "layer": "policy",
+      "source": "internal/policy",
+      "span": {}
+    },
+    {
+      "id": "pkg:powerfarm.dev/continuity/v2/internal/runtime",
+      "kind": "package",
+      "name": "runtime",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime",
+      "layer": "runtime",
+      "source": "internal/runtime",
+      "span": {}
+    },
+    {
+      "id": "placement:da6eac01af62893f",
+      "kind": "placement_selector",
+      "name": "{\"powerfarm.dev/role\":\"lab-agent\"}",
+      "layer": "runtime",
+      "source": "examples/capabilities/service.restart.json",
+      "span": {},
+      "attributes": {
+        "selector": {
+          "powerfarm.dev/role": "lab-agent"
+        }
+      }
+    },
+    {
+      "id": "recovery:human_decision",
+      "kind": "recovery_strategy",
+      "name": "human_decision",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "recovery:observe_first",
+      "kind": "recovery_strategy",
+      "name": "observe_first",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "recovery:retry",
+      "kind": "recovery_strategy",
+      "name": "retry",
+      "layer": "effect-semantics",
+      "span": {}
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/effects.Class",
+      "kind": "type",
+      "name": "Class",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Class",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 5,
+        "endLine": 5
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/effects.Event",
+      "kind": "type",
+      "name": "Event",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Event",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 27,
+        "endLine": 27
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/effects.Recovery",
+      "kind": "type",
+      "name": "Recovery",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.Recovery",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 38,
+        "endLine": 38
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/effects.State",
+      "kind": "type",
+      "name": "State",
+      "qualified": "powerfarm.dev/continuity/v2/internal/effects.State",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "span": {
+        "startLine": 15,
+        "endLine": 15
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/journal.EventRecord",
+      "kind": "type",
+      "name": "EventRecord",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.EventRecord",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 39,
+        "endLine": 47
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "kind": "type",
+      "name": "Journal",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 21,
+        "endLine": 24
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/journal.Record",
+      "kind": "type",
+      "name": "Record",
+      "qualified": "powerfarm.dev/continuity/v2/internal/journal.Record",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "span": {
+        "startLine": 26,
+        "endLine": 37
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/policy.Client",
+      "kind": "type",
+      "name": "Client",
+      "qualified": "powerfarm.dev/continuity/v2/internal/policy.Client",
+      "layer": "policy",
+      "source": "internal/policy/client.go",
+      "span": {
+        "startLine": 13,
+        "endLine": 16
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/policy.Decision",
+      "kind": "type",
+      "name": "Decision",
+      "qualified": "powerfarm.dev/continuity/v2/internal/policy.Decision",
+      "layer": "policy",
+      "source": "internal/policy/client.go",
+      "span": {
+        "startLine": 18,
+        "endLine": 22
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/runtime.Authorizer",
+      "kind": "type",
+      "name": "Authorizer",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.Authorizer",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "span": {
+        "startLine": 19,
+        "endLine": 21
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/runtime.DispatchOutcome",
+      "kind": "type",
+      "name": "DispatchOutcome",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.DispatchOutcome",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "span": {
+        "startLine": 28,
+        "endLine": 35
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/runtime.Dispatcher",
+      "kind": "type",
+      "name": "Dispatcher",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.Dispatcher",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "span": {
+        "startLine": 23,
+        "endLine": 26
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/runtime.Executor",
+      "kind": "type",
+      "name": "Executor",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.Executor",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "span": {
+        "startLine": 43,
+        "endLine": 47
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/runtime.SmokeResult",
+      "kind": "type",
+      "name": "SmokeResult",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.SmokeResult",
+      "layer": "runtime",
+      "source": "internal/runtime/smoke.go",
+      "span": {
+        "startLine": 13,
+        "endLine": 17
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/runtime.VerifyOutcome",
+      "kind": "type",
+      "name": "VerifyOutcome",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.VerifyOutcome",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "span": {
+        "startLine": 37,
+        "endLine": 41
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/runtime.allowAuthorizer",
+      "kind": "type",
+      "name": "allowAuthorizer",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.allowAuthorizer",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "span": {
+        "startLine": 15,
+        "endLine": 15
+      }
+    },
+    {
+      "id": "type:powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher",
+      "kind": "type",
+      "name": "fakeDispatcher",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "span": {
+        "startLine": 21,
+        "endLine": 25
+      }
+    },
+    {
+      "id": "var:powerfarm.dev/continuity/v2/internal/runtime.ErrApprovalRequired",
+      "kind": "var",
+      "name": "ErrApprovalRequired",
+      "qualified": "powerfarm.dev/continuity/v2/internal/runtime.ErrApprovalRequired",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "span": {
+        "startLine": 17,
+        "endLine": 17
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge:calls:0d6326290cc8cd54",
+      "kind": "calls",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Events",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.bindText",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 237,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:1eab74131598dd71",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/effects.TestUncertainRecovery",
+      "to": "func:powerfarm.dev/continuity/v2/internal/effects.Recover",
+      "layer": "code",
+      "source": "internal/effects/effects_test.go",
+      "line": 17,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:21070b543287acc0",
+      "kind": "calls",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Transition",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.bindText",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 209,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:25db74d30a4a6e8d",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/runtime.TestExecutorVerifiesRealEffect",
+      "to": "func:powerfarm.dev/continuity/v2/internal/runtime.testBundleStep",
+      "layer": "code",
+      "source": "internal/runtime/executor_test.go",
+      "line": 53,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:2d0e432891820f3b",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/journal.TestCrashRecoveryPreservesUncertainty",
+      "to": "func:powerfarm.dev/continuity/v2/internal/effects.Recover",
+      "layer": "code",
+      "source": "internal/journal/sqlite_test.go",
+      "line": 53,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:3df6554da2f6d693",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/runtime.effectIdentity",
+      "to": "func:powerfarm.dev/continuity/v2/internal/runtime.stringsDigest",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "line": 169,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:426d708a85c68b30",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/bus.TestPublish",
+      "to": "func:powerfarm.dev/continuity/v2/internal/bus.Publish",
+      "layer": "code",
+      "source": "internal/bus/nats_test.go",
+      "line": 70,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:4778987967c9edb0",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/effects.TestObservationCanResolveUncertainty",
+      "to": "func:powerfarm.dev/continuity/v2/internal/effects.Next",
+      "layer": "code",
+      "source": "internal/effects/effects_test.go",
+      "line": 38,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:4b99ed22621ef35f",
+      "kind": "calls",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Create",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.bindText",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 138,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:5b57e9177ec9c8ce",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/runtime.TestExecutorDoesNotReplayInFlightEffect",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.Open",
+      "layer": "code",
+      "source": "internal/runtime/executor_test.go",
+      "line": 83,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:6b97149e99fc2854",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/runtime.TestExecutorVerifiesRealEffect",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.Open",
+      "layer": "code",
+      "source": "internal/runtime/executor_test.go",
+      "line": 46,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:6e1cb0da6d464fae",
+      "kind": "calls",
+      "from": "method:powerfarm.dev/continuity/v2/internal/runtime.Executor.ExecuteStep",
+      "to": "func:powerfarm.dev/continuity/v2/internal/runtime.effectIdentity",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "line": 53,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:70531e02b6ce809e",
+      "kind": "calls",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.getLocked",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.columnText",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 276,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:7c3fd18e9330c07d",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/journal.TestDuplicateEffectIDRejected",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.Open",
+      "layer": "code",
+      "source": "internal/journal/sqlite_test.go",
+      "line": 74,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:8f3e8799355a970d",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/journal.TestCrashRecoveryPreservesUncertainty",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.Open",
+      "layer": "code",
+      "source": "internal/journal/sqlite_test.go",
+      "line": 33,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:971df24f75ce6f0b",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/runtime.TestExecutorDoesNotReplayInFlightEffect",
+      "to": "func:powerfarm.dev/continuity/v2/internal/runtime.testBundleStep",
+      "layer": "code",
+      "source": "internal/runtime/executor_test.go",
+      "line": 74,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:9e35defbd43d2580",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/effects.TestLostAcknowledgementDoesNotBecomeFailed",
+      "to": "func:powerfarm.dev/continuity/v2/internal/effects.Next",
+      "layer": "code",
+      "source": "internal/effects/effects_test.go",
+      "line": 28,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:a6812ae1986f5d15",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/runtime.sha",
+      "to": "func:powerfarm.dev/continuity/v2/internal/runtime.stringsDigest",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "line": 172,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:b709bb097ee12b2c",
+      "kind": "calls",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Transition",
+      "to": "func:powerfarm.dev/continuity/v2/internal/effects.Next",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 161,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:c3d09fb8cc0368a5",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/runtime.effectIdentity",
+      "to": "func:powerfarm.dev/continuity/v2/internal/runtime.sha",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "line": 167,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:cfd05bb09d2eb8a6",
+      "kind": "calls",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.getLocked",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.bindText",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 265,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:d07ce57921d7f10e",
+      "kind": "calls",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Events",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.columnText",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 253,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:calls:d0da8aca0d821d2f",
+      "kind": "calls",
+      "from": "func:powerfarm.dev/continuity/v2/internal/runtime.Smoke",
+      "to": "func:powerfarm.dev/continuity/v2/internal/bus.Publish",
+      "layer": "code",
+      "source": "internal/runtime/smoke.go",
+      "line": 34,
+      "confidence": "static"
+    },
+    {
+      "id": "edge:contains:029917952b8ac0db",
+      "kind": "contains",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/effects",
+      "to": "file:internal/effects/effects.go",
+      "layer": "repository",
+      "source": "internal/effects/effects.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:contains:270396c2b533aa14",
+      "kind": "contains",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/policy",
+      "to": "file:internal/policy/client.go",
+      "layer": "repository",
+      "source": "internal/policy/client.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:contains:2bb7745d98de5760",
+      "kind": "contains",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/policy",
+      "to": "file:internal/policy/client_test.go",
+      "layer": "repository",
+      "source": "internal/policy/client_test.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:contains:3130c5a20d82c981",
+      "kind": "contains",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/bus",
+      "to": "file:internal/bus/nats_test.go",
+      "layer": "repository",
+      "source": "internal/bus/nats_test.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:contains:3b9e613d163121fd",
+      "kind": "contains",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/bus",
+      "to": "file:internal/bus/nats.go",
+      "layer": "repository",
+      "source": "internal/bus/nats.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:contains:629272d1178df2f8",
+      "kind": "contains",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/runtime",
+      "to": "file:internal/runtime/executor_test.go",
+      "layer": "repository",
+      "source": "internal/runtime/executor_test.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:contains:74656401e13071e3",
+      "kind": "contains",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/runtime",
+      "to": "file:internal/runtime/executor.go",
+      "layer": "repository",
+      "source": "internal/runtime/executor.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:contains:74a8b0c15e179a16",
+      "kind": "contains",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/runtime",
+      "to": "file:internal/runtime/smoke.go",
+      "layer": "repository",
+      "source": "internal/runtime/smoke.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:contains:7c05827719cb6bde",
+      "kind": "contains",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/journal",
+      "to": "file:internal/journal/sqlite_test.go",
+      "layer": "repository",
+      "source": "internal/journal/sqlite_test.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:contains:804b0dbf8495f7da",
+      "kind": "contains",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/effects",
+      "to": "file:internal/effects/effects_test.go",
+      "layer": "repository",
+      "source": "internal/effects/effects_test.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:contains:cd7a62a49ba18b8c",
+      "kind": "contains",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/journal",
+      "to": "file:internal/journal/sqlite.go",
+      "layer": "repository",
+      "source": "internal/journal/sqlite.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:000d3b2963edb71b",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.bindText",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 310,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:013a875b3f1fa1f2",
+      "kind": "defines",
+      "from": "file:internal/effects/effects_test.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/effects.TestLostAcknowledgementDoesNotBecomeFailed",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects_test.go",
+      "line": 27,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:048e679ac735a526",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Transition",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 154,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:080bce087bd02b88",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.exec",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 290,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:08a4d40e8f64b3a2",
+      "kind": "defines",
+      "from": "file:internal/policy/client_test.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/policy.TestDecide",
+      "layer": "policy",
+      "source": "internal/policy/client_test.go",
+      "line": 11,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:12ab2b0cb12fcef7",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/effects.Class",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 5,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:1a3e62d66a63f094",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.AtMostOnce",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 11,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:1b4b6e035ec19d61",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/effects.Recovery",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 38,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:1f409de223cf5f03",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor_test.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/runtime.TestExecutorDoesNotReplayInFlightEffect",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "line": 66,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:222332bdca463eb5",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Retry",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 41,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:24c7961c90e5b7b8",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.Dispatcher",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "line": 23,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:250e7504f4973094",
+      "kind": "defines",
+      "from": "file:internal/bus/nats_test.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/bus.TestPublish",
+      "layer": "transport",
+      "source": "internal/bus/nats_test.go",
+      "line": 11,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:2580e7c5f55d6486",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Idempotent",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 9,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:30983915bebca18f",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor.go",
+      "to": "var:powerfarm.dev/continuity/v2/internal/runtime.ErrApprovalRequired",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "line": 17,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:37d122e1eb0da8de",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Fail",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 35,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:3c60f6794316930a",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Planned",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 18,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:43813d7f947cf051",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor_test.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/runtime.testBundleStep",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "line": 35,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:4386cc1a7e810cc6",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Authorize",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 30,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:4451e394dd53d067",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.HumanDecision",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 43,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:46ae76a0bc2277ce",
+      "kind": "defines",
+      "from": "file:internal/effects/effects_test.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/effects.TestObservationCanResolveUncertainty",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects_test.go",
+      "line": 37,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:47ff926c66efb864",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.err",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 306,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:4a3efca0fc4fb5af",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite_test.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.TestCrashRecoveryPreservesUncertainty",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite_test.go",
+      "line": 10,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:4b95190105b31c50",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Uncertain",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 23,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:529cd2fafc890d1e",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.EventRecord",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 39,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:61f46c93ff2057a5",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Acknowledge",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 32,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:64a2bf454b6c26cb",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/runtime.effectIdentity",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "line": 162,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:6501bc155818bd87",
+      "kind": "defines",
+      "from": "file:internal/policy/client.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/policy.Client.Decide",
+      "layer": "policy",
+      "source": "internal/policy/client.go",
+      "line": 24,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:688d98af96cb58d0",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Verified",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 22,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:6e2329845e867921",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/runtime.stringsDigest",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "line": 173,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:7b943f862dec3d52",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 21,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:7cf5552d3bb27a5e",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor_test.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "line": 21,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:7e1a976db3fe8c96",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Events",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 229,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:812e64bfc25e3879",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor_test.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.allowAuthorizer",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "line": 15,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:819224e0c1bc20fe",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.DispatchOutcome",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "line": 28,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:81d4380e3b616420",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/effects.State",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 15,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:846eb5785c0384da",
+      "kind": "defines",
+      "from": "file:internal/policy/client.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/policy.Client",
+      "layer": "policy",
+      "source": "internal/policy/client.go",
+      "line": 13,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:863e34da5a3be69f",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Acknowledged",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 21,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:899ab180b1f13731",
+      "kind": "defines",
+      "from": "file:internal/runtime/smoke.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.SmokeResult",
+      "layer": "runtime",
+      "source": "internal/runtime/smoke.go",
+      "line": 13,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:8bb69670b254add0",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.LoseCertainty",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 34,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:8d910d57e681ed31",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Dispatched",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 20,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:8dff77504db80b01",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.Open",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 49,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:981ba1920f4b0002",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.VerifyMatch",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 33,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:a2e8aa66c0e17721",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Reconcilable",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 10,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:a4f5b1cd67410e88",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor_test.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/runtime.allowAuthorizer.Decide",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "line": 17,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:a589600fe07e326e",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor_test.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/runtime.TestExecutorVerifiesRealEffect",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "line": 45,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:a996db743ed383da",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/effects.Event",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 27,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:ab3cef53727ef791",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite_test.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.TestDuplicateEffectIDRejected",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite_test.go",
+      "line": 73,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:ace2e16f8ec97ccc",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.NoAction",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 44,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:b117f76214050c4a",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.prepare",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 280,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:b22238b17678a90a",
+      "kind": "defines",
+      "from": "file:internal/bus/nats.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/bus.Publish",
+      "layer": "transport",
+      "source": "internal/bus/nats.go",
+      "line": 15,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:b46e5c4ffb10e053",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Authorized",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 19,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:b4a95895b2b5f043",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/effects.Next",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 49,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:b6e1f8dd9ea42bbe",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Get",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 148,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:ba7a22ef2ba54537",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Irreversible",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 12,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:bd3ae1f7de8ef07e",
+      "kind": "defines",
+      "from": "file:internal/policy/client.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/policy.Decision",
+      "layer": "policy",
+      "source": "internal/policy/client.go",
+      "line": 18,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:c37e1be61a81e70b",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Create",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 115,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:c79425e567eb4288",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Dispatch",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 31,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:ca7226ca78d50ff2",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.VerifyOutcome",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "line": 37,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:cb0c298b852b88c7",
+      "kind": "defines",
+      "from": "file:internal/runtime/smoke.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/runtime.Smoke",
+      "layer": "runtime",
+      "source": "internal/runtime/smoke.go",
+      "line": 19,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:cbc5a0b76da870e9",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Failed",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 24,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:d1583ebdb270b564",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/runtime.Executor.authorize",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "line": 146,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:d9ed1021995558c3",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.getLocked",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 259,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:da996dc7b7d97760",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.Authorizer",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "line": 19,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:dd0fb05dc8940dcd",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor_test.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher.Invoke",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "line": 27,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:ddee76b406f9fe37",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.ObserveFirst",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 42,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:e841fc15cbca7d50",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Close",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 70,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:eceb406e13986fea",
+      "kind": "defines",
+      "from": "file:internal/effects/effects_test.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/effects.TestUncertainRecovery",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects_test.go",
+      "line": 5,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:eefd09bfaf0c6dbd",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.init",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 84,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:ef343f134fe82da0",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.Executor",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "line": 43,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:f058c76e8d53bd14",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "const:powerfarm.dev/continuity/v2/internal/effects.Observe",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 8,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:f448ae2e68005471",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/runtime.Executor.ExecuteStep",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "line": 49,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:f6aac1ebc7be2409",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.Record",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 26,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:f7ddc9d89b02abdf",
+      "kind": "defines",
+      "from": "file:internal/effects/effects.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/effects.Recover",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "line": 93,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:fa2cbd37de9261f3",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor_test.go",
+      "to": "method:powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher.Verify",
+      "layer": "runtime",
+      "source": "internal/runtime/executor_test.go",
+      "line": 31,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:fb34d4c9504478d8",
+      "kind": "defines",
+      "from": "file:internal/runtime/executor.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/runtime.sha",
+      "layer": "runtime",
+      "source": "internal/runtime/executor.go",
+      "line": 172,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:defines:fdd6faf12d5eb700",
+      "kind": "defines",
+      "from": "file:internal/journal/sqlite.go",
+      "to": "func:powerfarm.dev/continuity/v2/internal/journal.columnText",
+      "layer": "persistence",
+      "source": "internal/journal/sqlite.go",
+      "line": 319,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:has_effect_class:0c226808d74ec432",
+      "kind": "has_effect_class",
+      "from": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:002:verify",
+      "to": "effect_class:observe",
+      "layer": "effect-semantics",
+      "source": "examples/rescue.workflow.json",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:has_effect_class:7c86daced74788b4",
+      "kind": "has_effect_class",
+      "from": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:001:restart",
+      "to": "effect_class:reconcilable",
+      "layer": "effect-semantics",
+      "source": "examples/rescue.workflow.json",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:has_effect_class:9d74413b10871bb3",
+      "kind": "has_effect_class",
+      "from": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:000:inspect",
+      "to": "effect_class:observe",
+      "layer": "effect-semantics",
+      "source": "examples/rescue.workflow.json",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:imports:4f830fd46ff27e8a",
+      "kind": "imports",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/runtime",
+      "to": "pkg:powerfarm.dev/continuity/v2/internal/journal",
+      "layer": "code",
+      "source": "internal/runtime/executor_test.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:imports:5db754a9ec00c636",
+      "kind": "imports",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/journal",
+      "to": "pkg:powerfarm.dev/continuity/v2/internal/effects",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:imports:65c1a94122423e37",
+      "kind": "imports",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/journal",
+      "to": "pkg:powerfarm.dev/continuity/v2/internal/effects",
+      "layer": "code",
+      "source": "internal/journal/sqlite_test.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:imports:86e6b5fa319fc293",
+      "kind": "imports",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/runtime",
+      "to": "pkg:powerfarm.dev/continuity/v2/internal/policy",
+      "layer": "code",
+      "source": "internal/runtime/smoke.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:imports:942b6e93154c63e8",
+      "kind": "imports",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/runtime",
+      "to": "pkg:powerfarm.dev/continuity/v2/internal/policy",
+      "layer": "code",
+      "source": "internal/runtime/executor_test.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:imports:a7f25fbcadfcd4c7",
+      "kind": "imports",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/runtime",
+      "to": "pkg:powerfarm.dev/continuity/v2/internal/journal",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:imports:a91a4ccdf85d79a7",
+      "kind": "imports",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/runtime",
+      "to": "pkg:powerfarm.dev/continuity/v2/internal/bus",
+      "layer": "code",
+      "source": "internal/runtime/smoke.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:imports:ad65ab5b78a09bda",
+      "kind": "imports",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/runtime",
+      "to": "pkg:powerfarm.dev/continuity/v2/internal/policy",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:imports:b8387d7d9bd97f96",
+      "kind": "imports",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/runtime",
+      "to": "pkg:powerfarm.dev/continuity/v2/internal/effects",
+      "layer": "code",
+      "source": "internal/runtime/executor_test.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:imports:c4d6cd0e201da8d4",
+      "kind": "imports",
+      "from": "pkg:powerfarm.dev/continuity/v2/internal/runtime",
+      "to": "pkg:powerfarm.dev/continuity/v2/internal/effects",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:03fb801018511f94",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/runtime.Executor.authorize",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.Executor",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "line": 146,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:11f3ec7cc808ecbb",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/policy.Client.Decide",
+      "to": "type:powerfarm.dev/continuity/v2/internal/policy.Client",
+      "layer": "code",
+      "source": "internal/policy/client.go",
+      "line": 24,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:17dcf2839375dbd3",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Events",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 229,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:1e4803d7324dceb3",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/runtime.allowAuthorizer.Decide",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.allowAuthorizer",
+      "layer": "code",
+      "source": "internal/runtime/executor_test.go",
+      "line": 17,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:328fbe1128514d6c",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher.Invoke",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher",
+      "layer": "code",
+      "source": "internal/runtime/executor_test.go",
+      "line": 27,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:51ab037d28e03152",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Create",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 115,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:754010dbab5ebf3d",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Get",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 148,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:7b93c1c626fd8b88",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.err",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 306,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:89f446af9cea9c62",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/runtime.Executor.ExecuteStep",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.Executor",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "line": 49,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:8f1cd067a4fa516e",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.getLocked",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 259,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:a5b312015cb1bc48",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Transition",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 154,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:b856b1ad29d32c9a",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.Close",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 70,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:b8ec0fb33bc6a45c",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.init",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 84,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:c1f463c6975f6a02",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.prepare",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 280,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:cb8538f45e586302",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher.Verify",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher",
+      "layer": "code",
+      "source": "internal/runtime/executor_test.go",
+      "line": 31,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:method_of:d56a7bccd42fa912",
+      "kind": "method_of",
+      "from": "method:powerfarm.dev/continuity/v2/internal/journal.Journal.exec",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 290,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:precedes:5448de5b5c0aa5e0",
+      "kind": "precedes",
+      "from": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:001:restart",
+      "to": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:002:verify",
+      "layer": "runtime",
+      "source": "examples/rescue.workflow.json",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:precedes:e86f74ab20604bbb",
+      "kind": "precedes",
+      "from": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:000:inspect",
+      "to": "execution_bundle:sha256:8df6479e10b42bbfb45ef28bcd75e8329370064ca00ba4d4df3f8502fe80913d/step:001:restart",
+      "layer": "runtime",
+      "source": "examples/rescue.workflow.json",
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:recovers_via:31a4701a45419a50",
+      "kind": "recovers_via",
+      "from": "effect_class:idempotent",
+      "to": "recovery:retry",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed"
+    },
+    {
+      "id": "edge:recovers_via:732f8dd394769bf9",
+      "kind": "recovers_via",
+      "from": "effect_class:at_most_once",
+      "to": "recovery:human_decision",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed"
+    },
+    {
+      "id": "edge:recovers_via:cc6306b5147c411d",
+      "kind": "recovers_via",
+      "from": "effect_class:reconcilable",
+      "to": "recovery:observe_first",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed"
+    },
+    {
+      "id": "edge:recovers_via:e94b8cc0413b4943",
+      "kind": "recovers_via",
+      "from": "effect_class:irreversible",
+      "to": "recovery:human_decision",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed"
+    },
+    {
+      "id": "edge:recovers_via:eddd389529c4bd25",
+      "kind": "recovers_via",
+      "from": "effect_class:observe",
+      "to": "recovery:retry",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed"
+    },
+    {
+      "id": "edge:references_type:03fd6fa3b306cb56",
+      "kind": "references_type",
+      "from": "type:powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.VerifyOutcome",
+      "layer": "code",
+      "source": "internal/runtime/executor_test.go",
+      "line": 23,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:references_type:054cae1ecd6bc043",
+      "kind": "references_type",
+      "from": "type:powerfarm.dev/continuity/v2/internal/runtime.Authorizer",
+      "to": "type:powerfarm.dev/continuity/v2/internal/policy.Decision",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "line": 20,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:references_type:2e1c1f0cb0fc96c2",
+      "kind": "references_type",
+      "from": "type:powerfarm.dev/continuity/v2/internal/runtime.Executor",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.Dispatcher",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "line": 46,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:references_type:2fa6bc9d0ade75cd",
+      "kind": "references_type",
+      "from": "type:powerfarm.dev/continuity/v2/internal/runtime.Dispatcher",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.VerifyOutcome",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "line": 25,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:references_type:68b50ccacf4ba9df",
+      "kind": "references_type",
+      "from": "type:powerfarm.dev/continuity/v2/internal/runtime.Executor",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.Authorizer",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "line": 45,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:references_type:715265c4576b2a9b",
+      "kind": "references_type",
+      "from": "type:powerfarm.dev/continuity/v2/internal/journal.Record",
+      "to": "type:powerfarm.dev/continuity/v2/internal/effects.State",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 34,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:references_type:72773cd75e2dcde1",
+      "kind": "references_type",
+      "from": "type:powerfarm.dev/continuity/v2/internal/runtime.Dispatcher",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.DispatchOutcome",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "line": 24,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:references_type:9cd7f8985488ca5a",
+      "kind": "references_type",
+      "from": "type:powerfarm.dev/continuity/v2/internal/runtime.Executor",
+      "to": "type:powerfarm.dev/continuity/v2/internal/journal.Journal",
+      "layer": "code",
+      "source": "internal/runtime/executor.go",
+      "line": 44,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:references_type:b4350250fc2a2a39",
+      "kind": "references_type",
+      "from": "type:powerfarm.dev/continuity/v2/internal/runtime.fakeDispatcher",
+      "to": "type:powerfarm.dev/continuity/v2/internal/runtime.DispatchOutcome",
+      "layer": "code",
+      "source": "internal/runtime/executor_test.go",
+      "line": 22,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:references_type:bcbe1e6407b6eef7",
+      "kind": "references_type",
+      "from": "type:powerfarm.dev/continuity/v2/internal/journal.EventRecord",
+      "to": "type:powerfarm.dev/continuity/v2/internal/effects.State",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 44,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:references_type:c264ede303a8c665",
+      "kind": "references_type",
+      "from": "type:powerfarm.dev/continuity/v2/internal/journal.EventRecord",
+      "to": "type:powerfarm.dev/continuity/v2/internal/effects.Event",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 43,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:references_type:de6f1fb6113f57b3",
+      "kind": "references_type",
+      "from": "type:powerfarm.dev/continuity/v2/internal/journal.Record",
+      "to": "type:powerfarm.dev/continuity/v2/internal/effects.Class",
+      "layer": "code",
+      "source": "internal/journal/sqlite.go",
+      "line": 32,
+      "confidence": "exact"
+    },
+    {
+      "id": "edge:transitions_to:39f8931bc9614473",
+      "kind": "transitions_to",
+      "from": "effect_state:authorized",
+      "to": "effect_state:dispatched",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed",
+      "attributes": {
+        "event": "dispatch"
+      }
+    },
+    {
+      "id": "edge:transitions_to:6212f1bcb18a36b5",
+      "kind": "transitions_to",
+      "from": "effect_state:acknowledged",
+      "to": "effect_state:failed",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed",
+      "attributes": {
+        "event": "fail"
+      }
+    },
+    {
+      "id": "edge:transitions_to:66eaecfa18cadd2e",
+      "kind": "transitions_to",
+      "from": "effect_state:acknowledged",
+      "to": "effect_state:verified",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed",
+      "attributes": {
+        "event": "verify_match"
+      }
+    },
+    {
+      "id": "edge:transitions_to:73a2dc7f2f5a4a83",
+      "kind": "transitions_to",
+      "from": "effect_state:dispatched",
+      "to": "effect_state:acknowledged",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed",
+      "attributes": {
+        "event": "acknowledge"
+      }
+    },
+    {
+      "id": "edge:transitions_to:7996043045fe4c34",
+      "kind": "transitions_to",
+      "from": "effect_state:dispatched",
+      "to": "effect_state:failed",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed",
+      "attributes": {
+        "event": "fail"
+      }
+    },
+    {
+      "id": "edge:transitions_to:a8ccba167f19a5b5",
+      "kind": "transitions_to",
+      "from": "effect_state:acknowledged",
+      "to": "effect_state:uncertain",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed",
+      "attributes": {
+        "event": "lose_certainty"
+      }
+    },
+    {
+      "id": "edge:transitions_to:c2929fdd92c93f1e",
+      "kind": "transitions_to",
+      "from": "effect_state:dispatched",
+      "to": "effect_state:uncertain",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed",
+      "attributes": {
+        "event": "lose_certainty"
+      }
+    },
+    {
+      "id": "edge:transitions_to:c418bc8acc8f2cab",
+      "kind": "transitions_to",
+      "from": "effect_state:dispatched",
+      "to": "effect_state:verified",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed",
+      "attributes": {
+        "event": "verify_match"
+      }
+    },
+    {
+      "id": "edge:transitions_to:c914589bc293d923",
+      "kind": "transitions_to",
+      "from": "effect_state:uncertain",
+      "to": "effect_state:verified",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed",
+      "attributes": {
+        "event": "verify_match"
+      }
+    },
+    {
+      "id": "edge:transitions_to:cff73a0b6aa5819e",
+      "kind": "transitions_to",
+      "from": "effect_state:uncertain",
+      "to": "effect_state:failed",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed",
+      "attributes": {
+        "event": "fail"
+      }
+    },
+    {
+      "id": "edge:transitions_to:ed92be435c8896d5",
+      "kind": "transitions_to",
+      "from": "effect_state:planned",
+      "to": "effect_state:authorized",
+      "layer": "effect-semantics",
+      "source": "internal/effects/effects.go",
+      "confidence": "executed",
+      "attributes": {
+        "event": "authorize"
+      }
+    }
+  ]
+}

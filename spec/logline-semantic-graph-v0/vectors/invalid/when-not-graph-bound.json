@@ -1,0 +1,27 @@
+{
+  "caused_by": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "confirmed_by": "evidence:sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "did": "declare_semantic_node",
+  "graph_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "hashes": {
+    "algorithm": "sha256",
+    "content_hash": "27145052b85c8003498fbca9d97a59bfb0709682524b4ea9b0f8d0c726e75950",
+    "tuple_hash": "3533e3f69ad1a94c8d64b4ebbef3ac38ed30bd58ab4a8db7b49318c6dad0e3d1"
+  },
+  "id": "27145052b85c8003498fbca9d97a59bfb0709682524b4ea9b0f8d0c726e75950",
+  "if_doubt": "review_semantic_node",
+  "if_not": "reject_semantic_node",
+  "if_ok": "publish_semantic_node",
+  "json_canonicalization": "jcs-rfc8785",
+  "node_kind": "capability",
+  "node_layer": "domain",
+  "node_name": "wrong",
+  "receipt_version": "logline.receipt.v0",
+  "semantic_id": "node:wrong-when",
+  "semantic_kind": "node",
+  "semantic_profile": "logline.semantic-graph.v0",
+  "status": "declared",
+  "this": "node:wrong-when",
+  "when": "2026-09-15T00:00:00Z",
+  "who": "continuity:semantic-graph"
+}

@@ -1,0 +1,70 @@
+{
+  "profile": "logline.semantic-change.v0",
+  "who": "llm:chatgpt-gpt-5.6-sol",
+  "base_graph_digest": "0e489c2f0024b176751c7d0547714d18b6c2ec4fe668e96d648294353a84ec0d",
+  "intent": "Make semantic-change candidate lifecycle state explicit and machine-readable, with candidate/doubt state verified against eligibility.",
+  "targets": [
+    "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+    "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+    "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate"
+  ],
+  "changes": [
+    {
+      "kind": "replace_text",
+      "path": "internal/semanticchange/types.go",
+      "target_semantic_id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+      "expected_sha256": "dee99ad62fcae086ca4ee1e3fca6f5b3aaccc4ed35304ea5a229753721f0acf8",
+      "old": "const ProfileVersion = \"logline.semantic-change.v0\"\n\ntype Proposal struct {",
+      "new": "const ProfileVersion = \"logline.semantic-change.v0\"\n\ntype ChangeState string\n\nconst (\n\tChangeStateCandidate ChangeState = \"candidate\"\n\tChangeStateDoubt     ChangeState = \"doubt\"\n)\n\ntype Proposal struct {"
+    },
+    {
+      "kind": "replace_text",
+      "path": "internal/semanticchange/types.go",
+      "target_semantic_id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+      "old": "type Candidate struct {\n\tProfile               string              `json:\"profile\"`\n\tProposalID            string              `json:\"proposal_id\"`",
+      "new": "type Candidate struct {\n\tProfile               string              `json:\"profile\"`\n\tState                 ChangeState         `json:\"state\"`\n\tProposalID            string              `json:\"proposal_id\"`"
+    },
+    {
+      "kind": "replace_text",
+      "path": "internal/semanticchange/change.go",
+      "target_semantic_id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+      "expected_sha256": "a5d3f9a2e2eb2ce6b88a7877e158c971e62126d52420d178331916c62b5b9a56",
+      "old": "\tdiff := semanticgraph.Compare(base, after)\n\treceipts, evidence, err := candidateReceipts(p, pid, baseDigest, afterDigest, applied, results, diff, eligible)",
+      "new": "\tdiff := semanticgraph.Compare(base, after)\n\tstate := ChangeStateCandidate\n\tif !eligible {\n\t\tstate = ChangeStateDoubt\n\t}\n\treceipts, evidence, err := candidateReceipts(p, pid, baseDigest, afterDigest, applied, results, diff, eligible)"
+    },
+    {
+      "kind": "replace_text",
+      "path": "internal/semanticchange/change.go",
+      "target_semantic_id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.Stage",
+      "old": "\tc = Candidate{Profile: ProfileVersion, ProposalID: pid, BaseGraphDigest: baseDigest, CandidateGraphDigest: afterDigest, EligibleForAcceptance: eligible, Applied: applied, Expectations: results, Diff: diff, Receipts: receipts, Evidence: evidence}",
+      "new": "\tc = Candidate{Profile: ProfileVersion, State: state, ProposalID: pid, BaseGraphDigest: baseDigest, CandidateGraphDigest: afterDigest, EligibleForAcceptance: eligible, Applied: applied, Expectations: results, Diff: diff, Receipts: receipts, Evidence: evidence}"
+    },
+    {
+      "kind": "replace_text",
+      "path": "internal/semanticchange/change.go",
+      "target_semantic_id": "func:powerfarm.dev/continuity/v2/internal/semanticchange.VerifyCandidate",
+      "old": "\tif c.Profile != ProfileVersion {\n\t\treturn fmt.Errorf(\"candidate profile mismatch\")\n\t}\n\tpid, err := ProposalID(p)",
+      "new": "\tif c.Profile != ProfileVersion {\n\t\treturn fmt.Errorf(\"candidate profile mismatch\")\n\t}\n\twantState := ChangeStateCandidate\n\tif !c.EligibleForAcceptance {\n\t\twantState = ChangeStateDoubt\n\t}\n\tif c.State != wantState {\n\t\treturn fmt.Errorf(\"candidate state %q does not match eligibility\", c.State)\n\t}\n\tpid, err := ProposalID(p)"
+    }
+  ],
+  "expectations": [
+    {
+      "kind": "node_exists",
+      "id": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeState"
+    },
+    {
+      "kind": "node_exists",
+      "id": "const:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeStateCandidate"
+    },
+    {
+      "kind": "node_exists",
+      "id": "const:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeStateDoubt"
+    },
+    {
+      "kind": "edge_exists",
+      "relation": "references_type",
+      "from": "type:powerfarm.dev/continuity/v2/internal/semanticchange.Candidate",
+      "to": "type:powerfarm.dev/continuity/v2/internal/semanticchange.ChangeState"
+    }
+  ]
+}

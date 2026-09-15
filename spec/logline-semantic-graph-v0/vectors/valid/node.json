@@ -1,0 +1,27 @@
+{
+  "caused_by": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "confirmed_by": "evidence:sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "did": "declare_semantic_node",
+  "graph_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "hashes": {
+    "algorithm": "sha256",
+    "content_hash": "b4be67e734c6cd0a0318c57cc4509f0ad526e2abeae03456bd7396ad0c908482",
+    "tuple_hash": "7276a3cf6c64e18125f17300aaedf7d3e8b27db55656a527676af32d6bc13ae9"
+  },
+  "id": "b4be67e734c6cd0a0318c57cc4509f0ad526e2abeae03456bd7396ad0c908482",
+  "if_doubt": "review_semantic_node",
+  "if_not": "reject_semantic_node",
+  "if_ok": "publish_semantic_node",
+  "json_canonicalization": "jcs-rfc8785",
+  "node_kind": "capability",
+  "node_layer": "domain",
+  "node_name": "a",
+  "receipt_version": "logline.receipt.v0",
+  "semantic_id": "node:a",
+  "semantic_kind": "node",
+  "semantic_profile": "logline.semantic-graph.v0",
+  "status": "declared",
+  "this": "node:a",
+  "when": "graph:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "who": "continuity:semantic-graph"
+}

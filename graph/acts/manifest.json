@@ -1,0 +1,15 @@
+{
+  "evidence_count": 1961,
+  "files": [
+    "receipts.jsonl",
+    "evidence.jsonl",
+    "links.jsonl",
+    "index.json",
+    "README.md"
+  ],
+  "graph_digest": "425a4fc60c730eb3f797fc68beb65488563823d6db00f5919cec95285c759185",
+  "link_count": 4784,
+  "profile": "logline.semantic-graph.v0",
+  "receipt_count": 1961,
+  "root_receipt_id": "ee6bbf16ff2dedf10a7d7f43a7c19b1341ce9373640e7a482be1eac082618f5b"
+}

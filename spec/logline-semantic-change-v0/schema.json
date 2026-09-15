@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logline.foundation/schema/logline.semantic-change.v0.json",
+  "title": "LogLine Semantic Change v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["profile", "who", "base_graph_digest", "intent", "changes"],
+  "properties": {
+    "profile": {"const": "logline.semantic-change.v0"},
+    "who": {"type": "string", "minLength": 1},
+    "base_graph_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "intent": {"type": "string", "minLength": 1},
+    "targets": {"type": "array", "items": {"type": "string"}},
+    "changes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "path"],
+        "properties": {
+          "kind": {"enum": ["replace_text", "add_file", "delete_file"]},
+          "path": {"type": "string", "minLength": 1},
+          "target_semantic_id": {"type": "string"},
+          "expected_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "old": {"type": "string"},
+          "new": {"type": "string"},
+          "content": {"type": "string"}
+        }
+      }
+    },
+    "expectations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind"],
+        "properties": {
+          "kind": {"enum": ["node_exists", "node_absent", "edge_exists", "edge_absent"]},
+          "id": {"type": "string"},
+          "relation": {"type": "string"},
+          "from": {"type": "string"},
+          "to": {"type": "string"}
+        }
+      }
+    }
+  }
+}

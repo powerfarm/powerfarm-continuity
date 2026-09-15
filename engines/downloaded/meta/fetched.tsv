@@ -1,0 +1,20 @@
+# name	profile	kind	version_or_ref	resolved	sha256
+open-workflow-schema	core	url	1.0.3	https://open-workflow-specification.org/schemas/1.0.3/workflow.yaml	628f83fa5cf3473929bcc47f1541556ca6799d3f9d602b5928f264e4a7a76742
+mcp-go-sdk	core	github-tag	v1.6.1	modelcontextprotocol/go-sdk@v1.6.1	a161e098e8fbcd4bede636837c6e2665eba6ef39b87436c19973e3584aaaf9bd
+temporal	core	github-tag	v1.32.0	temporalio/temporal@v1.32.0	a089b27f11b6910ee2ff7e7bb429831f87f1fe3dd6d82419cef3aca24039c47c
+opa	core	github-tag	v1.20.2	open-policy-agent/opa@v1.20.2	3689adff37794f117989a0e57f55f49eb4bcf6872560368cad14624d4fd4ca88
+nats-server	core	github-tag	v2.14.6	nats-io/nats-server@v2.14.6	90aec2c35eaa94105354cbcdfb6d88cea5082415dc39409efdbe320fb66328bb
+cue	core	github-tag	v0.17.1	cue-lang/cue@v0.17.1	32279a50fdd37223ce66a1864d38914c7938e6378e256ff1ec8bb7a7be0bb0fc
+eclipse-ditto	world	github-tag	3.9.6	eclipse-ditto/ditto@3.9.6	1aec0e604321e003032aa99a4b1a4de8c304afe7ba461cef18f3298ea2aa8c12
+crossplane	world	github-tag	v2.3.4	crossplane/crossplane@v2.3.4	7100fd96fa7f9d30fde82da181f9a515f7e75bd24dee387c2c7c6b0cd92b1750
+node-wot-core	world	npm	0.9.2	@node-wot/core@0.9.2	1a14b88a1632b205e978aec3c4176465f323076a78a823174561c5b7bf9d56da
+node-wot-http	world	npm	0.9.2	@node-wot/binding-http@0.9.2	1a14b88a1632b205e978aec3c4176465f323076a78a823174561c5b7bf9d56da
+node-wot-mqtt	world	npm	0.9.2	@node-wot/binding-mqtt@0.9.2	1a14b88a1632b205e978aec3c4176465f323076a78a823174561c5b7bf9d56da
+spire	identity	github-tag	v1.15.3	spiffe/spire@v1.15.3	34ea849d0538e1aac57e86cfd95769c05785f573a333579942e58d18730676c0
+oras	packaging	github-tag	v1.3.3	oras-project/oras@v1.3.3	77170b1c2af19c4d9e0125c98b0709764534b9080de60b94fb3a2952bdce3ebf
+cosign	packaging	github-tag	v3.0.6	sigstore/cosign@v3.0.6	ea2f4094d944d79671784ba3d7601d7fdf78c15b0d92cdc4ca31b4d5cff3cd89
+wasmtime	sandbox	github-tag	v45.0.0	bytecodealliance/wasmtime@v45.0.0	9bf0ab9c873bcb4c405b81a9b5f4c61c3918201c0894f7bed8b04cbe1b3de28c
+otel-collector	observability	github-tag	v0.160.0	open-telemetry/opentelemetry-collector-releases@v0.160.0	060c0c9fa823fa36f977276c7cddc88ceba63ef2c9f11e6ae01e6bc00bce6fe8
+open62541	industrial	github-tag	v1.5.4	open62541/open62541@v1.5.4	fb5aafc19c67a91368d1f71d9ee4acf0f4b47a0d65c66db4ed738691828779c7
+paho-mqtt-c	industrial	github-tag	v1.3.16	eclipse-paho/paho.mqtt.c@v1.3.16	8b960f51edc7e03507637d987882bc486d8f4be6e79431bf99e2763344fd14c5
+libmodbus	industrial	github-tag	v3.2.0	stephane/libmodbus@v3.2.0	0c61007b2815daf452618f8b877d15cdcd376b71ad5dbd06b330d70f53b2ccaa

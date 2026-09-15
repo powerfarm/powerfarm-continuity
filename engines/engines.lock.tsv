@@ -1,0 +1,23 @@
+# name	profile	kind	version_or_ref	source	license	role
+open-workflow-schema	core	url	1.0.3	https://open-workflow-specification.org/schemas/1.0.3/workflow.yaml	Apache-2.0	Canonical workflow schema
+mcp-go-sdk	core	github-tag	v1.6.1	modelcontextprotocol/go-sdk	Apache-2.0	LLM/control tool protocol SDK
+temporal	core	github-tag	v1.32.0	temporalio/temporal	MIT	Durable orchestration
+opa	core	github-tag	v1.20.2	open-policy-agent/opa	Apache-2.0	Policy decisions
+nats-server	core	github-tag	v2.14.6	nats-io/nats-server	Apache-2.0	Edge transport and JetStream
+cue	core	github-tag	v0.17.1	cue-lang/cue	Apache-2.0	Constraints and validation
+
+eclipse-ditto	world	github-tag	3.9.6	eclipse-ditto/ditto	EPL-2.0	Desired/reported digital twin state
+crossplane	world	github-tag	v2.3.4	crossplane/crossplane	Apache-2.0	Declarative external resource reconciliation
+node-wot-core	world	npm	0.9.2	@node-wot/core	EPL-2.0 OR W3C	W3C Web of Things runtime core
+node-wot-http	world	npm	0.9.2	@node-wot/binding-http	EPL-2.0 OR W3C	WoT HTTP binding
+node-wot-mqtt	world	npm	0.9.2	@node-wot/binding-mqtt	EPL-2.0 OR W3C	WoT MQTT binding
+
+spire	identity	github-tag	v1.15.3	spiffe/spire	Apache-2.0	Workload identity
+oras	packaging	github-tag	v1.3.3	oras-project/oras	Apache-2.0	OCI artifact distribution
+cosign	packaging	github-tag	v3.0.6	sigstore/cosign	Apache-2.0	Artifact signing and verification
+wasmtime	sandbox	github-tag	v45.0.0	bytecodealliance/wasmtime	Apache-2.0 WITH LLVM-exception	Wasm component runtime
+otel-collector	observability	github-tag	v0.160.0	open-telemetry/opentelemetry-collector-releases	Apache-2.0	Telemetry collection
+
+open62541	industrial	github-tag	v1.5.4	open62541/open62541	MPL-2.0	OPC UA client/server stack
+paho-mqtt-c	industrial	github-tag	v1.3.16	eclipse-paho/paho.mqtt.c	EPL-2.0 OR EDL-1.0	MQTT C client
+libmodbus	industrial	github-tag	v3.2.0	stephane/libmodbus	LGPL-2.1+	Modbus TCP/RTU stack
