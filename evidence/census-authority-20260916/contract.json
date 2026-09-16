@@ -1,0 +1,47 @@
+{
+  "apiVersion": "powerfarm.specs/v0",
+  "kind": "HeartimeContract",
+  "metadata": {
+    "id": "pf.contract.heartime.coloured-places.census",
+    "generation": 1,
+    "subject": "pf.coloured-places",
+    "owner": "pf.danvoulez"
+  },
+  "spec": {
+    "obligationId": "census",
+    "responsibility": {
+      "id": "pf.contract.exec.coloured-places.census",
+      "generation": 1
+    },
+    "recurrence": {
+      "anchor": "2026-09-16T13:05:57Z",
+      "everySeconds": 3600
+    },
+    "graceSeconds": 300,
+    "catchUp": "latest",
+    "maxBatch": 64,
+    "overlap": "coalesce",
+    "reviewAfterSeconds": 900,
+    "handoff": {
+      "id": "pf.contract.exec.coloured-places.census",
+      "generation": 1
+    },
+    "fallback": {
+      "mode": "retry_at",
+      "reviewAfterSeconds": 900,
+      "handoff": {
+        "id": "pf.contract.exec.coloured-places.census-recovery",
+        "generation": 1
+      }
+    },
+    "planning": {
+      "planValidThrough": "2026-09-16T13:21:57Z",
+      "nextPlanningReviewAt": "2026-09-16T13:16:57Z",
+      "reviewEverySeconds": 900,
+      "handoff": {
+        "id": "pf.contract.exec.prepare-next-period",
+        "generation": 1
+      }
+    }
+  }
+}

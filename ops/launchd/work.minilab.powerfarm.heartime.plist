@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>work.minilab.powerfarm.heartime</string>
+  <!-- The ledger delivers due occurrences to the ingress on loopback. It keeps
+       its own durable state; launchd only keeps the process present. -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>@PREFIX@/bin/heartime</string>
+    <string>-db</string>
+    <string>@PREFIX@/state/heartime.db</string>
+    <string>serve</string>
+    <string>@ENDPOINT@</string>
+    <string>@PREFIX@/state/receiver.token</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ThrottleInterval</key>
+  <integer>10</integer>
+  <key>StandardOutPath</key>
+  <string>@PREFIX@/state/serve.log</string>
+  <key>StandardErrorPath</key>
+  <string>@PREFIX@/state/serve.log</string>
+</dict>
+</plist>

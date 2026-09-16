@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>work.minilab.powerfarm.ingress</string>
+  <!-- The ingress recovers from its own durable state when it starts, so being
+       restarted is an ordinary restart and never a second activation. -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>@PREFIX@/bin/heartime-ingress</string>
+    <string>-config</string>
+    <string>@PREFIX@/state/ingress.json</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ThrottleInterval</key>
+  <integer>10</integer>
+  <key>StandardOutPath</key>
+  <string>@PREFIX@/state/ingress.log</string>
+  <key>StandardErrorPath</key>
+  <string>@PREFIX@/state/ingress.log</string>
+</dict>
+</plist>

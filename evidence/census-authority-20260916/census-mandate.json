@@ -1,0 +1,36 @@
+{
+  "contract": {
+    "id": "pf.contract.exec.coloured-places.census",
+    "generation": 1
+  },
+  "owner": "pf.danvoulez",
+  "objective": "Observe what exists at one authorized place and reconcile it with what the Registry currently recognizes there. Record observations under the accepted observability contract and emit attention for discrepancies. Detection grants no repair authority: nothing is moved, admitted, deleted or fixed.",
+  "expiresAt": "2026-10-16T00:00:00Z",
+  "allowedCapabilities": [
+    "census.resolve",
+    "census.probe",
+    "census.record",
+    "census.reconcile"
+  ],
+  "maxInvocations": 1,
+  "timeoutSeconds": 240,
+  "contextBytes": 0,
+  "allowedOutput": "",
+  "noNewSpending": true,
+  "periodSeconds": 0,
+  "planningReviewAfterSeconds": 0,
+  "containmentReviewSeconds": 900,
+  "directionBoundaries": [
+    "human-only-authority",
+    "objective-change",
+    "accept-material-consequence"
+  ],
+  "census": {
+    "place": "pf.app-park.8gb",
+    "placePath": "/Users/danvoulez/App Park",
+    "placeHost": "localhost",
+    "observabilityContract": "coloured-places.observability",
+    "cohortGrant": "registry.cohort.read",
+    "repair": false
+  }
+}

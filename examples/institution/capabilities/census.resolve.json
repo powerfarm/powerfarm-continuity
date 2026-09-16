@@ -1,0 +1,21 @@
+{
+  "apiVersion": "continuity.powerfarm.dev/v2alpha1",
+  "kind": "CapabilityProfile",
+  "metadata": {
+    "name": "census.resolve",
+    "version": "0"
+  },
+  "spec": {
+    "contract": {
+      "kind": "openapi",
+      "ref": "urn:powerfarm:capability:census.resolve",
+      "op": "census.resolve"
+    },
+    "effect": {
+      "class": "observe"
+    },
+    "authorization": {
+      "mode": "policy"
+    }
+  }
+}

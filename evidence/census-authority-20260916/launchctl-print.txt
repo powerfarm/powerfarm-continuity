@@ -1,0 +1,20 @@
+# launchctl print, after kill -9 of both processes
+# 2026-09-16T14:17:04Z
+
+## work.minilab.powerfarm.heartime
+	path = /Users/danvoulez/Library/LaunchAgents/work.minilab.powerfarm.heartime.plist
+	state = running
+	program = /Users/danvoulez/powerfarm-unattended/bin/heartime
+	runs = 2
+	pid = 68758
+		state = active
+		state = active
+
+## work.minilab.powerfarm.ingress
+	path = /Users/danvoulez/Library/LaunchAgents/work.minilab.powerfarm.ingress.plist
+	state = running
+	program = /Users/danvoulez/powerfarm-unattended/bin/heartime-ingress
+	runs = 2
+	pid = 68757
+		state = active
+		state = active

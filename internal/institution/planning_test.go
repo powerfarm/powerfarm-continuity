@@ -177,7 +177,7 @@ func TestAcceptedAndConfirmedRenewalIsTheOnlyVerifiedPlanningReturn(t *testing.T
 	ledger.renewsInto(covered(coverageAfter, reviewAfter))
 
 	planning := runPlanning(t, ledger, nil)
-	if planning.Outcome != PlanningVerified {
+	if planning.Outcome != OutcomeVerified {
 		t.Fatalf("outcome %s: %s", planning.Outcome, planning.Reason)
 	}
 	if !planning.Renewed {
@@ -212,7 +212,7 @@ func TestALedgerThatRefusesTheRenewalIsFailedSoTheFallbackIsInvoked(t *testing.T
 	ledger.breaks("renew-fails")
 
 	planning := runPlanning(t, ledger, nil)
-	if planning.Outcome != PlanningFailed {
+	if planning.Outcome != OutcomeFailed {
 		t.Fatalf("a refused renewal was reported %s: %s", planning.Outcome, planning.Reason)
 	}
 	if planning.Renewed {
@@ -232,7 +232,7 @@ func TestAcceptanceTheLedgerDoesNotShowIsUncertain(t *testing.T) {
 	ledger := newLedger(t, covered(coverageBefore, "2026-09-16T12:30:00Z"))
 
 	planning := runPlanning(t, ledger, nil)
-	if planning.Outcome != PlanningUncertain {
+	if planning.Outcome != OutcomeUncertain {
 		t.Fatalf("unconfirmed acceptance was reported %s: %s", planning.Outcome, planning.Reason)
 	}
 	if planning.Renewed {
@@ -251,7 +251,7 @@ func TestALedgerThatCannotBeReadBackIsUncertain(t *testing.T) {
 			return plan, receipt, err
 		})
 	})
-	if planning.Outcome != PlanningUncertain {
+	if planning.Outcome != OutcomeUncertain {
 		t.Fatalf("an unreadable ledger was reported %s: %s", planning.Outcome, planning.Reason)
 	}
 	if len(ledger.renewals()) != 1 {
@@ -265,7 +265,7 @@ func TestNothingToPlanForIsContained(t *testing.T) {
 	ledger := newLedger(t, retired)
 
 	planning := runPlanning(t, ledger, nil)
-	if planning.Outcome != PlanningContained {
+	if planning.Outcome != OutcomeContained {
 		t.Fatalf("a retired obligation was reported %s: %s", planning.Outcome, planning.Reason)
 	}
 	if len(ledger.renewals()) != 0 {
@@ -304,7 +304,7 @@ func TestAPlanThatDoesNotExtendCoverageNeverReachesTheLedger(t *testing.T) {
 					return corrupt(plan), receipt, err
 				})
 			})
-			if planning.Outcome != PlanningFailed {
+			if planning.Outcome != OutcomeFailed {
 				t.Fatalf("an unsound plan was reported %s: %s", planning.Outcome, planning.Reason)
 			}
 			if len(ledger.renewals()) != 0 {
@@ -322,7 +322,7 @@ func TestARefusedPlanningRouteIsFailedAndRaisesTheDeclaredBoundary(t *testing.T)
 	planning := runPlanning(t, ledger, func(p *Planning) {
 		p.Planner = CommandPlanner(p.CAS, "test/planner", []string{refusal})
 	})
-	if planning.Outcome != PlanningFailed {
+	if planning.Outcome != OutcomeFailed {
 		t.Fatalf("a refused planning route was reported %s: %s", planning.Outcome, planning.Reason)
 	}
 	if planning.Attempted != 1 {
@@ -354,7 +354,7 @@ echo '{"occurrence":"%s","contract":{"id":"%s","generation":1},"responsibility":
 	planning := runPlanning(t, ledger, func(p *Planning) {
 		p.Planner = CommandPlanner(p.CAS, "external/route", []string{route})
 	})
-	if planning.Outcome != PlanningVerified {
+	if planning.Outcome != OutcomeVerified {
 		t.Fatalf("an external planner's accepted plan was reported %s: %s", planning.Outcome, planning.Reason)
 	}
 	if planning.Plan.Planner != "external/route" {
@@ -371,7 +371,7 @@ func TestTheDeterministicPlannerRefusesAMandateItCannotSatisfy(t *testing.T) {
 		// A review interval that is not shorter than the period it plans.
 		p.Mandate.PlanningReviewAfterSeconds = p.Mandate.PeriodSeconds
 	})
-	if planning.Outcome != PlanningFailed {
+	if planning.Outcome != OutcomeFailed {
 		t.Fatalf("an unsatisfiable mandate was reported %s: %s", planning.Outcome, planning.Reason)
 	}
 	if len(ledger.renewals()) != 0 {
@@ -396,7 +396,7 @@ func TestCoverageContinuesFromItsEndSoNoInstantIsUncovered(t *testing.T) {
 	if after.Plan.CoverageFrom != planningNow {
 		t.Fatalf("an ended period was backdated to %s", after.Plan.CoverageFrom)
 	}
-	if after.Outcome != PlanningVerified {
+	if after.Outcome != OutcomeVerified {
 		t.Fatalf("renewing after coverage ended was reported %s: %s", after.Outcome, after.Reason)
 	}
 }
