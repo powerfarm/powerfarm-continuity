@@ -1,7 +1,12 @@
 // Command census-turn executes one census sweep for one Heartime occurrence:
-// probe an authorized place, record observations in Antenna under an accepted
-// observability contract, verify them by independent retrieval, reconcile them
-// with a frozen cohort and emit attention. It has no repair authority.
+// resolve the currently recognized cohort of one place under an institutional
+// machine authority, freeze it for this occurrence, probe the place, record
+// observations in Antenna under the accepted observability contract, verify
+// them by independent retrieval, reconcile them and emit attention.
+//
+// What it may inventory, under which observability contract, and with which
+// Registry grant are delegated by its mandate, not chosen on the command line.
+// It has no repair authority, and its mandate may not grant one.
 package main
 
 import (
@@ -25,15 +30,22 @@ import (
 	rt "powerfarm.dev/continuity/v2/internal/runtime"
 )
 
-// censusAuthority admits read, record and reconcile capabilities only.
-type censusAuthority struct{}
+// censusAuthority admits exactly the capabilities the mandate lists, and only
+// while the mandate is unexpired. It is rechecked for every step. Repair is not
+// among them and the mandate is refused if it tries to delegate one.
+type censusAuthority struct{ mandate institution.CensusMandate }
 
-func (censusAuthority) Decide(_ context.Context, step model.BundleStep) (policy.Decision, error) {
-	switch step.Capability {
-	case institution.CapabilityCensusProbe, institution.CapabilityCensusRecord, institution.CapabilityCensusReconcile:
-		return policy.Decision{Allow: true, Reason: "read-only census under the accepted observability contract; no repair authority"}, nil
+func (a censusAuthority) Decide(_ context.Context, step model.BundleStep) (policy.Decision, error) {
+	expiresAt, err := time.Parse(time.RFC3339, a.mandate.ExpiresAt)
+	if err != nil {
+		return policy.Decision{}, err
 	}
-	return policy.Decision{Allow: false, Reason: "outside the census authority"}, nil
+	for _, admitted := range a.mandate.AllowedCapabilities {
+		if admitted == step.Capability && time.Now().Before(expiresAt) {
+			return policy.Decision{Allow: true, Reason: "read-only census capability admitted by the bounded mandate"}, nil
+		}
+	}
+	return policy.Decision{Allow: false, Reason: "outside the census mandate"}, nil
 }
 
 func main() {
@@ -45,20 +57,29 @@ func main() {
 
 func run() error {
 	root := flag.String("state", "", "application-owned directory of this census activation")
-	snapshot := flag.String("cohort", "", "Registry snapshot read by an authorized identity")
-	tokenFile := flag.String("token-file", "", "file holding the observability contract credential")
-	occurrence := flag.String("occurrence", "", "Heartime occurrence identity that activated this census")
 	assets := flag.String("assets", "examples/institution", "directory with the census graph and capability profiles")
+	mandatePath := flag.String("mandate", "", "the delegated mandate (default <assets>/census-mandate.json)")
+	occurrence := flag.String("occurrence", "", "Heartime occurrence identity that activated this census")
+	tokenFile := flag.String("token-file", "", "file holding the observability contract credential")
+	cohortEndpoint := flag.String("cohort-endpoint", "", "the Registry read that resolves the recognized cohort of a place")
+	cohortTokenFile := flag.String("cohort-token-file", "", "file holding the Registry machine service credential")
+	cohortAPIKeyFile := flag.String("cohort-apikey-file", "", "file holding the Registry publishable API key, when its HTTP surface requires one")
 	endpoint := flag.String("antenna", "https://antenna.minilab.work", "Antenna endpoint")
-	contract := flag.String("contract", "coloured-places.observability", "accepted Antenna observability contract")
-	place := flag.String("place", "pf.app-park.8gb", "identity of the inventoried place")
-	placeHost := flag.String("place-host", "lab-8gb", "SSH host of the place")
-	placePath := flag.String("place-path", "/Users/danvoulez/App Park", "directory of the place on its host")
-	responsibility := flag.String("responsibility", "pf.contract.exec.coloured-places.census", "census responsibility contract id")
 	flag.Parse()
-	if *root == "" || *snapshot == "" || *tokenFile == "" || *occurrence == "" {
-		return errors.New("-state, -cohort, -token-file and -occurrence are required")
+	if *root == "" || *occurrence == "" || *tokenFile == "" {
+		return errors.New("-state, -occurrence and -token-file are required")
 	}
+	if *mandatePath == "" {
+		*mandatePath = filepath.Join(*assets, "census-mandate.json")
+	}
+	var mandate institution.CensusMandate
+	if err := readStrictJSON(*mandatePath, &mandate); err != nil {
+		return fmt.Errorf("mandate: %w", err)
+	}
+	if err := mandate.ValidateCensus(time.Now().UTC()); err != nil {
+		return err
+	}
+
 	if err := os.MkdirAll(*root, 0o700); err != nil {
 		return err
 	}
@@ -72,43 +93,27 @@ func run() error {
 	}
 	defer syscall.Flock(int(lock.Fd()), syscall.LOCK_UN)
 
-	raw, err := os.ReadFile(*snapshot)
+	secret, err := readSecret(*tokenFile)
 	if err != nil {
 		return err
 	}
-	var cohort struct {
-		Population []struct {
-			Slug  string `json:"slug"`
-			Place string `json:"place"`
-		} `json:"population"`
-	}
-	if err := json.Unmarshal(raw, &cohort); err != nil {
+	cohortToken, err := readSecret(*cohortTokenFile)
+	if err != nil {
 		return err
 	}
-	expected := []institution.Expected{}
-	for _, member := range cohort.Population {
-		if member.Place == *place {
-			expected = append(expected, institution.Expected{ID: member.Slug, Place: member.Place})
-		}
+	cohortKey, err := readSecret(*cohortAPIKeyFile)
+	if err != nil {
+		return err
 	}
-	if len(expected) == 0 {
-		return fmt.Errorf("the cohort declares nobody at %s", *place)
-	}
+	client := &http.Client{Timeout: 70 * time.Second, CheckRedirect: func(*http.Request, []*http.Request) error { return errors.New("redirects are refused") }}
 	cas := institution.CAS{Root: filepath.Join(*root, "cas")}
-	// The cohort is frozen as exact bytes before the sweep starts.
-	cohortRef, err := cas.Put(raw, "application/json")
-	if err != nil {
-		return err
-	}
-	secret, err := os.ReadFile(*tokenFile)
-	if err != nil {
-		return err
-	}
 	census := &institution.Census{
-		Root: *root, CAS: cas, Responsibility: institution.ContractRef{ID: *responsibility, Generation: 1},
-		Cohort: cohortRef, Expected: expected, Place: *place, PlaceHost: *placeHost, PlacePath: *placePath,
-		Endpoint: *endpoint, Contract: *contract, Token: strings.TrimSpace(string(secret)), Occurrence: *occurrence,
-		HTTP: &http.Client{Timeout: 70 * time.Second, CheckRedirect: func(*http.Request, []*http.Request) error { return errors.New("redirects are refused") }},
+		Root: *root, CAS: cas, Responsibility: mandate.Contract, Mandate: mandate,
+		Endpoint: *endpoint, Token: secret, Occurrence: *occurrence, HTTP: client,
+		Authority: institution.RegistryCohort{
+			Endpoint: *cohortEndpoint, APIKey: cohortKey, Token: cohortToken,
+			Grant: mandate.Census.CohortGrant, HTTP: client,
+		},
 	}
 	graph, err := os.ReadFile(filepath.Join(*assets, "census.workflow.json"))
 	if err != nil {
@@ -127,8 +132,8 @@ func run() error {
 		return err
 	}
 	defer effects.Close()
-	executor := rt.Executor{Journal: effects, Authorizer: censusAuthority{}, Dispatcher: census}
-	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Minute)
+	executor := rt.Executor{Journal: effects, Authorizer: censusAuthority{mandate: mandate}, Dispatcher: census}
+	ctx, cancel := context.WithTimeout(context.Background(), time.Duration(mandate.TimeoutSeconds)*time.Second)
 	defer cancel()
 	for _, step := range bundle.Steps {
 		if record, err := executor.ExecuteStep(ctx, *bundle, step); err != nil {
@@ -137,5 +142,35 @@ func run() error {
 	}
 	encoder := json.NewEncoder(os.Stdout)
 	encoder.SetIndent("", "  ")
-	return encoder.Encode(map[string]any{"receiptId": census.ReceiptID, "verified": census.Verified, "cohort": cohortRef, "observations": census.ObservationRef})
+	return encoder.Encode(map[string]any{
+		"outcome": census.Outcome, "reason": census.Reason,
+		"occurrence": census.Occurrence, "place": mandate.Census.Place,
+		"cohort": census.Cohort, "manifest": census.Manifest,
+		"receiptId": census.ReceiptID, "verified": census.Verified,
+		"observations": census.ObservationRef, "directionDecision": census.Decision,
+	})
+}
+
+// readSecret reads a credential file, or returns empty when none is configured.
+// A credential never reaches a census through argv, which is recorded.
+func readSecret(path string) (string, error) {
+	if path == "" {
+		return "", nil
+	}
+	raw, err := os.ReadFile(path)
+	if err != nil {
+		return "", err
+	}
+	return strings.TrimSpace(string(raw)), nil
+}
+
+func readStrictJSON(path string, target any) error {
+	file, err := os.Open(path)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+	decoder := json.NewDecoder(file)
+	decoder.DisallowUnknownFields()
+	return decoder.Decode(target)
 }

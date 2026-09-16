@@ -60,7 +60,7 @@ The command holds an exclusive lock on the state directory, refuses to replay an
 
 `examples/institution/census.workflow.json` runs `census.probe` → `census.record` → `census.reconcile` for one Heartime occurrence (`cmd/census-turn`):
 
-1. The Registry cohort snapshot is frozen as exact bytes in CAS before the sweep.
+1. The recognized cohort of one place is resolved from the Registry under a machine service credential and frozen as an occurrence-specific manifest in CAS. There is no remembered cohort to fall back to: when no authority answers, the sweep is contained and a `DirectionDecision` is recorded. See [CENSUS-MANDATE-AND-COHORT.md](CENSUS-MANDATE-AND-COHORT.md).
 2. The probe lists directory names of one authorized place over SSH and classifies them against the members declared at that place.
 3. Observations are recorded in Antenna under the accepted observability contract. Verification retrieves them independently through Antenna's MCP interface and requires a **completed run preserving the exact payload digest**; a routed receipt is not enough.
 4. Reconciliation distinguishes recognized-expected, recognized-elsewhere, expected-absent, unrecognized-present, present-prohibited (only with an explicit rule) and unknown (inconclusive or unprobed). Cards are emitted for discrepancies only. The census has no repair, move, admit or delete capability.
@@ -69,5 +69,5 @@ The command holds an exclusive lock on the state directory, refuses to replay an
 
 - The deterministic period planner always plans the mandate's full period; `reduce_scope` is expressible but nothing decides to use it. See [PLANNING-RENEWAL.md](PLANNING-RENEWAL.md).
 - Capability profiles of in-process capabilities declare `openapi` with a URN placeholder, because Continuity v2 has no profile for bounded local capabilities.
-- The census cohort was read with the operator's authenticated Registry session, not a dedicated read-only credential. The probe covers directory names at one place.
-- The mandate and contracts are local, trusted-operator documents, not Registry admissions.
+- The Registry has no read a machine service credential can call, so the census contains at that boundary today. The probe covers directory names at one place, so presence is not liveness.
+- The mandates and contracts are local, trusted-operator documents, not Registry admissions.

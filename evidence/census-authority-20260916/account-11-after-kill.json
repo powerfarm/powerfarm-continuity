@@ -1,0 +1,138 @@
+{
+  "at": "2026-09-16T14:14:21Z",
+  "due": [
+    {
+      "id": "sha256:098ce87a3ad2c6e0c9b5f61cc66b95392366fe10d791329de94b32bd647e6494",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "kind": "work",
+      "nominal": "2026-09-16T13:05:57Z",
+      "coveredCount": 1,
+      "state": "verified",
+      "attempts": 1,
+      "acknowledged": true
+    },
+    {
+      "id": "sha256:3fdc3729a0f715fc1a388dce30aac360360834eaccbefe7e16240756f86b350f",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "kind": "planning-review",
+      "nominal": "2026-09-16T13:16:57Z",
+      "coveredCount": 1,
+      "state": "verified",
+      "attempts": 1,
+      "acknowledged": true
+    },
+    {
+      "id": "sha256:855df2b7b2377d028dc2c0aa66c9bcc0d3c666ea56d10cec8535ad66182a3670",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "kind": "planning-review",
+      "nominal": "2026-09-16T13:31:57Z",
+      "coveredCount": 1,
+      "state": "verified",
+      "attempts": 1,
+      "acknowledged": true
+    },
+    {
+      "id": "sha256:f7f1c85da075392e102d702ccaf236e1aad097b7fca2af10532a5fda2fb9f69c",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "kind": "planning-review",
+      "nominal": "2026-09-16T13:46:57Z",
+      "coveredCount": 1,
+      "state": "verified",
+      "attempts": 1,
+      "acknowledged": true
+    },
+    {
+      "id": "sha256:ff7b2da41925569d508be86f84bc6d2e504e5b37b41498d112419d774508dbbb",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "kind": "planning-review",
+      "nominal": "2026-09-16T14:01:57Z",
+      "coveredCount": 1,
+      "state": "verified",
+      "attempts": 1,
+      "acknowledged": true
+    },
+    {
+      "id": "sha256:67dff7199d45cef5e0d00ff20ae5b1216a9be2fa7a235ee2993b148266480459",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "kind": "work",
+      "nominal": "2026-09-16T14:05:57Z",
+      "coveredCount": 1,
+      "state": "verified",
+      "attempts": 1,
+      "acknowledged": true
+    },
+    {
+      "id": "sha256:bacc7dca7b82aa2f8718a8f0e6f237481b3231d366b2ef106f6c86bf65d697d2",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 2
+      },
+      "kind": "work",
+      "nominal": "2026-09-16T14:13:03Z",
+      "coveredCount": 1,
+      "state": "contained",
+      "attempts": 1,
+      "acknowledged": true
+    }
+  ],
+  "emitted": [
+    "sha256:098ce87a3ad2c6e0c9b5f61cc66b95392366fe10d791329de94b32bd647e6494",
+    "sha256:3fdc3729a0f715fc1a388dce30aac360360834eaccbefe7e16240756f86b350f",
+    "sha256:855df2b7b2377d028dc2c0aa66c9bcc0d3c666ea56d10cec8535ad66182a3670",
+    "sha256:f7f1c85da075392e102d702ccaf236e1aad097b7fca2af10532a5fda2fb9f69c",
+    "sha256:ff7b2da41925569d508be86f84bc6d2e504e5b37b41498d112419d774508dbbb",
+    "sha256:67dff7199d45cef5e0d00ff20ae5b1216a9be2fa7a235ee2993b148266480459",
+    "sha256:bacc7dca7b82aa2f8718a8f0e6f237481b3231d366b2ef106f6c86bf65d697d2"
+  ],
+  "mayHaveExecuted": [],
+  "unresolved": [],
+  "next": [
+    {
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 2
+      },
+      "subject": "work",
+      "at": "2026-09-16T14:18:03Z",
+      "overdue": false
+    },
+    {
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 2
+      },
+      "subject": "planning-review",
+      "at": "2026-09-16T14:28:33Z",
+      "overdue": false
+    }
+  ],
+  "coverage": [
+    {
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 2
+      },
+      "validUntil": "2026-09-16T14:43:33Z",
+      "ended": false
+    }
+  ],
+  "uncovered": []
+}

@@ -40,30 +40,28 @@ const (
 	CapabilityPlanningVerify   = "planning.verify"
 )
 
-// PlanningOutcome is the execution feedback a planning turn returns.
+// Outcome is the execution feedback a responsibility returns to Heartime.
 //
 // These are Heartime's four terms. They are spelled here as well as in
 // internal/ingress because neither package owns the other and neither owns the
 // vocabulary: it belongs to the Heartime Contract.
-type PlanningOutcome string
+type Outcome string
 
-// The outcomes a planning turn can reach.
+// The outcomes a responsibility can reach.
 const (
-	// PlanningVerified: Heartime accepted the renewal and an independent read
-	// established the new coverage and the next planning evaluation.
-	PlanningVerified PlanningOutcome = "verified"
-	// PlanningFailed: no renewal took effect and the ledger is unchanged. This
+	// OutcomeVerified: the relationship established its own result independently.
+	OutcomeVerified Outcome = "verified"
+	// OutcomeFailed: no renewal took effect and the ledger is unchanged. This
 	// is deliberate: an unsuccessful planning return invokes the predeclared
 	// fallback at once, which is exactly what a responsibility about to run out
 	// of coverage needs.
-	PlanningFailed PlanningOutcome = "failed"
-	// PlanningUncertain: a renewal was attempted and what the ledger now holds
+	OutcomeFailed Outcome = "failed"
+	// OutcomeUncertain: a renewal was attempted and what the ledger now holds
 	// could not be established.
-	PlanningUncertain PlanningOutcome = "uncertain"
-	// PlanningContained: there was nothing to plan for — the obligation is
-	// retired, expired or superseded — so this turn owns no active work. It
-	// never means a period was renewed.
-	PlanningContained PlanningOutcome = "contained"
+	OutcomeUncertain Outcome = "uncertain"
+	// OutcomeContained: the condition is bounded and recorded and this turn owns
+	// no active work. It never means the intended work succeeded.
+	OutcomeContained Outcome = "contained"
 )
 
 // ErrNoActiveCoverage means the ledger holds no current, renewable coverage for
@@ -365,7 +363,7 @@ type Planning struct {
 	Renewed        bool
 	Attempted      int
 	Events         []RecoveryEvent
-	Outcome        PlanningOutcome
+	Outcome        Outcome
 	Reason         string
 	Decision       *DirectionDecision
 
@@ -459,7 +457,7 @@ func (p *Planning) resolve(ctx context.Context) error {
 	}
 	coverage, found := account.CoverageOf(p.Contract)
 	if !found || coverage.Retired || coverage.Expired {
-		p.Outcome, p.Reason = PlanningContained, fmt.Sprintf("%s has no active coverage to renew (present: %t, retired: %t, expired: %t); this planning review owns no work and no institutional state was changed",
+		p.Outcome, p.Reason = OutcomeContained, fmt.Sprintf("%s has no active coverage to renew (present: %t, retired: %t, expired: %t); this planning review owns no work and no institutional state was changed",
 			p.Contract.ID, found, coverage.Retired, coverage.Expired)
 		p.Events = append(p.Events, RecoveryEvent{Stage: "resolve", Outcome: p.Reason})
 		return nil
@@ -548,17 +546,17 @@ func (p *Planning) renew(ctx context.Context) {
 // review succeeded: a produced plan is not an effect, and an exit status is not
 // evidence.
 func (p *Planning) confirm(ctx context.Context) error {
-	if p.Outcome == PlanningContained {
+	if p.Outcome == OutcomeContained {
 		return nil
 	}
 	if p.PlanRef.Digest == "" {
-		p.Outcome = PlanningFailed
+		p.Outcome = OutcomeFailed
 		p.Reason = "no sound plan was produced, so no renewal was attempted and the ledger is unchanged; the predeclared fallback is now due"
 		return nil
 	}
 	account, raw, err := p.Ledger.Account(ctx)
 	if err != nil {
-		p.Outcome = PlanningUncertain
+		p.Outcome = OutcomeUncertain
 		p.Reason = "a renewal was attempted and the ledger could not be read back, so what it now holds cannot be established: " + err.Error()
 		return nil
 	}
@@ -583,15 +581,15 @@ func (p *Planning) confirm(ctx context.Context) error {
 	p.Renewal = renewal
 	switch {
 	case p.Renewed:
-		p.Outcome = PlanningVerified
+		p.Outcome = OutcomeVerified
 		p.Reason = "Heartime accepted the renewal: coverage runs to " + p.Plan.CoverageThrough + " and the next planning evaluation is armed at " + p.Plan.NextReviewAt
 	case p.renewErr == nil:
 		// The command reported acceptance and the ledger does not show it.
 		// Nothing here can say which is true.
-		p.Outcome = PlanningUncertain
+		p.Outcome = OutcomeUncertain
 		p.Reason = "the ledger command reported acceptance but an independent read does not show the new coverage; what the ledger holds cannot be established"
 	default:
-		p.Outcome = PlanningFailed
+		p.Outcome = OutcomeFailed
 		p.Reason = "Heartime refused the renewal and the coverage is unchanged (" + p.renewErr.Error() + "); the predeclared fallback is now due"
 	}
 	p.Events = append(p.Events, RecoveryEvent{Stage: "confirm", Outcome: p.Reason, Evidence: &observation})
@@ -608,7 +606,7 @@ func (c PlanningContext) CoverageBefore() string { return c.Basis.CoverageBefore
 // names, and only failed and uncertain returns do that. Containment here is the
 // record, not a way of closing the obligation.
 func (p *Planning) contain() error {
-	if p.Renewed || p.Outcome == PlanningContained {
+	if p.Renewed || p.Outcome == OutcomeContained {
 		return nil
 	}
 	nextReview := p.now().Add(time.Duration(p.Mandate.ContainmentReviewSeconds) * time.Second).Format(utcSeconds)
