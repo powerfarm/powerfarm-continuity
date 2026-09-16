@@ -1,0 +1,9 @@
+{
+  "admission": "trusted-local-operator-cache; not Registry admission",
+  "installed": {
+    "id": "pf.contract.heartime.coloured-places.census",
+    "generation": 1,
+    "subject": "pf.coloured-places",
+    "owner": "pf.danvoulez"
+  }
+}

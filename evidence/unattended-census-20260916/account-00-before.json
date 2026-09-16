@@ -1,0 +1,38 @@
+{
+  "at": "2026-09-16T13:07:08Z",
+  "due": [],
+  "emitted": [],
+  "mayHaveExecuted": [],
+  "unresolved": [],
+  "next": [
+    {
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "subject": "work",
+      "at": "2026-09-16T13:05:57Z",
+      "overdue": true
+    },
+    {
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "subject": "planning-review",
+      "at": "2026-09-16T13:16:57Z",
+      "overdue": false
+    }
+  ],
+  "coverage": [
+    {
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "validUntil": "2026-09-16T13:21:57Z",
+      "ended": false
+    }
+  ],
+  "uncovered": []
+}

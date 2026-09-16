@@ -1,0 +1,73 @@
+{
+  "at": "2026-09-16T13:16:57Z",
+  "due": [
+    {
+      "id": "sha256:098ce87a3ad2c6e0c9b5f61cc66b95392366fe10d791329de94b32bd647e6494",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "kind": "work",
+      "nominal": "2026-09-16T13:05:57Z",
+      "coveredCount": 1,
+      "state": "verified",
+      "attempts": 1,
+      "acknowledged": true
+    },
+    {
+      "id": "sha256:3fdc3729a0f715fc1a388dce30aac360360834eaccbefe7e16240756f86b350f",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "kind": "planning-review",
+      "nominal": "2026-09-16T13:16:57Z",
+      "coveredCount": 1,
+      "state": "acknowledged",
+      "attempts": 1,
+      "acknowledged": true,
+      "reviewAt": "2026-09-16T13:31:57Z"
+    }
+  ],
+  "emitted": [
+    "sha256:098ce87a3ad2c6e0c9b5f61cc66b95392366fe10d791329de94b32bd647e6494",
+    "sha256:3fdc3729a0f715fc1a388dce30aac360360834eaccbefe7e16240756f86b350f"
+  ],
+  "mayHaveExecuted": [
+    "sha256:3fdc3729a0f715fc1a388dce30aac360360834eaccbefe7e16240756f86b350f"
+  ],
+  "unresolved": [
+    "sha256:3fdc3729a0f715fc1a388dce30aac360360834eaccbefe7e16240756f86b350f"
+  ],
+  "next": [
+    {
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "subject": "fallback",
+      "at": "2026-09-16T13:21:57Z",
+      "overdue": false
+    },
+    {
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "subject": "return:sha256:3fdc3729a0f715fc1a388dce30aac360360834eaccbefe7e16240756f86b350f",
+      "at": "2026-09-16T13:31:57Z",
+      "overdue": false
+    }
+  ],
+  "coverage": [
+    {
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "validUntil": "2026-09-16T13:21:57Z",
+      "ended": false
+    }
+  ],
+  "uncovered": []
+}
