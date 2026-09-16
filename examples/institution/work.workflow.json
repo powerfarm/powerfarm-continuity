@@ -1,0 +1,40 @@
+{
+  "document": {
+    "dsl": "1.0.3",
+    "namespace": "powerfarm",
+    "name": "continue-building-powerfarm",
+    "version": "0.1.0"
+  },
+  "do": [
+    {
+      "work-primary": {
+        "call": "work.primary"
+      }
+    },
+    {
+      "work-diagnose": {
+        "call": "work.diagnose"
+      }
+    },
+    {
+      "work-alternate": {
+        "call": "work.alternate"
+      }
+    },
+    {
+      "work-commit": {
+        "call": "work.commit"
+      }
+    },
+    {
+      "work-contain": {
+        "call": "work.contain"
+      }
+    },
+    {
+      "work-record": {
+        "call": "work.record"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "document": {
+    "dsl": "1.0.3",
+    "namespace": "powerfarm",
+    "name": "census",
+    "version": "0.1.0"
+  },
+  "do": [
+    {
+      "census-probe": {
+        "call": "census.probe"
+      }
+    },
+    {
+      "census-record": {
+        "call": "census.record"
+      }
+    },
+    {
+      "census-reconcile": {
+        "call": "census.reconcile"
+      }
+    }
+  ]
+}
