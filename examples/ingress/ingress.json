@@ -1,0 +1,48 @@
+{
+  "listen": "127.0.0.1:8787",
+  "tokenFile": "/etc/powerfarm/heartime-receiver.token",
+  "state": "/var/lib/powerfarm/ingress",
+  "report": ["/usr/local/bin/heartime", "-db", "/var/lib/powerfarm/heartime.db", "report"],
+  "sweepSeconds": 60,
+  "reviewBound": 3,
+  "routes": [
+    {
+      "name": "coloured-places census",
+      "handoff": "pf.contract.exec.coloured-places.census",
+      "kinds": ["work"],
+      "argv": [
+        "/usr/local/bin/census-turn",
+        "-state", "{stateDir}",
+        "-cohort", "/var/lib/powerfarm/census/cohort.json",
+        "-token-file", "/etc/powerfarm/observability.token",
+        "-assets", "/usr/local/share/powerfarm/institution",
+        "-occurrence", "{occurrence}"
+      ],
+      "timeoutSeconds": 240,
+      "outcome": {
+        "field": "verified",
+        "whenFalse": "uncertain"
+      }
+    },
+    {
+      "name": "build-powerfarm traceability",
+      "handoff": "pf.contract.exec.build-powerfarm",
+      "kinds": ["work"],
+      "argv": [
+        "/usr/local/bin/institution-turn",
+        "-state", "/var/lib/powerfarm/build-powerfarm",
+        "-assets", "/usr/local/share/powerfarm/institution",
+        "-test-source", "/var/lib/powerfarm/build-powerfarm/inputs/heartime_test.go",
+        "-requirements", "/var/lib/powerfarm/build-powerfarm/inputs/cases.yaml",
+        "-occurrence", "{occurrence}",
+        "-primary-name", "xai/grok",
+        "-primary", "[\"/usr/local/bin/occupant-chat\",\"-endpoint\",\"https://api.x.ai/v1/chat/completions\",\"-model\",\"grok-4.6\",\"-schema\",\"{schema}\"]"
+      ],
+      "timeoutSeconds": 600,
+      "outcome": {
+        "field": "verified",
+        "whenFalse": "contained"
+      }
+    }
+  ]
+}

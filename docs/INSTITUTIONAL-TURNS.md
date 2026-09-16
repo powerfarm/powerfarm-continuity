@@ -54,7 +54,7 @@ go build -o occupant-chat ./cmd/occupant-chat
 OCCUPANT_API_KEY="$(cat /path/to/key)" ./institution-turn -state /path/to/state -assets examples/institution -test-source /path/to/heartime_test.go -requirements /path/to/cases.yaml -occurrence sha256:... -primary-name xai/grok -primary '["./occupant-chat","-endpoint","https://api.x.ai/v1/chat/completions","-model","MODEL","-schema","{schema}"]'
 ```
 
-The command holds an exclusive lock on the state directory, refuses to replay an activation that already has a return, and prints the turn, its WakePack, the resulting state and any Direction decision. It then reports nothing by itself: the operator or a receiver reports the outcome to Heartime with the digest of the return file.
+The command holds an exclusive lock on the state directory, refuses to replay an activation that already has a return, and prints the turn, its WakePack, the resulting state and any Direction decision. It reports nothing by itself: `cmd/heartime-ingress` activates it from a Heartime delivery and returns its outcome to the ledger. See [HEARTIME-INGRESS.md](HEARTIME-INGRESS.md).
 
 ## Census sweep
 
@@ -67,8 +67,7 @@ The command holds an exclusive lock on the state directory, refuses to replay an
 
 ## Current limits
 
-- Heartime and these commands are joined by operator scripts: there is no receiver service that accepts Heartime deliveries, deduplicates by occurrence, runs the graph and reports back.
-- Planning renewal is performed by an operator adapter that binds the turn's prepared period; no planning capability graph exists yet.
+- Planning renewal is still an operator adapter binding the turn's prepared period; no planning capability graph exists yet, so an autonomous responsibility falls into fallback when its coverage ends.
 - Capability profiles of in-process capabilities declare `openapi` with a URN placeholder, because Continuity v2 has no profile for bounded local capabilities.
 - The census cohort was read with the operator's authenticated Registry session, not a dedicated read-only credential. The probe covers directory names at one place.
 - The mandate and contracts are local, trusted-operator documents, not Registry admissions.

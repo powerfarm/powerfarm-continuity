@@ -1,0 +1,30 @@
+{
+  "listen": "127.0.0.1:8799",
+  "tokenFile": "/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/live/token",
+  "state": "/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/live/ingress-state",
+  "report": [
+    "/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/heartime",
+    "-db",
+    "/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/live/heartime.db",
+    "report"
+  ],
+  "sweepSeconds": 5,
+  "routes": [
+    {
+      "name": "live-work",
+      "handoff": "pf.contract.exec.test.live-work",
+      "kinds": [
+        "work"
+      ],
+      "argv": [
+        "/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/live/route.sh",
+        "{occurrence}",
+        "{nominal}"
+      ],
+      "timeoutSeconds": 60,
+      "outcome": {
+        "field": "verified"
+      }
+    }
+  ]
+}
