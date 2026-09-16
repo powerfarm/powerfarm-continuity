@@ -29,6 +29,8 @@ Routes are selected by the **handoff** each occurrence names, because Heartime s
 
 Occurrences of one handoff are advanced in sequence, so a relationship never has two activations of its state at once. Different relationships advance independently.
 
+`planning-review` occurrences are routed like any other kind, to `cmd/planning-turn`, which renews the responsibility's coverage and returns `verified` only for a confirmed renewal — see [PLANNING-RENEWAL.md](PLANNING-RENEWAL.md). The ingress knows nothing about planning beyond the handoff it is configured to send it to.
+
 An occurrence no route serves is **contained**, not ignored: recorded, bounded, owning no active work, with a reason naming the kind and the handoff. Silence would leave Heartime reviewing it forever.
 
 ## The route contract
@@ -43,9 +45,12 @@ The intent to invoke is recorded and synced before the route's first byte runs, 
 | exceeded its time bound, or was killed by a signal | `uncertain` — fixed: it may have produced effects |
 | exited `3` | `outcome.onRefusal` (default `contained`): a credential, quota or budget refusal, reported distinctly from technical failure |
 | exited non-zero otherwise | `outcome.onFailure` (default `failed`) |
-| exited `0`, declared field `true` | `outcome.whenTrue` (default `verified`) |
-| exited `0`, declared field `false` | `outcome.whenFalse` (default `uncertain`) |
-| exited `0`, no field declared, or stdout is not a JSON object with that boolean | `outcome.onMissing` (default `uncertain`) |
+| exited `0`, declared boolean `field` is `true` | `outcome.whenTrue` (default `verified`) |
+| exited `0`, declared boolean `field` is `false` | `outcome.whenFalse` (default `uncertain`) |
+| exited `0`, declared `outcomeField` names one of Heartime's four terms | that outcome |
+| exited `0`, no field declared, or stdout is not a JSON object carrying it | `outcome.onMissing` (default `uncertain`) |
+
+A route says how its exit is read in one of two ways, never both. `field` names a boolean, for a relationship whose success is a yes or no. `outcomeField` names a string in which the route states its own outcome in Heartime's own terms, for a relationship whose outcomes are genuinely four: a planning turn tells a ledger that refused a plan apart from a ledger whose state it could not establish, and a boolean cannot carry that difference. The ingress reads what the route said and validates it; it never decides for the route.
 
 The first two rows are doctrine and cannot be configured away. The rest is the meaning the route's own configuration declares: **the ingress never infers verification**. A route that does not say how success is established has every clean exit resolved as uncertain, and the recorded reason says exactly that.
 
@@ -100,6 +105,5 @@ go build -o heartime-ingress ./cmd/heartime-ingress
 ## Recorded gaps
 
 - The ingress runs on the ledger's host because `report` and `renew` have no authenticated network surface. That is Heartime's gap, not a design choice here.
-- Nothing accepts a **planning** return: `renew` is still an operator step, so a route for `planning-review` can execute and be reported, but it cannot extend coverage. Until a planning capability exists, an autonomous responsibility falls into fallback when its coverage ends.
 - The route contract is a process boundary. Bounded in-process capabilities still have no Continuity profile.
 - The configuration is a trusted local operator document, not a Registry admission.

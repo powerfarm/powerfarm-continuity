@@ -1,0 +1,21 @@
+{
+  "apiVersion": "continuity.powerfarm.dev/v2alpha1",
+  "kind": "CapabilityProfile",
+  "metadata": {
+    "name": "planning.resolve",
+    "version": "0"
+  },
+  "spec": {
+    "contract": {
+      "kind": "openapi",
+      "ref": "urn:powerfarm:capability:planning.resolve",
+      "op": "planning.resolve"
+    },
+    "effect": {
+      "class": "observe"
+    },
+    "authorization": {
+      "mode": "policy"
+    }
+  }
+}

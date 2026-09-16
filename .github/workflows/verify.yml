@@ -25,6 +25,6 @@ jobs:
       - name: Vet
         run: go vet ./...
       - name: Staticcheck (packages under the Go Language Profile)
-        run: go run honnef.co/go/tools/cmd/staticcheck@v0.8.1 ./internal/institution/... ./internal/ingress/... ./cmd/institution-turn ./cmd/census-turn ./cmd/occupant-chat ./cmd/heartime-ingress
+        run: go run honnef.co/go/tools/cmd/staticcheck@v0.8.1 ./internal/institution/... ./internal/ingress/... ./cmd/institution-turn ./cmd/census-turn ./cmd/occupant-chat ./cmd/heartime-ingress ./cmd/planning-turn
       - name: Tests with race detector
         run: go test -race -count=1 ./...

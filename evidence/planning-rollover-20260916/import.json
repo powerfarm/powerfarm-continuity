@@ -1,0 +1,9 @@
+{
+  "admission": "trusted-local-operator-cache; not Registry admission",
+  "installed": {
+    "id": "pf.contract.heartime.test.rollover",
+    "generation": 1,
+    "subject": "pf.test",
+    "owner": "pf.danvoulez"
+  }
+}

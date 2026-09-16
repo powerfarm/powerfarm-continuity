@@ -1,0 +1,1 @@
+{"attempted":1,"events":[{"evidence":{"digest":"sha256:db53eb2e19e1d4be0e5497e7c93bb24cd6a06e39fd4c4773bc3713e636dc11b7","mediaType":"application/json","size":530},"outcome":"a plan was produced by deterministic/period","stage":"propose"}],"outcome":"","plan":{"digest":"","mediaType":"","size":0},"renewed":false,"stage":"planning.propose"}

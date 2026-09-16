@@ -99,12 +99,26 @@ func classify(route Route, stdout []byte, runErr error, timedOut bool) verdict {
 		}
 	}
 	missing := func(reason string) verdict { return verdict{route.Outcome.OnMissing, reason, false, 0} }
-	if route.Outcome.Field == "" {
+	if route.Outcome.Field == "" && route.Outcome.OutcomeField == "" {
 		return missing("the route exited cleanly but declares no field by which success is established")
 	}
 	var reported map[string]json.RawMessage
 	if err := json.Unmarshal(bytes.TrimSpace(stdout), &reported); err != nil {
 		return missing("the route exited cleanly but did not return a JSON object")
+	}
+	if field := route.Outcome.OutcomeField; field != "" {
+		raw, present := reported[field]
+		if !present {
+			return missing(fmt.Sprintf("the route exited cleanly without the declared field %q", field))
+		}
+		var stated Outcome
+		if err := json.Unmarshal(raw, &stated); err != nil {
+			return missing(fmt.Sprintf("the route's field %q is not a string", field))
+		}
+		if !validOutcome(stated) {
+			return missing(fmt.Sprintf("the route stated %q, which Heartime does not accept", stated))
+		}
+		return verdict{stated, fmt.Sprintf("the route exited 0 stating %s", stated), false, 0}
 	}
 	raw, present := reported[route.Outcome.Field]
 	if !present {

@@ -2,7 +2,9 @@ package bus
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
+	"io"
 	"net"
 	"strings"
 	"testing"
@@ -26,6 +28,14 @@ func TestPublish(t *testing.T) {
 		fmt.Fprint(c, "INFO {\"server_id\":\"test\"}\r\n")
 		for {
 			line, err := r.ReadString('\n')
+			// Publish closes its connection when it is done, so end of file is
+			// how this exchange ends, not a failure. Reporting it as one made
+			// the test fail whenever this goroutine noticed the close before
+			// the test read the channel.
+			if errors.Is(err, io.EOF) {
+				done <- nil
+				return
+			}
 			if err != nil {
 				done <- err
 				return
@@ -70,11 +80,9 @@ func TestPublish(t *testing.T) {
 	if err := Publish(ln.Addr().String(), "continuity.test", []byte("hello")); err != nil {
 		t.Fatal(err)
 	}
-	select {
-	case err := <-done:
-		if err != nil {
-			t.Fatal(err)
-		}
-	default:
+	// Wait for the server to finish, so the payload it checked is actually
+	// asserted rather than raced past.
+	if err := <-done; err != nil {
+		t.Fatal(err)
 	}
 }
