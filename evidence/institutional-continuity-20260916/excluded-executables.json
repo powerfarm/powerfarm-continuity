@@ -1,0 +1,17 @@
+[
+  {
+    "digest": "sha256:2c05e1718b8eea7611a78464ecbae5558eb151aa6b37af1781bfcc8d85793236",
+    "bytes": 6524866,
+    "reason": "executable copied into CAS by the first version of institution-turn"
+  },
+  {
+    "digest": "sha256:6d72088932754cec151db416df4a8f59c5c966e617412895d182848be2410b9f",
+    "bytes": 6524866,
+    "reason": "executable copied into CAS by the first version of institution-turn"
+  },
+  {
+    "digest": "sha256:d6bb7cb529b19e83c977188e75fd828bd8d55d7e20558a13911797ee29b8187b",
+    "bytes": 6524882,
+    "reason": "executable copied into CAS by the first version of institution-turn"
+  }
+]

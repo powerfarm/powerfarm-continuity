@@ -1,0 +1,549 @@
+{
+  "effect_events": [
+    {
+      "id": 1,
+      "effect_id": "eff_7084a2649b1b698f512f89eca68e87c8",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T10:36:16.826607Z",
+      "details_json": {
+        "reason": "read-only census under the accepted observability contract; no repair authority"
+      }
+    },
+    {
+      "id": 2,
+      "effect_id": "eff_7084a2649b1b698f512f89eca68e87c8",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T10:36:16.826868Z",
+      "details_json": {
+        "capability": "census.probe"
+      }
+    },
+    {
+      "id": 3,
+      "effect_id": "eff_7084a2649b1b698f512f89eca68e87c8",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T10:36:17.232973Z",
+      "details_json": {
+        "output": {
+          "observations": {
+            "digest": "sha256:a7ef97c7c194938e6aab44177afe67e7434b285aac3d41a934cb00d4f80b4853",
+            "mediaType": "application/json",
+            "size": 1126
+          },
+          "stage": "census.probe"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "effect_id": "eff_7084a2649b1b698f512f89eca68e87c8",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T10:36:17.235631Z",
+      "details_json": {
+        "observation": {
+          "observations": {
+            "digest": "sha256:a7ef97c7c194938e6aab44177afe67e7434b285aac3d41a934cb00d4f80b4853",
+            "mediaType": "application/json",
+            "size": 1126
+          },
+          "stage": "census.probe"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "effect_id": "eff_90379fc6eb5c1249d8471f99257b6086",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T10:36:17.236742Z",
+      "details_json": {
+        "reason": "read-only census under the accepted observability contract; no repair authority"
+      }
+    },
+    {
+      "id": 6,
+      "effect_id": "eff_90379fc6eb5c1249d8471f99257b6086",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T10:36:17.23737Z",
+      "details_json": {
+        "capability": "census.record"
+      }
+    },
+    {
+      "id": 7,
+      "effect_id": "eff_90379fc6eb5c1249d8471f99257b6086",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T10:36:25.07512Z",
+      "details_json": {
+        "output": {
+          "receipt": {
+            "correlation_id": "cor_01a0a9c9eb3378808b3f2ee85b66b04e",
+            "digest": "a6aaf38e457ba2d8deeca224486da542ea7588fd3586a2557ca4d8ca7c95a8c0",
+            "receipt_id": "rcp_01a0a9c9eb3378808b3f2ef52307248b",
+            "result": {
+              "capability": "service.invoke",
+              "contract_id": "f5bde058-9e7e-465d-9938-9744046cb5a1",
+              "contract_sha256": "27ae1700cb25feaa05317e56e1dd68f4ab4434ff552d5b0b3dcf3c25ea3b4147",
+              "definition_sha256": "15b27ae3c4a42a5ef6487722e0412073e7f0303c91ecd751990fc5428513fd11",
+              "outputs": {
+                "inspect": {
+                  "capability": "document.inspect",
+                  "observation": {
+                    "declared_content_type": "application/json",
+                    "digest": "a6aaf38e457ba2d8deeca224486da542ea7588fd3586a2557ca4d8ca7c95a8c0",
+                    "size_bytes": 1030,
+                    "sniffed_content_type": "application/json",
+                    "structure": {
+                      "kind": "json",
+                      "top_level": [
+                        "cohort",
+                        "event",
+                        "observationRef",
+                        "observations",
+                        "occurrence",
+                        "source"
+                      ]
+                    }
+                  }
+                },
+                "preserve": {
+                  "capability": "object.store",
+                  "content_type": "application/json",
+                  "digest": "a6aaf38e457ba2d8deeca224486da542ea7588fd3586a2557ca4d8ca7c95a8c0",
+                  "size_bytes": 1030
+                }
+              },
+              "result": {
+                "capability": "document.inspect",
+                "observation": {
+                  "declared_content_type": "application/json",
+                  "digest": "a6aaf38e457ba2d8deeca224486da542ea7588fd3586a2557ca4d8ca7c95a8c0",
+                  "size_bytes": 1030,
+                  "sniffed_content_type": "application/json",
+                  "structure": {
+                    "kind": "json",
+                    "top_level": [
+                      "cohort",
+                      "event",
+                      "observationRef",
+                      "observations",
+                      "occurrence",
+                      "source"
+                    ]
+                  }
+                }
+              }
+            },
+            "run_id": "run_01a0a9c9eb377a2388c46837701d7698",
+            "status": "completed"
+          },
+          "stage": "census.record"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "effect_id": "eff_90379fc6eb5c1249d8471f99257b6086",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T10:36:25.129123Z",
+      "details_json": {
+        "observation": {
+          "id": 1,
+          "jsonrpc": "2.0",
+          "result": {
+            "_meta": {
+              "antenna/correlation_id": "cor_01a0a9ca08fb79328b35e534640480a6",
+              "antenna/receipt_id": "rcp_01a0a9ca08fb79328b35e5498712e225",
+              "io.modelcontextprotocol/serverInfo": {
+                "name": "antenna",
+                "version": "0.1.0"
+              }
+            },
+            "content": [
+              {
+                "text": "{\n  \"capability\": \"mcp.dispatch\",\n  \"tool\": \"invoke_service\",\n  \"result\": {\n    \"receipt_id\": \"rcp_01a0a9c9eb3378808b3f2ef52307248b\",\n    \"status\": \"routed\",\n    \"runs\": [\n      {\n        \"id\": \"run_01a0a9c9eb377a2388c46837701d7698\",\n        \"receipt_id\": \"rcp_01a0a9c9eb3378808b3f2ef52307248b\",\n        \"capability\": \"service.invoke\",\n        \"status\": \"completed\",\n        \"output\": \"{\\\"capability\\\":\\\"service.invoke\\\",\\\"contract_id\\\":\\\"f5bde058-9e7e-465d-9938-9744046cb5a1\\\",\\\"contract_sha256\\\":\\\"27ae1700cb25feaa05317e56e1dd68f4ab4434ff552d5b0b3dcf3c25ea3b4147\\\",\\\"definition_sha256\\\":\\\"15b27ae3c4a42a5ef6487722e0412073e7f0303c91ecd751990fc5428513fd11\\\",\\\"result\\\":{\\\"capability\\\":\\\"document.inspect\\\",\\\"observation\\\":{\\\"digest\\\":\\\"a6aaf38e457ba2d8deeca224486da542ea7588fd3586a2557ca4d8ca7c95a8c0\\\",\\\"size_bytes\\\":1030,\\\"sniffed_content_type\\\":\\\"application/json\\\",\\\"declared_content_type\\\":\\\"application/json\\\",\\\"structure\\\":{\\\"kind\\\":\\\"json\\\",\\\"top_level\\\":[\\\"cohort\\\",\\\"event\\\",\\\"observationRef\\\",\\\"observations\\\",\\\"occurrence\\\",\\\"source\\\"]}}},\\\"outputs\\\":{\\\"preserve\\\":{\\\"capability\\\":\\\"object.store\\\",\\\"digest\\\":\\\"a6aaf38e457ba2d8deeca224486da542ea7588fd3586a2557ca4d8ca7c95a8c0\\\",\\\"size_bytes\\\":1030,\\\"content_type\\\":\\\"application/json\\\"},\\\"inspect\\\":{\\\"capability\\\":\\\"document.inspect\\\",\\\"observation\\\":{\\\"digest\\\":\\\"a6aaf38e457ba2d8deeca224486da542ea7588fd3586a2557ca4d8ca7c95a8c0\\\",\\\"size_bytes\\\":1030,\\\"sniffed_content_type\\\":\\\"application/json\\\",\\\"declared_content_type\\\":\\\"application/json\\\",\\\"structure\\\":{\\\"kind\\\":\\\"json\\\",\\\"top_level\\\":[\\\"cohort\\\",\\\"event\\\",\\\"observationRef\\\",\\\"observations\\\",\\\"occurrence\\\",\\\"source\\\"]}}}}}\",\n        \"error\": null,\n        \"created_at\": \"2026-09-16T10:36:17.591623Z\",\n        \"completed_at\": \"2026-09-16T10:36:25.155730Z\"\n      }\n    ],\n    \"deliveries\": [\n      {\n        \"id\": \"dlv_01a0a9ca08c37d53b4ff070d6c6bc0c0\",\n        \"receipt_id\": \"rcp_01a0a9c9eb3378808b3f2ef52307248b\",\n        \"run_id\": \"run_01a0a9c9eb377a2388c46837701d7698\",\n        \"correlation_id\": \"cor_01a0a9c9eb3378808b3f2ee85b66b04e\",\n        \"destination\": \"return-path:active-response:cor_01a0a9c9eb3378808b3f2ee85b66b04e\",\n        \"transport\": \"return-path\",\n        \"idempotency_key\": \"return:cor_01a0a9c9eb3378808b3f2ee85b66b04e\",\n        \"content_type\": \"application/json\",\n        \"attempt\": 1,\n        \"max_attempts\": 5,\n        \"status\": \"completed\",\n        \"resumed_uncertain\": 0,\n        \"created_at\": \"2026-09-16T10:36:25.155382Z\",\n        \"completed_at\": \"2026-09-16T10:36:25.159678Z\",\n        \"last_error\": null,\n        \"authority\": \"{\\\"decision\\\":\\\"granted\\\",\\\"reason\\\":\\\"return path for an accepted receipt\\\"}\",\n        \"telemetry\": \"{\\\"trace_id\\\":\\\"b95ba8f16656421387f7d6e9f7e916f5\\\",\\\"span_id\\\":\\\"fbcf45c9dc3f4026\\\",\\\"traceparent\\\":\\\"00-b95ba8f16656421387f7d6e9f7e916f5-fbcf45c9dc3f4026-01\\\"}\"\n      }\n    ]\n  }\n}",
+                "type": "text"
+              }
+            ],
+            "isError": false,
+            "resultType": "complete",
+            "structuredContent": {
+              "capability": "mcp.dispatch",
+              "result": {
+                "deliveries": [
+                  {
+                    "attempt": 1,
+                    "authority": "{\"decision\":\"granted\",\"reason\":\"return path for an accepted receipt\"}",
+                    "completed_at": "2026-09-16T10:36:25.159678Z",
+                    "content_type": "application/json",
+                    "correlation_id": "cor_01a0a9c9eb3378808b3f2ee85b66b04e",
+                    "created_at": "2026-09-16T10:36:25.155382Z",
+                    "destination": "return-path:active-response:cor_01a0a9c9eb3378808b3f2ee85b66b04e",
+                    "id": "dlv_01a0a9ca08c37d53b4ff070d6c6bc0c0",
+                    "idempotency_key": "return:cor_01a0a9c9eb3378808b3f2ee85b66b04e",
+                    "last_error": null,
+                    "max_attempts": 5,
+                    "receipt_id": "rcp_01a0a9c9eb3378808b3f2ef52307248b",
+                    "resumed_uncertain": 0,
+                    "run_id": "run_01a0a9c9eb377a2388c46837701d7698",
+                    "status": "completed",
+                    "telemetry": "{\"trace_id\":\"b95ba8f16656421387f7d6e9f7e916f5\",\"span_id\":\"fbcf45c9dc3f4026\",\"traceparent\":\"00-b95ba8f16656421387f7d6e9f7e916f5-fbcf45c9dc3f4026-01\"}",
+                    "transport": "return-path"
+                  }
+                ],
+                "receipt_id": "rcp_01a0a9c9eb3378808b3f2ef52307248b",
+                "runs": [
+                  {
+                    "capability": "service.invoke",
+                    "completed_at": "2026-09-16T10:36:25.155730Z",
+                    "created_at": "2026-09-16T10:36:17.591623Z",
+                    "error": null,
+                    "id": "run_01a0a9c9eb377a2388c46837701d7698",
+                    "output": "{\"capability\":\"service.invoke\",\"contract_id\":\"f5bde058-9e7e-465d-9938-9744046cb5a1\",\"contract_sha256\":\"27ae1700cb25feaa05317e56e1dd68f4ab4434ff552d5b0b3dcf3c25ea3b4147\",\"definition_sha256\":\"15b27ae3c4a42a5ef6487722e0412073e7f0303c91ecd751990fc5428513fd11\",\"result\":{\"capability\":\"document.inspect\",\"observation\":{\"digest\":\"a6aaf38e457ba2d8deeca224486da542ea7588fd3586a2557ca4d8ca7c95a8c0\",\"size_bytes\":1030,\"sniffed_content_type\":\"application/json\",\"declared_content_type\":\"application/json\",\"structure\":{\"kind\":\"json\",\"top_level\":[\"cohort\",\"event\",\"observationRef\",\"observations\",\"occurrence\",\"source\"]}}},\"outputs\":{\"preserve\":{\"capability\":\"object.store\",\"digest\":\"a6aaf38e457ba2d8deeca224486da542ea7588fd3586a2557ca4d8ca7c95a8c0\",\"size_bytes\":1030,\"content_type\":\"application/json\"},\"inspect\":{\"capability\":\"document.inspect\",\"observation\":{\"digest\":\"a6aaf38e457ba2d8deeca224486da542ea7588fd3586a2557ca4d8ca7c95a8c0\",\"size_bytes\":1030,\"sniffed_content_type\":\"application/json\",\"declared_content_type\":\"application/json\",\"structure\":{\"kind\":\"json\",\"top_level\":[\"cohort\",\"event\",\"observationRef\",\"observations\",\"occurrence\",\"source\"]}}}}}",
+                    "receipt_id": "rcp_01a0a9c9eb3378808b3f2ef52307248b",
+                    "status": "completed"
+                  }
+                ],
+                "status": "routed"
+              },
+              "tool": "invoke_service"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 9,
+      "effect_id": "eff_f8906e28116c4a2feab31da0c38f2a36",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T10:36:25.129829Z",
+      "details_json": {
+        "reason": "read-only census under the accepted observability contract; no repair authority"
+      }
+    },
+    {
+      "id": 10,
+      "effect_id": "eff_f8906e28116c4a2feab31da0c38f2a36",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T10:36:25.130259Z",
+      "details_json": {
+        "capability": "census.reconcile"
+      }
+    },
+    {
+      "id": 11,
+      "effect_id": "eff_f8906e28116c4a2feab31da0c38f2a36",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T10:36:25.155698Z",
+      "details_json": {
+        "output": {
+          "cards": [
+            {
+              "id": "sha256:ac6e778edfc8e6c43c0ddf6cce0984b56555643d8293d2c23d79db204c97bd32",
+              "subject": "unrecognized-directory:cockpit",
+              "responsibility": {
+                "id": "pf.contract.exec.coloured-places.census",
+                "generation": 1
+              },
+              "reason": "unresolved",
+              "evidence": [
+                {
+                  "digest": "sha256:a7ef97c7c194938e6aab44177afe67e7434b285aac3d41a934cb00d4f80b4853",
+                  "mediaType": "application/json",
+                  "size": 1126
+                }
+              ],
+              "salience": 1,
+              "expiresAt": "2026-09-16T10:46:25Z"
+            },
+            {
+              "id": "sha256:649ca1112f7baaa194785b57a37f4cecfbb6b357f643f7151e129d89be343e1a",
+              "subject": "unrecognized-directory:work-graph",
+              "responsibility": {
+                "id": "pf.contract.exec.coloured-places.census",
+                "generation": 1
+              },
+              "reason": "unresolved",
+              "evidence": [
+                {
+                  "digest": "sha256:a7ef97c7c194938e6aab44177afe67e7434b285aac3d41a934cb00d4f80b4853",
+                  "mediaType": "application/json",
+                  "size": 1126
+                }
+              ],
+              "salience": 1,
+              "expiresAt": "2026-09-16T10:46:25Z"
+            },
+            {
+              "id": "sha256:fb07c2099eafa928f6bd97aae0f251b808896884984c208b1a43093eb7b4b2ff",
+              "subject": "unrecognized-directory:zelador",
+              "responsibility": {
+                "id": "pf.contract.exec.coloured-places.census",
+                "generation": 1
+              },
+              "reason": "unresolved",
+              "evidence": [
+                {
+                  "digest": "sha256:a7ef97c7c194938e6aab44177afe67e7434b285aac3d41a934cb00d4f80b4853",
+                  "mediaType": "application/json",
+                  "size": 1126
+                }
+              ],
+              "salience": 1,
+              "expiresAt": "2026-09-16T10:46:25Z"
+            },
+            {
+              "id": "sha256:18ae06861b59b68fef07239e2bca2f1f642caaa25759961e4cbbbbad1ce21b88",
+              "subject": "unrecognized-directory:zelador-grid",
+              "responsibility": {
+                "id": "pf.contract.exec.coloured-places.census",
+                "generation": 1
+              },
+              "reason": "unresolved",
+              "evidence": [
+                {
+                  "digest": "sha256:a7ef97c7c194938e6aab44177afe67e7434b285aac3d41a934cb00d4f80b4853",
+                  "mediaType": "application/json",
+                  "size": 1126
+                }
+              ],
+              "salience": 1,
+              "expiresAt": "2026-09-16T10:46:25Z"
+            }
+          ],
+          "cohort": {
+            "digest": "sha256:706b00951fa0d476d03b903895f2c82cb378b5e48f0ac44b627033ae6ebf99ac",
+            "mediaType": "application/json",
+            "size": 1300
+          },
+          "discrepancies": [
+            {
+              "id": "pf.coloured-places",
+              "class": "recognized-expected",
+              "expectedPlace": "pf.app-park.8gb",
+              "observedPlace": "pf.app-park.8gb"
+            },
+            {
+              "id": "unrecognized-directory:cockpit",
+              "class": "unrecognized-present",
+              "observedPlace": "pf.app-park.8gb"
+            },
+            {
+              "id": "unrecognized-directory:work-graph",
+              "class": "unrecognized-present",
+              "observedPlace": "pf.app-park.8gb"
+            },
+            {
+              "id": "unrecognized-directory:zelador",
+              "class": "unrecognized-present",
+              "observedPlace": "pf.app-park.8gb"
+            },
+            {
+              "id": "unrecognized-directory:zelador-grid",
+              "class": "unrecognized-present",
+              "observedPlace": "pf.app-park.8gb"
+            }
+          ],
+          "receiptId": "rcp_01a0a9c9eb3378808b3f2ef52307248b",
+          "reconciliation": {
+            "digest": "sha256:06715e50809c56161bb798ea134859e5306410f59b547567ad63760869439f1d",
+            "mediaType": "application/json",
+            "size": 555
+          },
+          "stage": "census.reconcile"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "effect_id": "eff_f8906e28116c4a2feab31da0c38f2a36",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T10:36:25.156699Z",
+      "details_json": {
+        "observation": {
+          "cards": [
+            {
+              "evidence": [
+                {
+                  "digest": "sha256:a7ef97c7c194938e6aab44177afe67e7434b285aac3d41a934cb00d4f80b4853",
+                  "mediaType": "application/json",
+                  "size": 1126
+                }
+              ],
+              "expiresAt": "2026-09-16T10:46:25Z",
+              "id": "sha256:ac6e778edfc8e6c43c0ddf6cce0984b56555643d8293d2c23d79db204c97bd32",
+              "reason": "unresolved",
+              "responsibility": {
+                "generation": 1,
+                "id": "pf.contract.exec.coloured-places.census"
+              },
+              "salience": 1,
+              "subject": "unrecognized-directory:cockpit"
+            },
+            {
+              "evidence": [
+                {
+                  "digest": "sha256:a7ef97c7c194938e6aab44177afe67e7434b285aac3d41a934cb00d4f80b4853",
+                  "mediaType": "application/json",
+                  "size": 1126
+                }
+              ],
+              "expiresAt": "2026-09-16T10:46:25Z",
+              "id": "sha256:649ca1112f7baaa194785b57a37f4cecfbb6b357f643f7151e129d89be343e1a",
+              "reason": "unresolved",
+              "responsibility": {
+                "generation": 1,
+                "id": "pf.contract.exec.coloured-places.census"
+              },
+              "salience": 1,
+              "subject": "unrecognized-directory:work-graph"
+            },
+            {
+              "evidence": [
+                {
+                  "digest": "sha256:a7ef97c7c194938e6aab44177afe67e7434b285aac3d41a934cb00d4f80b4853",
+                  "mediaType": "application/json",
+                  "size": 1126
+                }
+              ],
+              "expiresAt": "2026-09-16T10:46:25Z",
+              "id": "sha256:fb07c2099eafa928f6bd97aae0f251b808896884984c208b1a43093eb7b4b2ff",
+              "reason": "unresolved",
+              "responsibility": {
+                "generation": 1,
+                "id": "pf.contract.exec.coloured-places.census"
+              },
+              "salience": 1,
+              "subject": "unrecognized-directory:zelador"
+            },
+            {
+              "evidence": [
+                {
+                  "digest": "sha256:a7ef97c7c194938e6aab44177afe67e7434b285aac3d41a934cb00d4f80b4853",
+                  "mediaType": "application/json",
+                  "size": 1126
+                }
+              ],
+              "expiresAt": "2026-09-16T10:46:25Z",
+              "id": "sha256:18ae06861b59b68fef07239e2bca2f1f642caaa25759961e4cbbbbad1ce21b88",
+              "reason": "unresolved",
+              "responsibility": {
+                "generation": 1,
+                "id": "pf.contract.exec.coloured-places.census"
+              },
+              "salience": 1,
+              "subject": "unrecognized-directory:zelador-grid"
+            }
+          ],
+          "cohort": {
+            "digest": "sha256:706b00951fa0d476d03b903895f2c82cb378b5e48f0ac44b627033ae6ebf99ac",
+            "mediaType": "application/json",
+            "size": 1300
+          },
+          "discrepancies": [
+            {
+              "class": "recognized-expected",
+              "expectedPlace": "pf.app-park.8gb",
+              "id": "pf.coloured-places",
+              "observedPlace": "pf.app-park.8gb"
+            },
+            {
+              "class": "unrecognized-present",
+              "id": "unrecognized-directory:cockpit",
+              "observedPlace": "pf.app-park.8gb"
+            },
+            {
+              "class": "unrecognized-present",
+              "id": "unrecognized-directory:work-graph",
+              "observedPlace": "pf.app-park.8gb"
+            },
+            {
+              "class": "unrecognized-present",
+              "id": "unrecognized-directory:zelador",
+              "observedPlace": "pf.app-park.8gb"
+            },
+            {
+              "class": "unrecognized-present",
+              "id": "unrecognized-directory:zelador-grid",
+              "observedPlace": "pf.app-park.8gb"
+            }
+          ],
+          "receiptId": "rcp_01a0a9c9eb3378808b3f2ef52307248b",
+          "reconciliation": {
+            "digest": "sha256:06715e50809c56161bb798ea134859e5306410f59b547567ad63760869439f1d",
+            "mediaType": "application/json",
+            "size": 555
+          },
+          "stage": "census.reconcile"
+        }
+      }
+    }
+  ],
+  "effects": [
+    {
+      "effect_id": "eff_7084a2649b1b698f512f89eca68e87c8",
+      "bundle_digest": "sha256:a8a958c177f0a43f875eda3812d11c5dbe8c99adf0f6496c99d3d2ebe05c6836",
+      "step_name": "census-probe",
+      "capability": "census.probe",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T10:36:17.235631Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_90379fc6eb5c1249d8471f99257b6086",
+      "bundle_digest": "sha256:a8a958c177f0a43f875eda3812d11c5dbe8c99adf0f6496c99d3d2ebe05c6836",
+      "step_name": "census-record",
+      "capability": "census.record",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T10:36:25.129123Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_f8906e28116c4a2feab31da0c38f2a36",
+      "bundle_digest": "sha256:a8a958c177f0a43f875eda3812d11c5dbe8c99adf0f6496c99d3d2ebe05c6836",
+      "step_name": "census-reconcile",
+      "capability": "census.reconcile",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T10:36:25.156699Z",
+      "last_error": ""
+    }
+  ],
+  "sqlite_sequence": [
+    {
+      "name": "effect_events",
+      "seq": 12
+    }
+  ]
+}

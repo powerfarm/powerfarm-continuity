@@ -1,0 +1,33 @@
+{
+  "contract": {
+    "id": "pf.contract.exec.build-powerfarm",
+    "generation": 1
+  },
+  "owner": "pf.danvoulez",
+  "objective": "Continue building Powerfarm by maintaining a traceability dataset from current Heartime tests and institutional conformance requirements. Extend the existing dataset from current state; preserve evidence and prepare the next bounded period.",
+  "expiresAt": "2026-10-16T00:00:00Z",
+  "allowedCapabilities": [
+    "work.primary",
+    "work.diagnose",
+    "work.alternate",
+    "work.commit",
+    "work.contain",
+    "work.record"
+  ],
+  "maxInvocations": 2,
+  "timeoutSeconds": 180,
+  "contextBytes": 60000,
+  "allowedOutput": "conformance-map.json",
+  "noNewSpending": true,
+  "periodSeconds": 7200,
+  "planningReviewAfterSeconds": 3600,
+  "containmentReviewSeconds": 300,
+  "directionBoundaries": [
+    "objective-change",
+    "external-commitment",
+    "material-new-budget",
+    "human-only-authority",
+    "unavailable-human-controlled-credential",
+    "accept-material-consequence"
+  ]
+}

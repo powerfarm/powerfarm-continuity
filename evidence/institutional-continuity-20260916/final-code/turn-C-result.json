@@ -1,0 +1,22 @@
+{
+  "directionDecision": null,
+  "invocations": 1,
+  "state": {
+    "period": 3,
+    "dataset": {
+      "digest": "sha256:6d30400c7560923e26df64a835a190d3a8230bed4a31da379ac1cbc82026e283",
+      "mediaType": "application/json",
+      "size": 6199
+    },
+    "coverageThrough": "2026-09-16T12:51:50Z",
+    "nextReviewAt": "2026-09-16T11:51:50Z",
+    "lastTurn": "b53d29a5df9d2183ef4a6c4faed0fb317341b6882adcd6c4c531640b29c65d05"
+  },
+  "turn": "b53d29a5df9d2183ef4a6c4faed0fb317341b6882adcd6c4c531640b29c65d05",
+  "verified": true,
+  "wakePack": {
+    "digest": "sha256:9bdd2aedb0f15d76f2d2b6a7446d8f528ea8047b0176be22bee09b8db7c38beb",
+    "mediaType": "application/json",
+    "size": 2246
+  }
+}

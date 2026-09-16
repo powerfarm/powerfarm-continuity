@@ -1,0 +1,22 @@
+{
+  "capturedAt": "2026-09-16T09:41:51.576314Z",
+  "scope": "authorized top-level App Park and Engine Park inventory; no mutation",
+  "places": {
+    "/Users/danvoulez/App Park": [
+      ".DS_Store",
+      "zelador-grid",
+      "cockpit",
+      "work-graph",
+      "README.md",
+      "zelador",
+      "coloured-places"
+    ],
+    "/Users/danvoulez/Engine Park": [
+      ".DS_Store",
+      "bin",
+      "README.md",
+      "live",
+      "build-capital.sh"
+    ]
+  }
+}

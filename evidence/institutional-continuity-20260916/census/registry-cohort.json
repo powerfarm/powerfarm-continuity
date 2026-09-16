@@ -1,0 +1,103 @@
+{
+  "source": "Powerfarm Registry / Supabase / authenticated operator read",
+  "capturedAt": "2026-09-16T09:41:51.265Z",
+  "scope": "selected registered apps and places; not complete population",
+  "population": [
+    {
+      "id": "0aaaab3a-6da0-44e6-8f94-1a67fdf13372",
+      "slug": "pf.app-park.8gb",
+      "kind": "place",
+      "metadata": {
+        "path": "/Users/danvoulez/App Park",
+        "slug": "pf.app-park.8gb",
+        "owner": "pf.danvoulez",
+        "title": "App Park 8GB",
+        "machine": "pf.lab-8gb",
+        "park_type": "app-park"
+      }
+    },
+    {
+      "id": "2cdc8c20-9224-4a99-99e3-f20f0f039e48",
+      "slug": "pf.engine-park.8gb",
+      "kind": "place",
+      "metadata": {
+        "path": "/Users/danvoulez/Engine Park",
+        "slug": "pf.engine-park.8gb",
+        "owner": "pf.danvoulez",
+        "title": "Engine Park 8GB",
+        "machine": "pf.lab-8gb",
+        "park_type": "engine-park"
+      }
+    },
+    {
+      "id": "9c78de50-e360-4cbd-ac9e-52b65e641be0",
+      "slug": "pf.antenna",
+      "kind": "app",
+      "metadata": {
+        "slug": "pf.antenna",
+        "owner": "pf.danvoulez",
+        "title": "Antenna",
+        "health": {
+          "path": "/health",
+          "port": 8799,
+          "expect_status": 200
+        },
+        "license": "MIT",
+        "runs_on": [
+          "pf.lab-8gb"
+        ],
+        "runtime": "rust",
+        "summary": "A thin, durable ingress/egress membrane. Receives faithfully, preserves durably, routes cheaply; no model is required to boot.",
+        "endpoints": [
+          {
+            "url": "https://antenna.minilab.work",
+            "name": "public",
+            "public": true
+          },
+          {
+            "url": "http://localhost:8799",
+            "name": "local",
+            "public": false
+          }
+        ],
+        "lifecycle": "production",
+        "repository": {
+          "url": "https://github.com/powerfarm/powerfarm-antenna",
+          "default_branch": "main"
+        },
+        "environments": [
+          "production"
+        ]
+      }
+    },
+    {
+      "id": "cb690740-ffd8-439a-8d54-d9284e729443",
+      "slug": "pf.coloured-places",
+      "kind": "app",
+      "metadata": {
+        "path": "/Users/danvoulez/App Park/coloured-places",
+        "slug": "pf.coloured-places",
+        "owner": "pf.danvoulez",
+        "place": "pf.app-park.8gb",
+        "route": "https://places.minilab.work",
+        "title": "Coloured Places",
+        "health": {
+          "path": "/api/health"
+        },
+        "mandate": "Read and present observations; no scheduled execution authority.",
+        "runtime": "node",
+        "lifecycle": "production",
+        "qualifier": "app",
+        "repository": {
+          "url": "https://github.com/powerfarm/powerfarm-coloured-places"
+        },
+        "environments": [
+          "production"
+        ],
+        "brand_version": "0.5.1",
+        "login_provider": "powerfarm-identity",
+        "observability_contract": "coloured-places.observability"
+      }
+    }
+  ]
+}

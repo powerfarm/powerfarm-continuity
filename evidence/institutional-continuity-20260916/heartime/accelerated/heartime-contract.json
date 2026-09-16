@@ -1,0 +1,47 @@
+{
+  "apiVersion": "powerfarm.specs/v0",
+  "kind": "HeartimeContract",
+  "metadata": {
+    "id": "pf.contract.heartime.build-powerfarm",
+    "generation": 1,
+    "subject": "pf.powerfarm",
+    "owner": "pf.danvoulez"
+  },
+  "spec": {
+    "obligationId": "continue-building-powerfarm",
+    "responsibility": {
+      "id": "pf.contract.exec.build-powerfarm",
+      "generation": 1
+    },
+    "recurrence": {
+      "anchor": "2026-09-16T09:39:20Z",
+      "everySeconds": 3600
+    },
+    "graceSeconds": 60,
+    "catchUp": "latest",
+    "maxBatch": 64,
+    "overlap": "defer",
+    "reviewAfterSeconds": 300,
+    "handoff": {
+      "id": "pf.contract.exec.build-powerfarm",
+      "generation": 1
+    },
+    "fallback": {
+      "mode": "safe_mode",
+      "reviewAfterSeconds": 300,
+      "handoff": {
+        "id": "pf.contract.exec.build-powerfarm-recovery",
+        "generation": 1
+      }
+    },
+    "planning": {
+      "planValidThrough": "2026-09-16T10:39:20Z",
+      "nextPlanningReviewAt": "2026-09-16T10:09:20Z",
+      "reviewEverySeconds": 3600,
+      "handoff": {
+        "id": "pf.contract.exec.prepare-next-period",
+        "generation": 1
+      }
+    }
+  }
+}

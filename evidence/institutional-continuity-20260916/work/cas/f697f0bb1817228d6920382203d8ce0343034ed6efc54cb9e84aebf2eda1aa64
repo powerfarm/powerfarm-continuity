@@ -1,0 +1,1 @@
+{"type":"object","additionalProperties":false,"required":["mappings"],"properties":{"mappings":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["caseId","testName","rationale"],"properties":{"caseId":{"type":"string"},"testName":{"type":"string"},"rationale":{"type":"string"}}}}}}

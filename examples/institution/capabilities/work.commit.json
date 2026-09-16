@@ -1,0 +1,28 @@
+{
+  "apiVersion": "continuity.powerfarm.dev/v2alpha1",
+  "kind": "CapabilityProfile",
+  "metadata": {
+    "name": "work.commit",
+    "version": "0"
+  },
+  "spec": {
+    "contract": {
+      "kind": "openapi",
+      "ref": "urn:powerfarm:capability:work.commit",
+      "op": "work.commit"
+    },
+    "effect": {
+      "class": "reconcilable",
+      "verification": {
+        "capability": "work.verify",
+        "expect": {
+          "stageRecorded": true
+        },
+        "timeout": "10s"
+      }
+    },
+    "authorization": {
+      "mode": "policy"
+    }
+  }
+}
