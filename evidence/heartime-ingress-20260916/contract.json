@@ -1,0 +1,47 @@
+{
+  "apiVersion": "powerfarm.specs/v0",
+  "kind": "HeartimeContract",
+  "metadata": {
+    "id": "pf.contract.heartime.test.live",
+    "generation": 1,
+    "subject": "pf.test",
+    "owner": "pf.danvoulez"
+  },
+  "spec": {
+    "obligationId": "live-return-loop",
+    "responsibility": {
+      "id": "pf.contract.exec.test.live",
+      "generation": 1
+    },
+    "recurrence": {
+      "anchor": "2026-09-16T12:17:34Z",
+      "everySeconds": 60
+    },
+    "graceSeconds": 300,
+    "catchUp": "latest",
+    "maxBatch": 64,
+    "overlap": "defer",
+    "reviewAfterSeconds": 600,
+    "handoff": {
+      "id": "pf.contract.exec.test.live-work",
+      "generation": 1
+    },
+    "fallback": {
+      "mode": "retry_at",
+      "reviewAfterSeconds": 600,
+      "handoff": {
+        "id": "pf.contract.exec.test.live-recovery",
+        "generation": 1
+      }
+    },
+    "planning": {
+      "planValidThrough": "2026-09-16T13:19:34Z",
+      "nextPlanningReviewAt": "2026-09-16T12:49:34Z",
+      "reviewEverySeconds": 1800,
+      "handoff": {
+        "id": "pf.contract.exec.test.live-planning",
+        "generation": 1
+      }
+    }
+  }
+}

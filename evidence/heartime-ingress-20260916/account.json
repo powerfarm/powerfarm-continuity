@@ -1,0 +1,54 @@
+{
+  "at": "2026-09-16T12:19:54Z",
+  "due": [
+    {
+      "id": "sha256:3f1c763afc600a497c768ab48f3954e3db3f950729e5a10a4b43caba33a49bee",
+      "contract": {
+        "id": "pf.contract.heartime.test.live",
+        "generation": 1
+      },
+      "kind": "work",
+      "nominal": "2026-09-16T12:19:34Z",
+      "coveredCount": 3,
+      "state": "verified",
+      "attempts": 1,
+      "acknowledged": true
+    }
+  ],
+  "emitted": [
+    "sha256:3f1c763afc600a497c768ab48f3954e3db3f950729e5a10a4b43caba33a49bee"
+  ],
+  "mayHaveExecuted": [],
+  "unresolved": [],
+  "next": [
+    {
+      "contract": {
+        "id": "pf.contract.heartime.test.live",
+        "generation": 1
+      },
+      "subject": "work",
+      "at": "2026-09-16T12:20:34Z",
+      "overdue": false
+    },
+    {
+      "contract": {
+        "id": "pf.contract.heartime.test.live",
+        "generation": 1
+      },
+      "subject": "planning-review",
+      "at": "2026-09-16T12:49:34Z",
+      "overdue": false
+    }
+  ],
+  "coverage": [
+    {
+      "contract": {
+        "id": "pf.contract.heartime.test.live",
+        "generation": 1
+      },
+      "validUntil": "2026-09-16T13:19:34Z",
+      "ended": false
+    }
+  ],
+  "uncovered": []
+}
