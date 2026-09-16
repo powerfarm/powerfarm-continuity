@@ -1,0 +1,150 @@
+{
+  "at": "2026-09-16T10:36:25Z",
+  "due": [
+    {
+      "id": "sha256:456bb06479c103f6de520aaf46e776fac4adc13fa22b0644219ea4d57ca3a1ab",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "kind": "work",
+      "nominal": "2026-09-16T09:45:18Z",
+      "coveredCount": 1,
+      "state": "contained",
+      "attempts": 1,
+      "acknowledged": true
+    },
+    {
+      "id": "sha256:bdbd4b63ba438fafae0be8e71eaa5e6ac32a9b7fe9b111aeff6efde8eb5afbc3",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 1
+      },
+      "kind": "return-review/sha256:456bb06479c103f6de520aaf46e776fac4adc13fa22b0644219ea4d57ca3a1ab",
+      "nominal": "2026-09-16T09:50:19Z",
+      "coveredCount": 1,
+      "state": "pending",
+      "attempts": 0,
+      "acknowledged": false,
+      "reviewAt": "2026-09-16T09:57:02Z"
+    },
+    {
+      "id": "sha256:cdea6e5abf8b63f7b2d1c8b9f0afbc50ee9a256e57e3be6f52a0baaa4374614f",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 2
+      },
+      "kind": "work",
+      "nominal": "2026-09-16T09:52:02Z",
+      "coveredCount": 1,
+      "state": "verified",
+      "attempts": 1,
+      "acknowledged": false
+    },
+    {
+      "id": "sha256:d29baf4fccdb2db2c03b5533e66dfe77542d11d3975e5e6ddd3da8556580d583",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 2
+      },
+      "kind": "return-review/sha256:cdea6e5abf8b63f7b2d1c8b9f0afbc50ee9a256e57e3be6f52a0baaa4374614f",
+      "nominal": "2026-09-16T09:57:02Z",
+      "coveredCount": 1,
+      "state": "pending",
+      "attempts": 0,
+      "acknowledged": false,
+      "reviewAt": "2026-09-16T10:40:38Z"
+    },
+    {
+      "id": "sha256:6f46281134c2201d6aae2dcfba7104e8987ae425cf848ae94b24cdc9bdb5fbea",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 2
+      },
+      "kind": "planning-review",
+      "nominal": "2026-09-16T10:22:02Z",
+      "coveredCount": 1,
+      "state": "pending",
+      "attempts": 0,
+      "acknowledged": false,
+      "reviewAt": "2026-09-16T10:40:38Z"
+    },
+    {
+      "id": "sha256:79da83fbc91d77851e045860afccaaaa70de8ae7dc1413882ca9ab2448862609",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 2
+      },
+      "kind": "work",
+      "nominal": "2026-09-16T10:35:02Z",
+      "coveredCount": 43,
+      "state": "coalesced",
+      "attempts": 0,
+      "acknowledged": false
+    },
+    {
+      "id": "sha256:68de1bca9ddc4053ec4cb9a3dc58d01906ef047cbc32549beaf816ca4b680ded",
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 2
+      },
+      "kind": "work",
+      "nominal": "2026-09-16T10:36:02Z",
+      "coveredCount": 1,
+      "state": "verified",
+      "attempts": 1,
+      "acknowledged": true
+    }
+  ],
+  "emitted": [
+    "sha256:456bb06479c103f6de520aaf46e776fac4adc13fa22b0644219ea4d57ca3a1ab",
+    "sha256:cdea6e5abf8b63f7b2d1c8b9f0afbc50ee9a256e57e3be6f52a0baaa4374614f",
+    "sha256:68de1bca9ddc4053ec4cb9a3dc58d01906ef047cbc32549beaf816ca4b680ded"
+  ],
+  "mayHaveExecuted": [],
+  "unresolved": [
+    "sha256:bdbd4b63ba438fafae0be8e71eaa5e6ac32a9b7fe9b111aeff6efde8eb5afbc3",
+    "sha256:d29baf4fccdb2db2c03b5533e66dfe77542d11d3975e5e6ddd3da8556580d583",
+    "sha256:6f46281134c2201d6aae2dcfba7104e8987ae425cf848ae94b24cdc9bdb5fbea"
+  ],
+  "next": [
+    {
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 2
+      },
+      "subject": "work",
+      "at": "2026-09-16T10:37:02Z",
+      "overdue": false
+    },
+    {
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 2
+      },
+      "subject": "return:sha256:6f46281134c2201d6aae2dcfba7104e8987ae425cf848ae94b24cdc9bdb5fbea",
+      "at": "2026-09-16T10:40:38Z",
+      "overdue": false
+    },
+    {
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 2
+      },
+      "subject": "fallback",
+      "at": "2026-09-16T10:52:02Z",
+      "overdue": false
+    }
+  ],
+  "coverage": [
+    {
+      "contract": {
+        "id": "pf.contract.heartime.coloured-places.census",
+        "generation": 2
+      },
+      "validUntil": "2026-09-16T10:52:02Z",
+      "ended": false
+    }
+  ],
+  "uncovered": []
+}

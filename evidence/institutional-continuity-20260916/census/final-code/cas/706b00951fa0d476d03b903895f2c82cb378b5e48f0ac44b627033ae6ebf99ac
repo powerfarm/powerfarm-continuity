@@ -1,0 +1,49 @@
+{
+  "source": "Powerfarm Registry / authenticated PostgREST read by operator session",
+  "capturedAt": "2026-09-16T10:35:38.281Z",
+  "scope": "all application identities visible to the operator; the census cohort is the subset declared at the probed place",
+  "population": [
+    {
+      "id": "4f5c7a5a-a7ca-40e7-9e6b-8c8a40833064",
+      "slug": "pf.powerfarm-cli",
+      "kind": "app",
+      "place": null,
+      "path": null
+    },
+    {
+      "id": "8684632a-68bf-4783-b949-373e0e5d95bb",
+      "slug": "pf.powerfarm-registry",
+      "kind": "app",
+      "place": null,
+      "path": null
+    },
+    {
+      "id": "ef3a20d3-e3fa-4300-9dc4-e9c166b3a07c",
+      "slug": "pf.pf-engine",
+      "kind": "app",
+      "place": null,
+      "path": null
+    },
+    {
+      "id": "43dde348-b843-4cf9-b9b2-54485e300700",
+      "slug": "pf.eve-team-runtime-and-ui",
+      "kind": "app",
+      "place": null,
+      "path": null
+    },
+    {
+      "id": "9c78de50-e360-4cbd-ac9e-52b65e641be0",
+      "slug": "pf.antenna",
+      "kind": "app",
+      "place": null,
+      "path": null
+    },
+    {
+      "id": "cb690740-ffd8-439a-8d54-d9284e729443",
+      "slug": "pf.coloured-places",
+      "kind": "app",
+      "place": "pf.app-park.8gb",
+      "path": "/Users/danvoulez/App Park/coloured-places"
+    }
+  ]
+}

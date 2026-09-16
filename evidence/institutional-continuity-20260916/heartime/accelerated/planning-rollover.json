@@ -1,0 +1,9 @@
+{
+  "clock": "accelerated Heartime evaluation; model calls use real wall time",
+  "oldCoverageThrough": "2026-09-16T10:51:34Z",
+  "reviewAt": "2026-09-16T10:21:34Z",
+  "newCoverageThrough": "2026-09-16T11:51:34Z",
+  "planningOccurrence": "sha256:d91c6db1a0e70eea62669e3bb7ac4a05a5fd1ef5c42f8b40ed67e127c6992b64",
+  "planEvidence": "sha256:9b382b33753269c7f385897b83c218c589d77fc1ed56295b5e129442fac4a43d",
+  "nextWorkOccurrence": "sha256:7f4174f8183b31eaf7da4f591a8e26fe8d63fa7f54189f1c8e29059616c58a03"
+}

@@ -1,0 +1,1 @@
+{"events":[{"outcome":"failed: Expected '{' but got '\"'","stage":"primary"}],"proposal":{"mappings":null},"stage":"work.primary","state":{"coverageThrough":"","dataset":{"digest":"","mediaType":"","size":0},"lastTurn":"","nextReviewAt":"","period":0},"verifiedWork":false,"wakePack":{"digest":"","mediaType":"","size":0}}

@@ -1,0 +1,1 @@
+{"concurrency":1,"contextBytes":60000,"effectClass":"reconcilable","maxInvocations":2,"noNewSpending":true,"output":"conformance-map.json","timeoutSeconds":180}

@@ -1,0 +1,781 @@
+{
+  "contracts": [
+    {
+      "body": {
+        "apiVersion": "powerfarm.specs/v0",
+        "kind": "HeartimeContract",
+        "metadata": {
+          "generation": 1,
+          "id": "pf.contract.heartime.build-powerfarm",
+          "owner": "pf.danvoulez",
+          "subject": "pf.powerfarm"
+        },
+        "spec": {
+          "catchUp": "latest",
+          "fallback": {
+            "handoff": {
+              "generation": 1,
+              "id": "pf.contract.exec.build-powerfarm-recovery"
+            },
+            "mode": "safe_mode",
+            "reviewAfterSeconds": 300
+          },
+          "graceSeconds": 60,
+          "handoff": {
+            "generation": 1,
+            "id": "pf.contract.exec.build-powerfarm"
+          },
+          "maxBatch": 64,
+          "obligationId": "continue-building-powerfarm",
+          "overlap": "defer",
+          "planning": {
+            "handoff": {
+              "generation": 1,
+              "id": "pf.contract.exec.prepare-next-period"
+            },
+            "nextPlanningReviewAt": "2026-09-16T10:09:20Z",
+            "planValidThrough": "2026-09-16T10:39:20Z",
+            "reviewEverySeconds": 3600
+          },
+          "recurrence": {
+            "anchor": "2026-09-16T09:39:20Z",
+            "everySeconds": 3600
+          },
+          "responsibility": {
+            "generation": 1,
+            "id": "pf.contract.exec.build-powerfarm"
+          },
+          "reviewAfterSeconds": 300
+        }
+      },
+      "coverage": 1789555160,
+      "current": 0,
+      "cursor": 1789555160,
+      "digest": "sha256:0c678f9fdad8112249ed2cc6de148b17ae505eb5258c9d79b966f7961ff86c9a",
+      "generation": 1,
+      "id": "pf.contract.heartime.build-powerfarm",
+      "last_clock": 1789555894,
+      "pause_until": 0,
+      "planning_review": 1789553360,
+      "retired": 0
+    },
+    {
+      "body": {
+        "apiVersion": "powerfarm.specs/v0",
+        "kind": "HeartimeContract",
+        "metadata": {
+          "generation": 2,
+          "id": "pf.contract.heartime.build-powerfarm",
+          "owner": "pf.danvoulez",
+          "subject": "pf.powerfarm"
+        },
+        "spec": {
+          "catchUp": "latest",
+          "fallback": {
+            "handoff": {
+              "generation": 1,
+              "id": "pf.contract.exec.build-powerfarm-recovery"
+            },
+            "mode": "safe_mode",
+            "reviewAfterSeconds": 300
+          },
+          "graceSeconds": 60,
+          "handoff": {
+            "generation": 1,
+            "id": "pf.contract.exec.build-powerfarm"
+          },
+          "maxBatch": 64,
+          "obligationId": "continue-building-powerfarm",
+          "overlap": "defer",
+          "planning": {
+            "handoff": {
+              "generation": 1,
+              "id": "pf.contract.exec.prepare-next-period"
+            },
+            "nextPlanningReviewAt": "2026-09-16T10:11:50Z",
+            "planValidThrough": "2026-09-16T10:41:50Z",
+            "reviewEverySeconds": 3600
+          },
+          "recurrence": {
+            "anchor": "2026-09-16T09:41:50Z",
+            "everySeconds": 3600
+          },
+          "responsibility": {
+            "generation": 1,
+            "id": "pf.contract.exec.build-powerfarm"
+          },
+          "reviewAfterSeconds": 300
+        }
+      },
+      "coverage": 1789555310,
+      "current": 0,
+      "cursor": 1789555310,
+      "digest": "sha256:efbdab0bfb4190b6a3a90ed9568cbb1f239dd43077110acc8536613ad25f8cc6",
+      "generation": 2,
+      "id": "pf.contract.heartime.build-powerfarm",
+      "last_clock": 1789555894,
+      "pause_until": 0,
+      "planning_review": 1789553510,
+      "retired": 0
+    },
+    {
+      "body": {
+        "apiVersion": "powerfarm.specs/v0",
+        "kind": "HeartimeContract",
+        "metadata": {
+          "generation": 3,
+          "id": "pf.contract.heartime.build-powerfarm",
+          "owner": "pf.danvoulez",
+          "subject": "pf.powerfarm"
+        },
+        "spec": {
+          "catchUp": "latest",
+          "fallback": {
+            "handoff": {
+              "generation": 1,
+              "id": "pf.contract.exec.build-powerfarm-recovery"
+            },
+            "mode": "safe_mode",
+            "reviewAfterSeconds": 300
+          },
+          "graceSeconds": 60,
+          "handoff": {
+            "generation": 1,
+            "id": "pf.contract.exec.build-powerfarm"
+          },
+          "maxBatch": 64,
+          "obligationId": "continue-building-powerfarm",
+          "overlap": "defer",
+          "planning": {
+            "handoff": {
+              "generation": 1,
+              "id": "pf.contract.exec.prepare-next-period"
+            },
+            "nextPlanningReviewAt": "2026-09-16T10:21:34Z",
+            "planValidThrough": "2026-09-16T10:51:34Z",
+            "reviewEverySeconds": 3600
+          },
+          "recurrence": {
+            "anchor": "2026-09-16T09:51:34Z",
+            "everySeconds": 3600
+          },
+          "responsibility": {
+            "generation": 1,
+            "id": "pf.contract.exec.build-powerfarm"
+          },
+          "reviewAfterSeconds": 300
+        }
+      },
+      "coverage": 1789559494,
+      "current": 1,
+      "cursor": 1789559494,
+      "digest": "sha256:086091b09db73868e0af93d04834dc57304884527d2020ef96706ea7a9b8ea72",
+      "generation": 3,
+      "id": "pf.contract.heartime.build-powerfarm",
+      "last_clock": 1789555894,
+      "pause_until": 0,
+      "planning_review": 1789559494,
+      "retired": 0
+    }
+  ],
+  "evidence": [
+    {
+      "at": 1789551560,
+      "body": {
+        "admission": "trusted-local-operator-cache",
+        "contract": {
+          "generation": 1,
+          "id": "pf.contract.heartime.build-powerfarm",
+          "owner": "pf.danvoulez",
+          "subject": "pf.powerfarm"
+        },
+        "digest": "sha256:0c678f9fdad8112249ed2cc6de148b17ae505eb5258c9d79b966f7961ff86c9a"
+      },
+      "kind": "contract-installed",
+      "occurrence_id": "",
+      "seq": 1
+    },
+    {
+      "at": 1789551560,
+      "body": {
+        "clock": "operator-supplied-UTC-or-system-UTC",
+        "contract": {
+          "generation": 1,
+          "id": "pf.contract.heartime.build-powerfarm"
+        },
+        "coveredCount": 1,
+        "coveredFrom": "2026-09-16T09:39:20Z",
+        "evaluatedAt": "2026-09-16T09:39:20Z",
+        "handoff": {
+          "generation": 1,
+          "id": "pf.contract.exec.build-powerfarm"
+        },
+        "kind": "work",
+        "nominal": "2026-09-16T09:39:20Z",
+        "obligationId": "continue-building-powerfarm",
+        "occurrenceId": "sha256:8b230b05e1ce87ed9fd481e5a6c53b26ef9bf7de8b80cba932c4d6ec1e6155ab",
+        "overlap": "defer",
+        "parent": "",
+        "predicate": "due",
+        "state": true
+      },
+      "kind": "temporal-pending",
+      "occurrence_id": "sha256:8b230b05e1ce87ed9fd481e5a6c53b26ef9bf7de8b80cba932c4d6ec1e6155ab",
+      "seq": 2
+    },
+    {
+      "at": 1789551560,
+      "body": {
+        "effectCertainty": "unknown"
+      },
+      "kind": "publication-attempt",
+      "occurrence_id": "sha256:8b230b05e1ce87ed9fd481e5a6c53b26ef9bf7de8b80cba932c4d6ec1e6155ab",
+      "seq": 3
+    },
+    {
+      "at": 1789551560,
+      "body": {
+        "verified": false
+      },
+      "kind": "transport-acknowledgement",
+      "occurrence_id": "sha256:8b230b05e1ce87ed9fd481e5a6c53b26ef9bf7de8b80cba932c4d6ec1e6155ab",
+      "seq": 4
+    },
+    {
+      "at": 1789551710,
+      "body": {
+        "evidence": "sha256:1757fe3d97df25a31f7089e8e96632bf74c9283b45c1e2532d55034941ed4c91",
+        "outcome": "failed"
+      },
+      "kind": "execution-report",
+      "occurrence_id": "sha256:8b230b05e1ce87ed9fd481e5a6c53b26ef9bf7de8b80cba932c4d6ec1e6155ab",
+      "seq": 5
+    },
+    {
+      "at": 1789551710,
+      "body": {
+        "admission": "trusted-local-operator-cache",
+        "contract": {
+          "generation": 2,
+          "id": "pf.contract.heartime.build-powerfarm",
+          "owner": "pf.danvoulez",
+          "subject": "pf.powerfarm"
+        },
+        "digest": "sha256:efbdab0bfb4190b6a3a90ed9568cbb1f239dd43077110acc8536613ad25f8cc6"
+      },
+      "kind": "contract-installed",
+      "occurrence_id": "",
+      "seq": 6
+    },
+    {
+      "at": 1789551710,
+      "body": {
+        "clock": "operator-supplied-UTC-or-system-UTC",
+        "contract": {
+          "generation": 2,
+          "id": "pf.contract.heartime.build-powerfarm"
+        },
+        "coveredCount": 1,
+        "coveredFrom": "2026-09-16T09:41:50Z",
+        "evaluatedAt": "2026-09-16T09:41:50Z",
+        "handoff": {
+          "generation": 1,
+          "id": "pf.contract.exec.build-powerfarm"
+        },
+        "kind": "work",
+        "nominal": "2026-09-16T09:41:50Z",
+        "obligationId": "continue-building-powerfarm",
+        "occurrenceId": "sha256:91b339f6ba1efd75603447ea205a3e3806a249b41aaed08e35e1843c60d9f4d5",
+        "overlap": "defer",
+        "parent": "",
+        "predicate": "due",
+        "state": true
+      },
+      "kind": "temporal-pending",
+      "occurrence_id": "sha256:91b339f6ba1efd75603447ea205a3e3806a249b41aaed08e35e1843c60d9f4d5",
+      "seq": 7
+    },
+    {
+      "at": 1789551774,
+      "body": {
+        "evidence": "sha256:1757fe3d97df25a31f7089e8e96632bf74c9283b45c1e2532d55034941ed4c91",
+        "outcome": "contained"
+      },
+      "kind": "execution-report",
+      "occurrence_id": "sha256:8b230b05e1ce87ed9fd481e5a6c53b26ef9bf7de8b80cba932c4d6ec1e6155ab",
+      "seq": 8
+    },
+    {
+      "at": 1789551774,
+      "body": {
+        "effectCertainty": "unknown"
+      },
+      "kind": "publication-attempt",
+      "occurrence_id": "sha256:91b339f6ba1efd75603447ea205a3e3806a249b41aaed08e35e1843c60d9f4d5",
+      "seq": 9
+    },
+    {
+      "at": 1789551775,
+      "body": {
+        "verified": false
+      },
+      "kind": "transport-acknowledgement",
+      "occurrence_id": "sha256:91b339f6ba1efd75603447ea205a3e3806a249b41aaed08e35e1843c60d9f4d5",
+      "seq": 10
+    },
+    {
+      "at": 1789552294,
+      "body": {
+        "evidence": "sha256:f1de6ea83734042f6c590300e4109a9054637e75bb3eafe81c9d1ed567f96749",
+        "outcome": "contained"
+      },
+      "kind": "execution-report",
+      "occurrence_id": "sha256:91b339f6ba1efd75603447ea205a3e3806a249b41aaed08e35e1843c60d9f4d5",
+      "seq": 11
+    },
+    {
+      "at": 1789552294,
+      "body": {
+        "admission": "trusted-local-operator-cache",
+        "contract": {
+          "generation": 3,
+          "id": "pf.contract.heartime.build-powerfarm",
+          "owner": "pf.danvoulez",
+          "subject": "pf.powerfarm"
+        },
+        "digest": "sha256:086091b09db73868e0af93d04834dc57304884527d2020ef96706ea7a9b8ea72"
+      },
+      "kind": "contract-installed",
+      "occurrence_id": "",
+      "seq": 12
+    },
+    {
+      "at": 1789552294,
+      "body": {
+        "clock": "operator-supplied-UTC-or-system-UTC",
+        "contract": {
+          "generation": 3,
+          "id": "pf.contract.heartime.build-powerfarm"
+        },
+        "coveredCount": 1,
+        "coveredFrom": "2026-09-16T09:51:34Z",
+        "evaluatedAt": "2026-09-16T09:51:34Z",
+        "handoff": {
+          "generation": 1,
+          "id": "pf.contract.exec.build-powerfarm"
+        },
+        "kind": "work",
+        "nominal": "2026-09-16T09:51:34Z",
+        "obligationId": "continue-building-powerfarm",
+        "occurrenceId": "sha256:12663131e2513a568033c0a61296949efc016d2526de40474cb8780d498b3e79",
+        "overlap": "defer",
+        "parent": "",
+        "predicate": "due",
+        "state": true
+      },
+      "kind": "temporal-pending",
+      "occurrence_id": "sha256:12663131e2513a568033c0a61296949efc016d2526de40474cb8780d498b3e79",
+      "seq": 13
+    },
+    {
+      "at": 1789552294,
+      "body": {
+        "effectCertainty": "unknown"
+      },
+      "kind": "publication-attempt",
+      "occurrence_id": "sha256:12663131e2513a568033c0a61296949efc016d2526de40474cb8780d498b3e79",
+      "seq": 14
+    },
+    {
+      "at": 1789552379,
+      "body": {
+        "evidence": "sha256:9b382b33753269c7f385897b83c218c589d77fc1ed56295b5e129442fac4a43d",
+        "outcome": "verified"
+      },
+      "kind": "execution-report",
+      "occurrence_id": "sha256:12663131e2513a568033c0a61296949efc016d2526de40474cb8780d498b3e79",
+      "seq": 15
+    },
+    {
+      "at": 1789554094,
+      "body": {
+        "clock": "operator-supplied-UTC-or-system-UTC",
+        "contract": {
+          "generation": 3,
+          "id": "pf.contract.heartime.build-powerfarm"
+        },
+        "coveredCount": 1,
+        "coveredFrom": "2026-09-16T10:21:34Z",
+        "evaluatedAt": "2026-09-16T10:21:34Z",
+        "handoff": {
+          "generation": 1,
+          "id": "pf.contract.exec.prepare-next-period"
+        },
+        "kind": "planning-review",
+        "nominal": "2026-09-16T10:21:34Z",
+        "obligationId": "continue-building-powerfarm",
+        "occurrenceId": "sha256:d91c6db1a0e70eea62669e3bb7ac4a05a5fd1ef5c42f8b40ed67e127c6992b64",
+        "overlap": "defer",
+        "parent": "",
+        "predicate": "due",
+        "state": true
+      },
+      "kind": "temporal-pending",
+      "occurrence_id": "sha256:d91c6db1a0e70eea62669e3bb7ac4a05a5fd1ef5c42f8b40ed67e127c6992b64",
+      "seq": 16
+    },
+    {
+      "at": 1789554094,
+      "body": {
+        "effectCertainty": "unknown"
+      },
+      "kind": "publication-attempt",
+      "occurrence_id": "sha256:d91c6db1a0e70eea62669e3bb7ac4a05a5fd1ef5c42f8b40ed67e127c6992b64",
+      "seq": 17
+    },
+    {
+      "at": 1789554094,
+      "body": {
+        "contract": {
+          "generation": 3,
+          "id": "pf.contract.heartime.build-powerfarm"
+        },
+        "plan": "sha256:9b382b33753269c7f385897b83c218c589d77fc1ed56295b5e129442fac4a43d",
+        "review": "2026-09-16T10:51:34Z",
+        "through": "2026-09-16T11:51:34Z"
+      },
+      "kind": "planning-renewed",
+      "occurrence_id": "",
+      "seq": 18
+    },
+    {
+      "at": 1789554094,
+      "body": {
+        "evidence": "sha256:9b382b33753269c7f385897b83c218c589d77fc1ed56295b5e129442fac4a43d",
+        "outcome": "verified"
+      },
+      "kind": "execution-report",
+      "occurrence_id": "sha256:d91c6db1a0e70eea62669e3bb7ac4a05a5fd1ef5c42f8b40ed67e127c6992b64",
+      "seq": 19
+    },
+    {
+      "at": 1789555894,
+      "body": {
+        "clock": "operator-supplied-UTC-or-system-UTC",
+        "contract": {
+          "generation": 3,
+          "id": "pf.contract.heartime.build-powerfarm"
+        },
+        "coveredCount": 1,
+        "coveredFrom": "2026-09-16T10:51:34Z",
+        "evaluatedAt": "2026-09-16T10:51:34Z",
+        "handoff": {
+          "generation": 1,
+          "id": "pf.contract.exec.prepare-next-period"
+        },
+        "kind": "planning-review",
+        "nominal": "2026-09-16T10:51:34Z",
+        "obligationId": "continue-building-powerfarm",
+        "occurrenceId": "sha256:ed9c50437fc1aba212f10eb5508ffcd156657c8d1383c01559935c45794cf273",
+        "overlap": "defer",
+        "parent": "",
+        "predicate": "due",
+        "state": true
+      },
+      "kind": "temporal-pending",
+      "occurrence_id": "sha256:ed9c50437fc1aba212f10eb5508ffcd156657c8d1383c01559935c45794cf273",
+      "seq": 20
+    },
+    {
+      "at": 1789555894,
+      "body": {
+        "clock": "operator-supplied-UTC-or-system-UTC",
+        "contract": {
+          "generation": 3,
+          "id": "pf.contract.heartime.build-powerfarm"
+        },
+        "coveredCount": 1,
+        "coveredFrom": "2026-09-16T10:51:34Z",
+        "evaluatedAt": "2026-09-16T10:51:34Z",
+        "handoff": {
+          "generation": 1,
+          "id": "pf.contract.exec.build-powerfarm"
+        },
+        "kind": "work",
+        "nominal": "2026-09-16T10:51:34Z",
+        "obligationId": "continue-building-powerfarm",
+        "occurrenceId": "sha256:7f4174f8183b31eaf7da4f591a8e26fe8d63fa7f54189f1c8e29059616c58a03",
+        "overlap": "defer",
+        "parent": "",
+        "predicate": "due",
+        "state": true
+      },
+      "kind": "temporal-pending",
+      "occurrence_id": "sha256:7f4174f8183b31eaf7da4f591a8e26fe8d63fa7f54189f1c8e29059616c58a03",
+      "seq": 21
+    },
+    {
+      "at": 1789555894,
+      "body": {
+        "effectCertainty": "unknown"
+      },
+      "kind": "publication-attempt",
+      "occurrence_id": "sha256:7f4174f8183b31eaf7da4f591a8e26fe8d63fa7f54189f1c8e29059616c58a03",
+      "seq": 22
+    },
+    {
+      "at": 1789555894,
+      "body": {
+        "evidence": "sha256:112b8b90eb540df1ce6df746fdd3b6cb59f013c06ba8b4c7af96d8e27b6ce9cd",
+        "outcome": "verified"
+      },
+      "kind": "execution-report",
+      "occurrence_id": "sha256:7f4174f8183b31eaf7da4f591a8e26fe8d63fa7f54189f1c8e29059616c58a03",
+      "seq": 23
+    }
+  ],
+  "occurrences": [
+    {
+      "body": {
+        "clock": "operator-supplied-UTC-or-system-UTC",
+        "contract": {
+          "generation": 1,
+          "id": "pf.contract.heartime.build-powerfarm"
+        },
+        "coveredCount": 1,
+        "coveredFrom": "2026-09-16T09:39:20Z",
+        "evaluatedAt": "2026-09-16T09:39:20Z",
+        "handoff": {
+          "generation": 1,
+          "id": "pf.contract.exec.build-powerfarm"
+        },
+        "kind": "work",
+        "nominal": "2026-09-16T09:39:20Z",
+        "obligationId": "continue-building-powerfarm",
+        "occurrenceId": "sha256:8b230b05e1ce87ed9fd481e5a6c53b26ef9bf7de8b80cba932c4d6ec1e6155ab",
+        "overlap": "defer",
+        "parent": "",
+        "predicate": "due",
+        "state": true
+      },
+      "contract_id": "pf.contract.heartime.build-powerfarm",
+      "covered_count": 1,
+      "covered_from": 1789551560,
+      "evaluated": 1789551560,
+      "generation": 1,
+      "id": "sha256:8b230b05e1ce87ed9fd481e5a6c53b26ef9bf7de8b80cba932c4d6ec1e6155ab",
+      "kind": "work",
+      "nominal": 1789551560,
+      "review_at": 1789551775,
+      "state": "contained"
+    },
+    {
+      "body": {
+        "clock": "operator-supplied-UTC-or-system-UTC",
+        "contract": {
+          "generation": 2,
+          "id": "pf.contract.heartime.build-powerfarm"
+        },
+        "coveredCount": 1,
+        "coveredFrom": "2026-09-16T09:41:50Z",
+        "evaluatedAt": "2026-09-16T09:41:50Z",
+        "handoff": {
+          "generation": 1,
+          "id": "pf.contract.exec.build-powerfarm"
+        },
+        "kind": "work",
+        "nominal": "2026-09-16T09:41:50Z",
+        "obligationId": "continue-building-powerfarm",
+        "occurrenceId": "sha256:91b339f6ba1efd75603447ea205a3e3806a249b41aaed08e35e1843c60d9f4d5",
+        "overlap": "defer",
+        "parent": "",
+        "predicate": "due",
+        "state": true
+      },
+      "contract_id": "pf.contract.heartime.build-powerfarm",
+      "covered_count": 1,
+      "covered_from": 1789551710,
+      "evaluated": 1789551710,
+      "generation": 2,
+      "id": "sha256:91b339f6ba1efd75603447ea205a3e3806a249b41aaed08e35e1843c60d9f4d5",
+      "kind": "work",
+      "nominal": 1789551710,
+      "review_at": 1789552295,
+      "state": "contained"
+    },
+    {
+      "body": {
+        "clock": "operator-supplied-UTC-or-system-UTC",
+        "contract": {
+          "generation": 3,
+          "id": "pf.contract.heartime.build-powerfarm"
+        },
+        "coveredCount": 1,
+        "coveredFrom": "2026-09-16T09:51:34Z",
+        "evaluatedAt": "2026-09-16T09:51:34Z",
+        "handoff": {
+          "generation": 1,
+          "id": "pf.contract.exec.build-powerfarm"
+        },
+        "kind": "work",
+        "nominal": "2026-09-16T09:51:34Z",
+        "obligationId": "continue-building-powerfarm",
+        "occurrenceId": "sha256:12663131e2513a568033c0a61296949efc016d2526de40474cb8780d498b3e79",
+        "overlap": "defer",
+        "parent": "",
+        "predicate": "due",
+        "state": true
+      },
+      "contract_id": "pf.contract.heartime.build-powerfarm",
+      "covered_count": 1,
+      "covered_from": 1789552294,
+      "evaluated": 1789552294,
+      "generation": 3,
+      "id": "sha256:12663131e2513a568033c0a61296949efc016d2526de40474cb8780d498b3e79",
+      "kind": "work",
+      "nominal": 1789552294,
+      "review_at": 1789552380,
+      "state": "verified"
+    },
+    {
+      "body": {
+        "clock": "operator-supplied-UTC-or-system-UTC",
+        "contract": {
+          "generation": 3,
+          "id": "pf.contract.heartime.build-powerfarm"
+        },
+        "coveredCount": 1,
+        "coveredFrom": "2026-09-16T10:21:34Z",
+        "evaluatedAt": "2026-09-16T10:21:34Z",
+        "handoff": {
+          "generation": 1,
+          "id": "pf.contract.exec.prepare-next-period"
+        },
+        "kind": "planning-review",
+        "nominal": "2026-09-16T10:21:34Z",
+        "obligationId": "continue-building-powerfarm",
+        "occurrenceId": "sha256:d91c6db1a0e70eea62669e3bb7ac4a05a5fd1ef5c42f8b40ed67e127c6992b64",
+        "overlap": "defer",
+        "parent": "",
+        "predicate": "due",
+        "state": true
+      },
+      "contract_id": "pf.contract.heartime.build-powerfarm",
+      "covered_count": 1,
+      "covered_from": 1789554094,
+      "evaluated": 1789554094,
+      "generation": 3,
+      "id": "sha256:d91c6db1a0e70eea62669e3bb7ac4a05a5fd1ef5c42f8b40ed67e127c6992b64",
+      "kind": "planning-review",
+      "nominal": 1789554094,
+      "review_at": 1789554095,
+      "state": "verified"
+    },
+    {
+      "body": {
+        "clock": "operator-supplied-UTC-or-system-UTC",
+        "contract": {
+          "generation": 3,
+          "id": "pf.contract.heartime.build-powerfarm"
+        },
+        "coveredCount": 1,
+        "coveredFrom": "2026-09-16T10:51:34Z",
+        "evaluatedAt": "2026-09-16T10:51:34Z",
+        "handoff": {
+          "generation": 1,
+          "id": "pf.contract.exec.prepare-next-period"
+        },
+        "kind": "planning-review",
+        "nominal": "2026-09-16T10:51:34Z",
+        "obligationId": "continue-building-powerfarm",
+        "occurrenceId": "sha256:ed9c50437fc1aba212f10eb5508ffcd156657c8d1383c01559935c45794cf273",
+        "overlap": "defer",
+        "parent": "",
+        "predicate": "due",
+        "state": true
+      },
+      "contract_id": "pf.contract.heartime.build-powerfarm",
+      "covered_count": 1,
+      "covered_from": 1789555894,
+      "evaluated": 1789555894,
+      "generation": 3,
+      "id": "sha256:ed9c50437fc1aba212f10eb5508ffcd156657c8d1383c01559935c45794cf273",
+      "kind": "planning-review",
+      "nominal": 1789555894,
+      "review_at": 1789556194,
+      "state": "pending"
+    },
+    {
+      "body": {
+        "clock": "operator-supplied-UTC-or-system-UTC",
+        "contract": {
+          "generation": 3,
+          "id": "pf.contract.heartime.build-powerfarm"
+        },
+        "coveredCount": 1,
+        "coveredFrom": "2026-09-16T10:51:34Z",
+        "evaluatedAt": "2026-09-16T10:51:34Z",
+        "handoff": {
+          "generation": 1,
+          "id": "pf.contract.exec.build-powerfarm"
+        },
+        "kind": "work",
+        "nominal": "2026-09-16T10:51:34Z",
+        "obligationId": "continue-building-powerfarm",
+        "occurrenceId": "sha256:7f4174f8183b31eaf7da4f591a8e26fe8d63fa7f54189f1c8e29059616c58a03",
+        "overlap": "defer",
+        "parent": "",
+        "predicate": "due",
+        "state": true
+      },
+      "contract_id": "pf.contract.heartime.build-powerfarm",
+      "covered_count": 1,
+      "covered_from": 1789555894,
+      "evaluated": 1789555894,
+      "generation": 3,
+      "id": "sha256:7f4174f8183b31eaf7da4f591a8e26fe8d63fa7f54189f1c8e29059616c58a03",
+      "kind": "work",
+      "nominal": 1789555894,
+      "review_at": 1789555895,
+      "state": "verified"
+    }
+  ],
+  "outbox": [
+    {
+      "acknowledged": 1,
+      "attempts": 1,
+      "id": "sha256:8b230b05e1ce87ed9fd481e5a6c53b26ef9bf7de8b80cba932c4d6ec1e6155ab",
+      "last_attempt": 1789551560
+    },
+    {
+      "acknowledged": 1,
+      "attempts": 1,
+      "id": "sha256:91b339f6ba1efd75603447ea205a3e3806a249b41aaed08e35e1843c60d9f4d5",
+      "last_attempt": 1789551774
+    },
+    {
+      "acknowledged": 0,
+      "attempts": 1,
+      "id": "sha256:12663131e2513a568033c0a61296949efc016d2526de40474cb8780d498b3e79",
+      "last_attempt": 1789552294
+    },
+    {
+      "acknowledged": 0,
+      "attempts": 1,
+      "id": "sha256:d91c6db1a0e70eea62669e3bb7ac4a05a5fd1ef5c42f8b40ed67e127c6992b64",
+      "last_attempt": 1789554094
+    },
+    {
+      "acknowledged": 0,
+      "attempts": 0,
+      "id": "sha256:ed9c50437fc1aba212f10eb5508ffcd156657c8d1383c01559935c45794cf273",
+      "last_attempt": null
+    },
+    {
+      "acknowledged": 0,
+      "attempts": 1,
+      "id": "sha256:7f4174f8183b31eaf7da4f591a8e26fe8d63fa7f54189f1c8e29059616c58a03",
+      "last_attempt": 1789555894
+    }
+  ]
+}

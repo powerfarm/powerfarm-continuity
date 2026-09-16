@@ -40,3 +40,14 @@ After the live-engine smoke passes:
 3. add the official MCP SDK and `service.status` / `service.restart` agent tools;
 4. connect the effect journal to that real MCP dispatch path;
 5. force-kill the agent after dispatch and prove recovery by independent verification.
+
+## Institutional turns and census (2026-09-16)
+
+Proven with tests and live evidence (`evidence/institutional-continuity-20260916`):
+
+- Work turns compile an immutable WakePack from current institutional state and are occupied by replaceable routes: Codex CLI, any OpenAI-compatible chat API (`cmd/occupant-chat`) or any command route.
+- A successor continues from the dataset and state produced by earlier turns, with no narrative handoff, including across providers.
+- Technical recovery is a graph: primary, diagnosis, alternate route, commit or containment, record; every stage journaled and verified. A Direction decision is recorded only when every route is refused at a declared boundary.
+- The census freezes its cohort, records observations through Antenna, verifies them by independent retrieval of the completed run and exact payload digest, and reconciles without repair authority.
+
+Remaining: a receiver joining Heartime deliveries to these commands, a planning capability graph, a profile for in-process capabilities, and Registry admission of the mandate and contracts. See `docs/INSTITUTIONAL-TURNS.md`.

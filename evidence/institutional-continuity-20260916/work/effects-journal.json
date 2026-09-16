@@ -1,0 +1,2048 @@
+{
+  "effect_events": [
+    {
+      "id": 1,
+      "effect_id": "eff_a21b84cf3a0b15ad80ac94eff824eafc",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:39:21.072777Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 2,
+      "effect_id": "eff_a21b84cf3a0b15ad80ac94eff824eafc",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:39:21.073126Z",
+      "details_json": {
+        "capability": "work.primary"
+      }
+    },
+    {
+      "id": 3,
+      "effect_id": "eff_a21b84cf3a0b15ad80ac94eff824eafc",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:39:21.137783Z",
+      "details_json": {
+        "output": {
+          "stage": "work.primary"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "effect_id": "eff_a21b84cf3a0b15ad80ac94eff824eafc",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:39:21.138248Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.primary",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "effect_id": "eff_566d9f882ac4bbde372380a1cfbaa09e",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:39:21.139222Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 6,
+      "effect_id": "eff_566d9f882ac4bbde372380a1cfbaa09e",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:39:21.139462Z",
+      "details_json": {
+        "capability": "work.diagnose"
+      }
+    },
+    {
+      "id": 7,
+      "effect_id": "eff_566d9f882ac4bbde372380a1cfbaa09e",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:39:21.150648Z",
+      "details_json": {
+        "output": {
+          "stage": "work.diagnose"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "effect_id": "eff_566d9f882ac4bbde372380a1cfbaa09e",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:39:21.151319Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.diagnose",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "effect_id": "eff_7fb0b8ec56bfc9dd7a8c13af4eec7ba8",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:39:21.1518Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 10,
+      "effect_id": "eff_7fb0b8ec56bfc9dd7a8c13af4eec7ba8",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:39:21.152043Z",
+      "details_json": {
+        "capability": "work.alternate"
+      }
+    },
+    {
+      "id": 11,
+      "effect_id": "eff_7fb0b8ec56bfc9dd7a8c13af4eec7ba8",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:39:21.172915Z",
+      "details_json": {
+        "output": {
+          "stage": "work.alternate"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "effect_id": "eff_7fb0b8ec56bfc9dd7a8c13af4eec7ba8",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:39:21.173925Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.alternate",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 13,
+      "effect_id": "eff_723e8a709658453ec4a498265270ab6b",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:39:21.174532Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 14,
+      "effect_id": "eff_723e8a709658453ec4a498265270ab6b",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:39:21.174762Z",
+      "details_json": {
+        "capability": "work.commit"
+      }
+    },
+    {
+      "id": 15,
+      "effect_id": "eff_723e8a709658453ec4a498265270ab6b",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:39:21.185613Z",
+      "details_json": {
+        "output": {
+          "stage": "work.commit"
+        }
+      }
+    },
+    {
+      "id": 16,
+      "effect_id": "eff_723e8a709658453ec4a498265270ab6b",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:39:21.186535Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.commit",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 17,
+      "effect_id": "eff_8c9b5c97169a4d6c9094934db1acc036",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:39:21.187022Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 18,
+      "effect_id": "eff_8c9b5c97169a4d6c9094934db1acc036",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:39:21.187353Z",
+      "details_json": {
+        "capability": "work.contain"
+      }
+    },
+    {
+      "id": 19,
+      "effect_id": "eff_8c9b5c97169a4d6c9094934db1acc036",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:39:21.206573Z",
+      "details_json": {
+        "output": {
+          "stage": "work.contain"
+        }
+      }
+    },
+    {
+      "id": 20,
+      "effect_id": "eff_8c9b5c97169a4d6c9094934db1acc036",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:39:21.207278Z",
+      "details_json": {
+        "observation": {
+          "coverageThrough": "",
+          "dataset": {
+            "digest": "",
+            "mediaType": "",
+            "size": 0
+          },
+          "lastTurn": "",
+          "nextReviewAt": "2026-09-16T09:44:21Z",
+          "period": 0,
+          "unresolved": "technical execution contained after bounded routes; no human technical rescue requested"
+        }
+      }
+    },
+    {
+      "id": 21,
+      "effect_id": "eff_c777b282dfacea83dd94ca873e8ece53",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:39:21.207734Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 22,
+      "effect_id": "eff_c777b282dfacea83dd94ca873e8ece53",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:39:21.207948Z",
+      "details_json": {
+        "capability": "work.record"
+      }
+    },
+    {
+      "id": 23,
+      "effect_id": "eff_c777b282dfacea83dd94ca873e8ece53",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:39:21.227518Z",
+      "details_json": {
+        "output": {
+          "recovery": [
+            {
+              "stage": "primary",
+              "outcome": "failed: Expected '{' but got '\"'"
+            },
+            {
+              "stage": "diagnosis",
+              "outcome": "model proposal unavailable or failed deterministic source validation; original state preserved"
+            },
+            {
+              "stage": "alternate",
+              "outcome": "failed: Expected '{' but got '\"'"
+            },
+            {
+              "stage": "containment",
+              "outcome": "technical execution contained after bounded routes; no human technical rescue requested"
+            }
+          ],
+          "stage": "work.record",
+          "state": {
+            "period": 0,
+            "dataset": {
+              "digest": "",
+              "mediaType": "",
+              "size": 0
+            },
+            "coverageThrough": "",
+            "nextReviewAt": "2026-09-16T09:44:21Z",
+            "lastTurn": "",
+            "unresolved": "technical execution contained after bounded routes; no human technical rescue requested"
+          },
+          "wakePack": {
+            "digest": "",
+            "mediaType": "",
+            "size": 0
+          }
+        }
+      }
+    },
+    {
+      "id": 24,
+      "effect_id": "eff_c777b282dfacea83dd94ca873e8ece53",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:39:21.228333Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.record",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 25,
+      "effect_id": "eff_ca85a349da0c364f07c19fa3f8154a48",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:42:55.548965Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 26,
+      "effect_id": "eff_ca85a349da0c364f07c19fa3f8154a48",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:42:55.549807Z",
+      "details_json": {
+        "capability": "work.primary"
+      }
+    },
+    {
+      "id": 27,
+      "effect_id": "eff_ca85a349da0c364f07c19fa3f8154a48",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:43:42.938317Z",
+      "details_json": {
+        "output": {
+          "stage": "work.primary"
+        }
+      }
+    },
+    {
+      "id": 28,
+      "effect_id": "eff_ca85a349da0c364f07c19fa3f8154a48",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:43:42.943329Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.primary",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 29,
+      "effect_id": "eff_40de678cfaaf5457ca24200ec2e0ee86",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:43:42.944158Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 30,
+      "effect_id": "eff_40de678cfaaf5457ca24200ec2e0ee86",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:43:42.944408Z",
+      "details_json": {
+        "capability": "work.diagnose"
+      }
+    },
+    {
+      "id": 31,
+      "effect_id": "eff_40de678cfaaf5457ca24200ec2e0ee86",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:43:42.955451Z",
+      "details_json": {
+        "output": {
+          "stage": "work.diagnose"
+        }
+      }
+    },
+    {
+      "id": 32,
+      "effect_id": "eff_40de678cfaaf5457ca24200ec2e0ee86",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:43:42.956017Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.diagnose",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 33,
+      "effect_id": "eff_bba05668f5c9c408287c0bf0e4b1af15",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:43:42.95705Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 34,
+      "effect_id": "eff_bba05668f5c9c408287c0bf0e4b1af15",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:43:42.957339Z",
+      "details_json": {
+        "capability": "work.alternate"
+      }
+    },
+    {
+      "id": 35,
+      "effect_id": "eff_bba05668f5c9c408287c0bf0e4b1af15",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:44:23.292149Z",
+      "details_json": {
+        "output": {
+          "stage": "work.alternate"
+        }
+      }
+    },
+    {
+      "id": 36,
+      "effect_id": "eff_bba05668f5c9c408287c0bf0e4b1af15",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:44:23.293088Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.alternate",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 37,
+      "effect_id": "eff_8e9276b0e5bc85b044048e64b2234466",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:44:23.293762Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 38,
+      "effect_id": "eff_8e9276b0e5bc85b044048e64b2234466",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:44:23.294Z",
+      "details_json": {
+        "capability": "work.commit"
+      }
+    },
+    {
+      "id": 39,
+      "effect_id": "eff_8e9276b0e5bc85b044048e64b2234466",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:44:23.305577Z",
+      "details_json": {
+        "output": {
+          "stage": "work.commit"
+        }
+      }
+    },
+    {
+      "id": 40,
+      "effect_id": "eff_8e9276b0e5bc85b044048e64b2234466",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:44:23.306497Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.commit",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 41,
+      "effect_id": "eff_b941de50d94ac070a47d49ea38028cd0",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:44:23.306866Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 42,
+      "effect_id": "eff_b941de50d94ac070a47d49ea38028cd0",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:44:23.307043Z",
+      "details_json": {
+        "capability": "work.contain"
+      }
+    },
+    {
+      "id": 43,
+      "effect_id": "eff_b941de50d94ac070a47d49ea38028cd0",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:44:23.326511Z",
+      "details_json": {
+        "output": {
+          "stage": "work.contain"
+        }
+      }
+    },
+    {
+      "id": 44,
+      "effect_id": "eff_b941de50d94ac070a47d49ea38028cd0",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:44:23.326906Z",
+      "details_json": {
+        "observation": {
+          "coverageThrough": "",
+          "dataset": {
+            "digest": "",
+            "mediaType": "",
+            "size": 0
+          },
+          "lastTurn": "",
+          "nextReviewAt": "2026-09-16T09:47:55Z",
+          "period": 0,
+          "unresolved": "technical execution contained after bounded routes; no human technical rescue requested"
+        }
+      }
+    },
+    {
+      "id": 45,
+      "effect_id": "eff_b269cd747e4ce14f73013c2628569159",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:44:23.327345Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 46,
+      "effect_id": "eff_b269cd747e4ce14f73013c2628569159",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:44:23.327769Z",
+      "details_json": {
+        "capability": "work.record"
+      }
+    },
+    {
+      "id": 47,
+      "effect_id": "eff_b269cd747e4ce14f73013c2628569159",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:44:23.348506Z",
+      "details_json": {
+        "output": {
+          "recovery": [
+            {
+              "stage": "intelligence",
+              "outcome": "codex/default/occupant-A",
+              "evidence": {
+                "digest": "sha256:0aff5d560d6e34319d3f44959bbffa4c6766f1678e6e793ea3523b093aa307a2",
+                "mediaType": "application/json",
+                "size": 9018
+              }
+            },
+            {
+              "stage": "primary",
+              "outcome": "failed: unverifiable mapping HEART-003 -> TestPersistBeforePublishAndRestart"
+            },
+            {
+              "stage": "diagnosis",
+              "outcome": "model proposal unavailable or failed deterministic source validation; original state preserved"
+            },
+            {
+              "stage": "intelligence",
+              "outcome": "codex/default/occupant-A/alternate",
+              "evidence": {
+                "digest": "sha256:a4a315e5fbee7437cb252ef708ca0de79117f03a23653771cf04e24e3fa75cd6",
+                "mediaType": "application/json",
+                "size": 8631
+              }
+            },
+            {
+              "stage": "alternate",
+              "outcome": "failed: unverifiable mapping HEART-003 -> TestPersistBeforePublishAndRestart"
+            },
+            {
+              "stage": "containment",
+              "outcome": "technical execution contained after bounded routes; no human technical rescue requested"
+            }
+          ],
+          "stage": "work.record",
+          "state": {
+            "period": 0,
+            "dataset": {
+              "digest": "",
+              "mediaType": "",
+              "size": 0
+            },
+            "coverageThrough": "",
+            "nextReviewAt": "2026-09-16T09:47:55Z",
+            "lastTurn": "",
+            "unresolved": "technical execution contained after bounded routes; no human technical rescue requested"
+          },
+          "wakePack": {
+            "digest": "sha256:37ad69f807d52367b0decd0c2a1ccc4592af6adfcb769a7f01ef138ce857b7c3",
+            "mediaType": "application/json",
+            "size": 2022
+          }
+        }
+      }
+    },
+    {
+      "id": 48,
+      "effect_id": "eff_b269cd747e4ce14f73013c2628569159",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:44:23.348919Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.record",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 49,
+      "effect_id": "eff_f6886532df90ac9062a76e7f22d6acaa",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:51:34.978654Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 50,
+      "effect_id": "eff_f6886532df90ac9062a76e7f22d6acaa",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:51:34.979221Z",
+      "details_json": {
+        "capability": "work.primary"
+      }
+    },
+    {
+      "id": 51,
+      "effect_id": "eff_f6886532df90ac9062a76e7f22d6acaa",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:51:51.471711Z",
+      "details_json": {
+        "output": {
+          "stage": "work.primary"
+        }
+      }
+    },
+    {
+      "id": 52,
+      "effect_id": "eff_f6886532df90ac9062a76e7f22d6acaa",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:51:51.47414Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.primary",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 53,
+      "effect_id": "eff_1100819e54ae2ea62f8d8e3e7ae7de4a",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:51:51.474599Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 54,
+      "effect_id": "eff_1100819e54ae2ea62f8d8e3e7ae7de4a",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:51:51.474709Z",
+      "details_json": {
+        "capability": "work.diagnose"
+      }
+    },
+    {
+      "id": 55,
+      "effect_id": "eff_1100819e54ae2ea62f8d8e3e7ae7de4a",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:51:51.48408Z",
+      "details_json": {
+        "output": {
+          "stage": "work.diagnose"
+        }
+      }
+    },
+    {
+      "id": 56,
+      "effect_id": "eff_1100819e54ae2ea62f8d8e3e7ae7de4a",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:51:51.484328Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.diagnose",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 57,
+      "effect_id": "eff_0ada4eac3dd2d35a546ef00b7a2383ad",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:51:51.4847Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 58,
+      "effect_id": "eff_0ada4eac3dd2d35a546ef00b7a2383ad",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:51:51.484833Z",
+      "details_json": {
+        "capability": "work.alternate"
+      }
+    },
+    {
+      "id": 59,
+      "effect_id": "eff_0ada4eac3dd2d35a546ef00b7a2383ad",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:51:51.49415Z",
+      "details_json": {
+        "output": {
+          "stage": "work.alternate"
+        }
+      }
+    },
+    {
+      "id": 60,
+      "effect_id": "eff_0ada4eac3dd2d35a546ef00b7a2383ad",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:51:51.494934Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.alternate",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 61,
+      "effect_id": "eff_1c59c98957141de98c80b62e0e33fca9",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:51:51.495191Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 62,
+      "effect_id": "eff_1c59c98957141de98c80b62e0e33fca9",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:51:51.495347Z",
+      "details_json": {
+        "capability": "work.commit"
+      }
+    },
+    {
+      "id": 63,
+      "effect_id": "eff_1c59c98957141de98c80b62e0e33fca9",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:51:51.530072Z",
+      "details_json": {
+        "output": {
+          "stage": "work.commit"
+        }
+      }
+    },
+    {
+      "id": 64,
+      "effect_id": "eff_1c59c98957141de98c80b62e0e33fca9",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:51:51.530352Z",
+      "details_json": {
+        "observation": {
+          "period": 1,
+          "dataset": {
+            "digest": "sha256:30995d13f41ff307e5094de2dca22ab8b46e962bd526414e5e23d31113d0713a",
+            "mediaType": "application/json",
+            "size": 1335
+          },
+          "coverageThrough": "2026-09-16T11:51:34Z",
+          "nextReviewAt": "2026-09-16T10:51:34Z",
+          "lastTurn": "3b589ec460658c3e010eeb45019cef684510ccb07d9e86d6055ad6dbfc506d8d"
+        }
+      }
+    },
+    {
+      "id": 65,
+      "effect_id": "eff_00e46c8e10e2db9e089950bb499c18f7",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:51:51.530582Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 66,
+      "effect_id": "eff_00e46c8e10e2db9e089950bb499c18f7",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:51:51.53103Z",
+      "details_json": {
+        "capability": "work.contain"
+      }
+    },
+    {
+      "id": 67,
+      "effect_id": "eff_00e46c8e10e2db9e089950bb499c18f7",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:51:51.540133Z",
+      "details_json": {
+        "output": {
+          "stage": "work.contain"
+        }
+      }
+    },
+    {
+      "id": 68,
+      "effect_id": "eff_00e46c8e10e2db9e089950bb499c18f7",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:51:51.540377Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.contain",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 69,
+      "effect_id": "eff_822baf044b263dc8a3736f98258e002e",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:51:51.540932Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 70,
+      "effect_id": "eff_822baf044b263dc8a3736f98258e002e",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:51:51.54104Z",
+      "details_json": {
+        "capability": "work.record"
+      }
+    },
+    {
+      "id": 71,
+      "effect_id": "eff_822baf044b263dc8a3736f98258e002e",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:51:51.56108Z",
+      "details_json": {
+        "output": {
+          "recovery": [
+            {
+              "stage": "intelligence",
+              "outcome": "codex/default/occupant-A3",
+              "evidence": {
+                "digest": "sha256:bb09d2a5f7ee9f0f4651f3fb7e02a32b31f275c14b2c97f842b8921e401cc325",
+                "mediaType": "application/json",
+                "size": 3801
+              }
+            }
+          ],
+          "stage": "work.record",
+          "state": {
+            "period": 1,
+            "dataset": {
+              "digest": "sha256:30995d13f41ff307e5094de2dca22ab8b46e962bd526414e5e23d31113d0713a",
+              "mediaType": "application/json",
+              "size": 1335
+            },
+            "coverageThrough": "2026-09-16T11:51:34Z",
+            "nextReviewAt": "2026-09-16T10:51:34Z",
+            "lastTurn": "3b589ec460658c3e010eeb45019cef684510ccb07d9e86d6055ad6dbfc506d8d"
+          },
+          "wakePack": {
+            "digest": "sha256:d373108af7060ed50a819d88686f09141c395bf10af21381d5c7e77a15203815",
+            "mediaType": "application/json",
+            "size": 2023
+          }
+        }
+      }
+    },
+    {
+      "id": 72,
+      "effect_id": "eff_822baf044b263dc8a3736f98258e002e",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:51:51.561763Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.record",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 73,
+      "effect_id": "eff_9687f86aa8d89a8285e8e82204a0898e",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:53:00.087222Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 74,
+      "effect_id": "eff_9687f86aa8d89a8285e8e82204a0898e",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:53:00.08892Z",
+      "details_json": {
+        "capability": "work.primary"
+      }
+    },
+    {
+      "id": 75,
+      "effect_id": "eff_9687f86aa8d89a8285e8e82204a0898e",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:53:24.677487Z",
+      "details_json": {
+        "output": {
+          "stage": "work.primary"
+        }
+      }
+    },
+    {
+      "id": 76,
+      "effect_id": "eff_9687f86aa8d89a8285e8e82204a0898e",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:53:24.68098Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.primary",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 77,
+      "effect_id": "eff_d79c81912e798a02ceb5357e445256b1",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:53:24.681525Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 78,
+      "effect_id": "eff_d79c81912e798a02ceb5357e445256b1",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:53:24.68163Z",
+      "details_json": {
+        "capability": "work.diagnose"
+      }
+    },
+    {
+      "id": 79,
+      "effect_id": "eff_d79c81912e798a02ceb5357e445256b1",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:53:24.694199Z",
+      "details_json": {
+        "output": {
+          "stage": "work.diagnose"
+        }
+      }
+    },
+    {
+      "id": 80,
+      "effect_id": "eff_d79c81912e798a02ceb5357e445256b1",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:53:24.694642Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.diagnose",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 81,
+      "effect_id": "eff_579247bd5c1d0c1cac1875789f358bd7",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:53:24.694971Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 82,
+      "effect_id": "eff_579247bd5c1d0c1cac1875789f358bd7",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:53:24.695058Z",
+      "details_json": {
+        "capability": "work.alternate"
+      }
+    },
+    {
+      "id": 83,
+      "effect_id": "eff_579247bd5c1d0c1cac1875789f358bd7",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:53:24.704234Z",
+      "details_json": {
+        "output": {
+          "stage": "work.alternate"
+        }
+      }
+    },
+    {
+      "id": 84,
+      "effect_id": "eff_579247bd5c1d0c1cac1875789f358bd7",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:53:24.70592Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.alternate",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 85,
+      "effect_id": "eff_4a79d1c1d3f94eedeafc3ecc324702fd",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:53:24.707458Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 86,
+      "effect_id": "eff_4a79d1c1d3f94eedeafc3ecc324702fd",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:53:24.707644Z",
+      "details_json": {
+        "capability": "work.commit"
+      }
+    },
+    {
+      "id": 87,
+      "effect_id": "eff_4a79d1c1d3f94eedeafc3ecc324702fd",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:53:24.74222Z",
+      "details_json": {
+        "output": {
+          "stage": "work.commit"
+        }
+      }
+    },
+    {
+      "id": 88,
+      "effect_id": "eff_4a79d1c1d3f94eedeafc3ecc324702fd",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:53:24.742581Z",
+      "details_json": {
+        "observation": {
+          "period": 2,
+          "dataset": {
+            "digest": "sha256:3eede746c4b8dac8d92332a1b69f7b58c086cfa821abe7ba76577353bebbb818",
+            "mediaType": "application/json",
+            "size": 2877
+          },
+          "coverageThrough": "2026-09-16T11:53:00Z",
+          "nextReviewAt": "2026-09-16T10:53:00Z",
+          "lastTurn": "55f237f1972b31d3f19b08f351bd5c33a390307240beefad16f569b2b63bbcbf"
+        }
+      }
+    },
+    {
+      "id": 89,
+      "effect_id": "eff_0719ab451a671a2d0404beed019cf275",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:53:24.742828Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 90,
+      "effect_id": "eff_0719ab451a671a2d0404beed019cf275",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:53:24.742931Z",
+      "details_json": {
+        "capability": "work.contain"
+      }
+    },
+    {
+      "id": 91,
+      "effect_id": "eff_0719ab451a671a2d0404beed019cf275",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:53:24.753229Z",
+      "details_json": {
+        "output": {
+          "stage": "work.contain"
+        }
+      }
+    },
+    {
+      "id": 92,
+      "effect_id": "eff_0719ab451a671a2d0404beed019cf275",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:53:24.754236Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.contain",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 93,
+      "effect_id": "eff_4dfd1f4863b9b7994d74d8efb87b8e1b",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T09:53:24.755213Z",
+      "details_json": {
+        "reason": "bounded operator mandate"
+      }
+    },
+    {
+      "id": 94,
+      "effect_id": "eff_4dfd1f4863b9b7994d74d8efb87b8e1b",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T09:53:24.755463Z",
+      "details_json": {
+        "capability": "work.record"
+      }
+    },
+    {
+      "id": 95,
+      "effect_id": "eff_4dfd1f4863b9b7994d74d8efb87b8e1b",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T09:53:24.773125Z",
+      "details_json": {
+        "output": {
+          "recovery": [
+            {
+              "stage": "intelligence",
+              "outcome": "codex/default/occupant-B",
+              "evidence": {
+                "digest": "sha256:152efd838d0a9226c251bcbe0cf754fbb3b0d264451bfd0e3c41014619e54961",
+                "mediaType": "application/json",
+                "size": 5414
+              }
+            }
+          ],
+          "stage": "work.record",
+          "state": {
+            "period": 2,
+            "dataset": {
+              "digest": "sha256:3eede746c4b8dac8d92332a1b69f7b58c086cfa821abe7ba76577353bebbb818",
+              "mediaType": "application/json",
+              "size": 2877
+            },
+            "coverageThrough": "2026-09-16T11:53:00Z",
+            "nextReviewAt": "2026-09-16T10:53:00Z",
+            "lastTurn": "55f237f1972b31d3f19b08f351bd5c33a390307240beefad16f569b2b63bbcbf"
+          },
+          "wakePack": {
+            "digest": "sha256:c6743657b04aedbc1008483498dce2e69b30968661bb692f7603298157a6eb20",
+            "mediaType": "application/json",
+            "size": 2239
+          }
+        }
+      }
+    },
+    {
+      "id": 96,
+      "effect_id": "eff_4dfd1f4863b9b7994d74d8efb87b8e1b",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T09:53:24.773422Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.record",
+          "mode": "bounded-stage-result; final state verified separately"
+        }
+      }
+    },
+    {
+      "id": 97,
+      "effect_id": "eff_94f362bfd3ba6624124d33ef44392e48",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T10:51:50.040519Z",
+      "details_json": {
+        "reason": "capability admitted by the bounded mandate"
+      }
+    },
+    {
+      "id": 98,
+      "effect_id": "eff_94f362bfd3ba6624124d33ef44392e48",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T10:51:50.041351Z",
+      "details_json": {
+        "capability": "work.primary"
+      }
+    },
+    {
+      "id": 99,
+      "effect_id": "eff_94f362bfd3ba6624124d33ef44392e48",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T10:54:28.539934Z",
+      "details_json": {
+        "output": {
+          "stage": "work.primary"
+        }
+      }
+    },
+    {
+      "id": 100,
+      "effect_id": "eff_94f362bfd3ba6624124d33ef44392e48",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T10:54:28.540509Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.primary",
+          "mode": "stage result persisted; final state verified by commit or containment"
+        }
+      }
+    },
+    {
+      "id": 101,
+      "effect_id": "eff_ed6dafca3c8419009e99493d5661668a",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T10:54:28.540923Z",
+      "details_json": {
+        "reason": "capability admitted by the bounded mandate"
+      }
+    },
+    {
+      "id": 102,
+      "effect_id": "eff_ed6dafca3c8419009e99493d5661668a",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T10:54:28.541014Z",
+      "details_json": {
+        "capability": "work.diagnose"
+      }
+    },
+    {
+      "id": 103,
+      "effect_id": "eff_ed6dafca3c8419009e99493d5661668a",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T10:54:28.549225Z",
+      "details_json": {
+        "output": {
+          "stage": "work.diagnose"
+        }
+      }
+    },
+    {
+      "id": 104,
+      "effect_id": "eff_ed6dafca3c8419009e99493d5661668a",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T10:54:28.550666Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.diagnose",
+          "mode": "stage result persisted; final state verified by commit or containment"
+        }
+      }
+    },
+    {
+      "id": 105,
+      "effect_id": "eff_a6c4105a5509c6dd7bc94afe8e364004",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T10:54:28.551404Z",
+      "details_json": {
+        "reason": "capability admitted by the bounded mandate"
+      }
+    },
+    {
+      "id": 106,
+      "effect_id": "eff_a6c4105a5509c6dd7bc94afe8e364004",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T10:54:28.551508Z",
+      "details_json": {
+        "capability": "work.alternate"
+      }
+    },
+    {
+      "id": 107,
+      "effect_id": "eff_a6c4105a5509c6dd7bc94afe8e364004",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T10:54:28.55894Z",
+      "details_json": {
+        "output": {
+          "stage": "work.alternate"
+        }
+      }
+    },
+    {
+      "id": 108,
+      "effect_id": "eff_a6c4105a5509c6dd7bc94afe8e364004",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T10:54:28.559664Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.alternate",
+          "mode": "stage result persisted; final state verified by commit or containment"
+        }
+      }
+    },
+    {
+      "id": 109,
+      "effect_id": "eff_9754aee0138d364d12322d5d52454ecc",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T10:54:28.559912Z",
+      "details_json": {
+        "reason": "capability admitted by the bounded mandate"
+      }
+    },
+    {
+      "id": 110,
+      "effect_id": "eff_9754aee0138d364d12322d5d52454ecc",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T10:54:28.56Z",
+      "details_json": {
+        "capability": "work.commit"
+      }
+    },
+    {
+      "id": 111,
+      "effect_id": "eff_9754aee0138d364d12322d5d52454ecc",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T10:54:28.598341Z",
+      "details_json": {
+        "output": {
+          "stage": "work.commit"
+        }
+      }
+    },
+    {
+      "id": 112,
+      "effect_id": "eff_9754aee0138d364d12322d5d52454ecc",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T10:54:28.599847Z",
+      "details_json": {
+        "observation": {
+          "period": 3,
+          "dataset": {
+            "digest": "sha256:6d30400c7560923e26df64a835a190d3a8230bed4a31da379ac1cbc82026e283",
+            "mediaType": "application/json",
+            "size": 6199
+          },
+          "coverageThrough": "2026-09-16T12:51:50Z",
+          "nextReviewAt": "2026-09-16T11:51:50Z",
+          "lastTurn": "b53d29a5df9d2183ef4a6c4faed0fb317341b6882adcd6c4c531640b29c65d05"
+        }
+      }
+    },
+    {
+      "id": 113,
+      "effect_id": "eff_c119b9db6badf259e2f281f8d10a6c49",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T10:54:28.60022Z",
+      "details_json": {
+        "reason": "capability admitted by the bounded mandate"
+      }
+    },
+    {
+      "id": 114,
+      "effect_id": "eff_c119b9db6badf259e2f281f8d10a6c49",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T10:54:28.600317Z",
+      "details_json": {
+        "capability": "work.contain"
+      }
+    },
+    {
+      "id": 115,
+      "effect_id": "eff_c119b9db6badf259e2f281f8d10a6c49",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T10:54:28.610437Z",
+      "details_json": {
+        "output": {
+          "stage": "work.contain"
+        }
+      }
+    },
+    {
+      "id": 116,
+      "effect_id": "eff_c119b9db6badf259e2f281f8d10a6c49",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T10:54:28.611512Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.contain",
+          "mode": "stage result persisted; final state verified by commit or containment"
+        }
+      }
+    },
+    {
+      "id": 117,
+      "effect_id": "eff_167490b4ae6cf1c42e51652f507a4946",
+      "from_state": "planned",
+      "event": "authorize",
+      "to_state": "authorized",
+      "occurred_at": "2026-09-16T10:54:28.612127Z",
+      "details_json": {
+        "reason": "capability admitted by the bounded mandate"
+      }
+    },
+    {
+      "id": 118,
+      "effect_id": "eff_167490b4ae6cf1c42e51652f507a4946",
+      "from_state": "authorized",
+      "event": "dispatch",
+      "to_state": "dispatched",
+      "occurred_at": "2026-09-16T10:54:28.612609Z",
+      "details_json": {
+        "capability": "work.record"
+      }
+    },
+    {
+      "id": 119,
+      "effect_id": "eff_167490b4ae6cf1c42e51652f507a4946",
+      "from_state": "dispatched",
+      "event": "acknowledge",
+      "to_state": "acknowledged",
+      "occurred_at": "2026-09-16T10:54:28.632829Z",
+      "details_json": {
+        "output": {
+          "recovery": [
+            {
+              "stage": "intelligence",
+              "outcome": "xai/grok-4.6",
+              "evidence": {
+                "digest": "sha256:26b76ac254a2cec06b12b873ac409e97379a2efce423dd9c10be79ba01e57e5e",
+                "mediaType": "application/json",
+                "size": 1670
+              }
+            }
+          ],
+          "stage": "work.record",
+          "state": {
+            "period": 3,
+            "dataset": {
+              "digest": "sha256:6d30400c7560923e26df64a835a190d3a8230bed4a31da379ac1cbc82026e283",
+              "mediaType": "application/json",
+              "size": 6199
+            },
+            "coverageThrough": "2026-09-16T12:51:50Z",
+            "nextReviewAt": "2026-09-16T11:51:50Z",
+            "lastTurn": "b53d29a5df9d2183ef4a6c4faed0fb317341b6882adcd6c4c531640b29c65d05"
+          },
+          "wakePack": {
+            "digest": "sha256:9bdd2aedb0f15d76f2d2b6a7446d8f528ea8047b0176be22bee09b8db7c38beb",
+            "mediaType": "application/json",
+            "size": 2246
+          }
+        }
+      }
+    },
+    {
+      "id": 120,
+      "effect_id": "eff_167490b4ae6cf1c42e51652f507a4946",
+      "from_state": "acknowledged",
+      "event": "verify_match",
+      "to_state": "verified",
+      "occurred_at": "2026-09-16T10:54:28.633299Z",
+      "details_json": {
+        "observation": {
+          "capability": "work.record",
+          "mode": "stage result persisted; final state verified by commit or containment"
+        }
+      }
+    }
+  ],
+  "effects": [
+    {
+      "effect_id": "eff_a21b84cf3a0b15ad80ac94eff824eafc",
+      "bundle_digest": "sha256:ce978a99bfeb1455d0bf204c78da910e196e4a03b4867d45e68438b1f08dadc5",
+      "step_name": "work-primary",
+      "capability": "work.primary",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:39:21.138248Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_566d9f882ac4bbde372380a1cfbaa09e",
+      "bundle_digest": "sha256:ce978a99bfeb1455d0bf204c78da910e196e4a03b4867d45e68438b1f08dadc5",
+      "step_name": "work-diagnose",
+      "capability": "work.diagnose",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:39:21.151319Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_7fb0b8ec56bfc9dd7a8c13af4eec7ba8",
+      "bundle_digest": "sha256:ce978a99bfeb1455d0bf204c78da910e196e4a03b4867d45e68438b1f08dadc5",
+      "step_name": "work-alternate",
+      "capability": "work.alternate",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:39:21.173925Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_723e8a709658453ec4a498265270ab6b",
+      "bundle_digest": "sha256:ce978a99bfeb1455d0bf204c78da910e196e4a03b4867d45e68438b1f08dadc5",
+      "step_name": "work-commit",
+      "capability": "work.commit",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:39:21.186535Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_8c9b5c97169a4d6c9094934db1acc036",
+      "bundle_digest": "sha256:ce978a99bfeb1455d0bf204c78da910e196e4a03b4867d45e68438b1f08dadc5",
+      "step_name": "work-contain",
+      "capability": "work.contain",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:39:21.207278Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_c777b282dfacea83dd94ca873e8ece53",
+      "bundle_digest": "sha256:ce978a99bfeb1455d0bf204c78da910e196e4a03b4867d45e68438b1f08dadc5",
+      "step_name": "work-record",
+      "capability": "work.record",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:39:21.228333Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_ca85a349da0c364f07c19fa3f8154a48",
+      "bundle_digest": "sha256:ee68902457363778281d5e8c810d58db3bd491c419e6facb86e2c7f4740c23e1",
+      "step_name": "work-primary",
+      "capability": "work.primary",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:43:42.943329Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_40de678cfaaf5457ca24200ec2e0ee86",
+      "bundle_digest": "sha256:ee68902457363778281d5e8c810d58db3bd491c419e6facb86e2c7f4740c23e1",
+      "step_name": "work-diagnose",
+      "capability": "work.diagnose",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:43:42.956017Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_bba05668f5c9c408287c0bf0e4b1af15",
+      "bundle_digest": "sha256:ee68902457363778281d5e8c810d58db3bd491c419e6facb86e2c7f4740c23e1",
+      "step_name": "work-alternate",
+      "capability": "work.alternate",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:44:23.293088Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_8e9276b0e5bc85b044048e64b2234466",
+      "bundle_digest": "sha256:ee68902457363778281d5e8c810d58db3bd491c419e6facb86e2c7f4740c23e1",
+      "step_name": "work-commit",
+      "capability": "work.commit",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:44:23.306497Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_b941de50d94ac070a47d49ea38028cd0",
+      "bundle_digest": "sha256:ee68902457363778281d5e8c810d58db3bd491c419e6facb86e2c7f4740c23e1",
+      "step_name": "work-contain",
+      "capability": "work.contain",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:44:23.326906Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_b269cd747e4ce14f73013c2628569159",
+      "bundle_digest": "sha256:ee68902457363778281d5e8c810d58db3bd491c419e6facb86e2c7f4740c23e1",
+      "step_name": "work-record",
+      "capability": "work.record",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:44:23.348919Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_f6886532df90ac9062a76e7f22d6acaa",
+      "bundle_digest": "sha256:442e5bb840cdc8e4f37c8ae1007eabe121d002482638da13c331460574407800",
+      "step_name": "work-primary",
+      "capability": "work.primary",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:51:51.47414Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_1100819e54ae2ea62f8d8e3e7ae7de4a",
+      "bundle_digest": "sha256:442e5bb840cdc8e4f37c8ae1007eabe121d002482638da13c331460574407800",
+      "step_name": "work-diagnose",
+      "capability": "work.diagnose",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:51:51.484328Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_0ada4eac3dd2d35a546ef00b7a2383ad",
+      "bundle_digest": "sha256:442e5bb840cdc8e4f37c8ae1007eabe121d002482638da13c331460574407800",
+      "step_name": "work-alternate",
+      "capability": "work.alternate",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:51:51.494934Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_1c59c98957141de98c80b62e0e33fca9",
+      "bundle_digest": "sha256:442e5bb840cdc8e4f37c8ae1007eabe121d002482638da13c331460574407800",
+      "step_name": "work-commit",
+      "capability": "work.commit",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:51:51.530352Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_00e46c8e10e2db9e089950bb499c18f7",
+      "bundle_digest": "sha256:442e5bb840cdc8e4f37c8ae1007eabe121d002482638da13c331460574407800",
+      "step_name": "work-contain",
+      "capability": "work.contain",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:51:51.540377Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_822baf044b263dc8a3736f98258e002e",
+      "bundle_digest": "sha256:442e5bb840cdc8e4f37c8ae1007eabe121d002482638da13c331460574407800",
+      "step_name": "work-record",
+      "capability": "work.record",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:51:51.561763Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_9687f86aa8d89a8285e8e82204a0898e",
+      "bundle_digest": "sha256:019405e1e447177549a3722fe180001668d8fa21d3a35e00a6f4a34be0d3755a",
+      "step_name": "work-primary",
+      "capability": "work.primary",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:53:24.68098Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_d79c81912e798a02ceb5357e445256b1",
+      "bundle_digest": "sha256:019405e1e447177549a3722fe180001668d8fa21d3a35e00a6f4a34be0d3755a",
+      "step_name": "work-diagnose",
+      "capability": "work.diagnose",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:53:24.694642Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_579247bd5c1d0c1cac1875789f358bd7",
+      "bundle_digest": "sha256:019405e1e447177549a3722fe180001668d8fa21d3a35e00a6f4a34be0d3755a",
+      "step_name": "work-alternate",
+      "capability": "work.alternate",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:53:24.70592Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_4a79d1c1d3f94eedeafc3ecc324702fd",
+      "bundle_digest": "sha256:019405e1e447177549a3722fe180001668d8fa21d3a35e00a6f4a34be0d3755a",
+      "step_name": "work-commit",
+      "capability": "work.commit",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:53:24.742581Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_0719ab451a671a2d0404beed019cf275",
+      "bundle_digest": "sha256:019405e1e447177549a3722fe180001668d8fa21d3a35e00a6f4a34be0d3755a",
+      "step_name": "work-contain",
+      "capability": "work.contain",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:53:24.754236Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_4dfd1f4863b9b7994d74d8efb87b8e1b",
+      "bundle_digest": "sha256:019405e1e447177549a3722fe180001668d8fa21d3a35e00a6f4a34be0d3755a",
+      "step_name": "work-record",
+      "capability": "work.record",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T09:53:24.773422Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_94f362bfd3ba6624124d33ef44392e48",
+      "bundle_digest": "sha256:6bad616fceaaa59d1cccdd559f604016156c9e4e70dbece79fb3b8fb9d69d0da",
+      "step_name": "work-primary",
+      "capability": "work.primary",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T10:54:28.540509Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_ed6dafca3c8419009e99493d5661668a",
+      "bundle_digest": "sha256:6bad616fceaaa59d1cccdd559f604016156c9e4e70dbece79fb3b8fb9d69d0da",
+      "step_name": "work-diagnose",
+      "capability": "work.diagnose",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T10:54:28.550666Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_a6c4105a5509c6dd7bc94afe8e364004",
+      "bundle_digest": "sha256:6bad616fceaaa59d1cccdd559f604016156c9e4e70dbece79fb3b8fb9d69d0da",
+      "step_name": "work-alternate",
+      "capability": "work.alternate",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T10:54:28.559664Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_9754aee0138d364d12322d5d52454ecc",
+      "bundle_digest": "sha256:6bad616fceaaa59d1cccdd559f604016156c9e4e70dbece79fb3b8fb9d69d0da",
+      "step_name": "work-commit",
+      "capability": "work.commit",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T10:54:28.599847Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_c119b9db6badf259e2f281f8d10a6c49",
+      "bundle_digest": "sha256:6bad616fceaaa59d1cccdd559f604016156c9e4e70dbece79fb3b8fb9d69d0da",
+      "step_name": "work-contain",
+      "capability": "work.contain",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T10:54:28.611512Z",
+      "last_error": ""
+    },
+    {
+      "effect_id": "eff_167490b4ae6cf1c42e51652f507a4946",
+      "bundle_digest": "sha256:6bad616fceaaa59d1cccdd559f604016156c9e4e70dbece79fb3b8fb9d69d0da",
+      "step_name": "work-record",
+      "capability": "work.record",
+      "capability_version": "0",
+      "class": "reconcilable",
+      "input_digest": "sha256:74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "state": "verified",
+      "updated_at": "2026-09-16T10:54:28.633299Z",
+      "last_error": ""
+    }
+  ],
+  "sqlite_sequence": [
+    {
+      "name": "effect_events",
+      "seq": 120
+    }
+  ]
+}

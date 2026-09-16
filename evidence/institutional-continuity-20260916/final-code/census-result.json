@@ -1,0 +1,14 @@
+{
+  "cohort": {
+    "digest": "sha256:706b00951fa0d476d03b903895f2c82cb378b5e48f0ac44b627033ae6ebf99ac",
+    "mediaType": "application/json",
+    "size": 1300
+  },
+  "observations": {
+    "digest": "sha256:a7ef97c7c194938e6aab44177afe67e7434b285aac3d41a934cb00d4f80b4853",
+    "mediaType": "application/json",
+    "size": 1126
+  },
+  "receiptId": "rcp_01a0a9c9eb3378808b3f2ef52307248b",
+  "verified": true
+}
