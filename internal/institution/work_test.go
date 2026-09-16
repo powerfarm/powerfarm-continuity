@@ -176,13 +176,19 @@ func TestDatasetRowsMustBeKeptAndVerifiable(t *testing.T) {
 			t.Fatalf("%s must be refused", name)
 		}
 	}
-	dataset, err := work.CAS.JSON(valid)
+
+	retired := Mapping{"HEART-002", "TestRenamedAway", "the test was renamed in a later change"}
+	previous := Proposal{Mappings: append(slices.Clone(valid.Mappings), retired)}
+	dataset, err := work.CAS.JSON(previous)
 	must(t, err)
 	work.State.Dataset = dataset
-	dropped := Proposal{Mappings: []Mapping{valid.Mappings[0], {"HEART-002", "TestTwo", "new"}, {"HEART-003", "TestThree", "new"}}}
-	if work.validate(dropped) == nil {
-		t.Fatal("dropping an existing row must be refused")
+	if work.validate(Proposal{Mappings: []Mapping{valid.Mappings[0], {"HEART-002", "TestTwo", "new"}}}) == nil {
+		t.Fatal("dropping a still verifiable row must be refused")
 	}
+	if work.validate(valid) == nil {
+		t.Fatal("a turn that only retires stale rows adds nothing and must be refused")
+	}
+	must(t, work.validate(Proposal{Mappings: append(slices.Clone(valid.Mappings), Mapping{"HEART-002", "TestThree", "re-mapped after the rename"})}))
 }
 
 func TestMandateBoundsAreEnforced(t *testing.T) {

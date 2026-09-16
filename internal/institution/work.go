@@ -290,9 +290,12 @@ func (w *Work) BuildContext(route string) (WakePack, error) {
 	return pack, err
 }
 
-// validate accepts a proposal only if it keeps every existing row unchanged,
-// adds rows, and every row names a case in the requirements and a test function
-// in the source. Rows are identified by (caseId, testName).
+// validate accepts a proposal only if every row names a case in the current
+// requirements and a test function in the current source, every existing row
+// that is still verifiable is kept unchanged, and at least one new verifiable
+// row is added. Existing rows whose case or test no longer exists may be
+// retired, because the institution's software changed. Rows are identified by
+// (caseId, testName).
 func (w *Work) validate(proposal Proposal) error {
 	previous := Proposal{}
 	if w.State.Dataset.Digest != "" {
@@ -304,25 +307,35 @@ func (w *Work) validate(proposal Proposal) error {
 			return err
 		}
 	}
-	if len(proposal.Mappings) <= len(previous.Mappings) {
-		return errors.New("a turn must extend the current dataset")
-	}
 	rows := map[string]Mapping{}
 	for _, row := range proposal.Mappings {
 		key := row.CaseID + "\x00" + row.TestName
-		if _, duplicate := rows[key]; duplicate || row.Rationale == "" ||
-			!caseIDPattern.MatchString(row.CaseID) || !strings.Contains(string(w.Requirements), "id: "+row.CaseID) ||
-			!testNamePattern.MatchString(row.TestName) || !strings.Contains(string(w.Source), "func "+row.TestName+"(") {
+		if _, duplicate := rows[key]; duplicate || row.Rationale == "" || !w.verifiable(row) {
 			return fmt.Errorf("unverifiable mapping %s -> %s", row.CaseID, row.TestName)
 		}
 		rows[key] = row
 	}
+	kept := 0
 	for _, row := range previous.Mappings {
-		if kept, ok := rows[row.CaseID+"\x00"+row.TestName]; !ok || kept != row {
-			return errors.New("a turn must keep every existing dataset row unchanged")
+		if !w.verifiable(row) {
+			continue
 		}
+		if current, ok := rows[row.CaseID+"\x00"+row.TestName]; !ok || current != row {
+			return fmt.Errorf("existing row %s -> %s is still verifiable and must be kept unchanged", row.CaseID, row.TestName)
+		}
+		kept++
+	}
+	if len(rows) <= kept {
+		return errors.New("a turn must add at least one new verifiable row")
 	}
 	return nil
+}
+
+// verifiable reports whether a row names a case present in the current
+// requirements and a test function present in the current source.
+func (w *Work) verifiable(row Mapping) bool {
+	return caseIDPattern.MatchString(row.CaseID) && strings.Contains(string(w.Requirements), "id: "+row.CaseID) &&
+		testNamePattern.MatchString(row.TestName) && strings.Contains(string(w.Source), "func "+row.TestName+"(")
 }
 
 // attempt spends one invocation on route. The spent budget is persisted before
