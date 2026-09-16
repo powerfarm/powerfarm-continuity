@@ -1,0 +1,45 @@
+{
+  "document": {
+    "dsl": "1.0.3",
+    "namespace": "powerfarm",
+    "name": "planning-renewal",
+    "version": "0.1.0"
+  },
+  "do": [
+    {
+      "planning-resolve": {
+        "call": "planning.resolve"
+      }
+    },
+    {
+      "planning-propose": {
+        "call": "planning.propose"
+      }
+    },
+    {
+      "planning-validate": {
+        "call": "planning.validate"
+      }
+    },
+    {
+      "planning-renew": {
+        "call": "planning.renew"
+      }
+    },
+    {
+      "planning-confirm": {
+        "call": "planning.confirm"
+      }
+    },
+    {
+      "planning-contain": {
+        "call": "planning.contain"
+      }
+    },
+    {
+      "planning-record": {
+        "call": "planning.record"
+      }
+    }
+  ]
+}

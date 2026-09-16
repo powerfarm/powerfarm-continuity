@@ -218,3 +218,44 @@ func TestAnObligationWithNoRouteIsContainedNotIgnored(t *testing.T) {
 		t.Fatalf("the containment does not say what it could not serve: %q", stored.Reason)
 	}
 }
+
+func TestARouteMayStateItsOwnOutcomeInHeartimeTerms(t *testing.T) {
+	// A relationship whose outcomes are genuinely four — a planning turn tells a
+	// ledger that refused a plan apart from a ledger it could not read — states
+	// its outcome itself. The ingress reads it and never decides for it.
+	cases := []struct {
+		name string
+		body string
+		want Outcome
+	}{
+		{"verified", `echo '{"outcome": "verified"}'`, Verified},
+		{"failed", `echo '{"outcome": "failed"}'`, Failed},
+		{"uncertain", `echo '{"outcome": "uncertain"}'`, Uncertain},
+		{"contained", `echo '{"outcome": "contained"}'`, Contained},
+		{"a term Heartime does not accept", `echo '{"outcome": "acknowledged"}'`, Uncertain},
+		{"not a string", `echo '{"outcome": true}'`, Uncertain},
+		{"absent", `echo '{"renewed": true}'`, Uncertain},
+	}
+	for _, test := range cases {
+		t.Run(test.name, func(t *testing.T) {
+			h := newHarness(t, stubRoute("planning", censusHandoff, []string{KindWork}, 0,
+				OutcomeMap{OutcomeField: "outcome"}, test.body))
+			_, raw := evidence(t, censusContract, 1, obligation, KindWork, nominal, "")
+			h.deliver(raw)
+			h.sweep()
+			if report := h.only(); report[1] != string(test.want) {
+				t.Fatalf("expected %s, got %s (%s)", test.want, report[1], h.result(report[2]).Reason)
+			}
+		})
+	}
+}
+
+func TestARouteMayNotStateItsOutcomeTwoWays(t *testing.T) {
+	config := Config{TokenFile: "t", State: "s", Report: []string{"heartime"}, Routes: []Route{{
+		Name: "planning", Handoff: censusHandoff, Kinds: []string{KindWork}, Argv: []string{"planning-turn"},
+		Outcome: OutcomeMap{Field: "verified", OutcomeField: "outcome"},
+	}}}
+	if err := config.normalize(); err == nil {
+		t.Fatal("a route declaring both a boolean and an outcome field was accepted")
+	}
+}

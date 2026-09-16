@@ -67,7 +67,7 @@ The command holds an exclusive lock on the state directory, refuses to replay an
 
 ## Current limits
 
-- Planning renewal is still an operator adapter binding the turn's prepared period; no planning capability graph exists yet, so an autonomous responsibility falls into fallback when its coverage ends.
+- The deterministic period planner always plans the mandate's full period; `reduce_scope` is expressible but nothing decides to use it. See [PLANNING-RENEWAL.md](PLANNING-RENEWAL.md).
 - Capability profiles of in-process capabilities declare `openapi` with a URN placeholder, because Continuity v2 has no profile for bounded local capabilities.
 - The census cohort was read with the operator's authenticated Registry session, not a dedicated read-only credential. The probe covers directory names at one place.
 - The mandate and contracts are local, trusted-operator documents, not Registry admissions.

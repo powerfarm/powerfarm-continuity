@@ -57,15 +57,24 @@ type Route struct {
 // ingress never infers verification: if a route does not say how success is
 // established, its activations resolve as uncertain.
 //
+// A route says so in one of two ways. `field` names a boolean the route returns
+// when success is a yes or no. `outcomeField` names a string field in which the
+// route states its own outcome in Heartime's own four terms, for a relationship
+// whose outcomes are genuinely four — a planning turn distinguishes a ledger
+// that refused a plan from a ledger whose state it could not establish, and a
+// boolean cannot carry that. The ingress still only reads what the route said;
+// it never decides for it.
+//
 // A route killed by timeout or signal is always uncertain, because effects may
 // have happened. That is doctrine, not policy, and cannot be configured away.
 type OutcomeMap struct {
-	Field     string  `json:"field,omitempty"`
-	WhenTrue  Outcome `json:"whenTrue,omitempty"`
-	WhenFalse Outcome `json:"whenFalse,omitempty"`
-	OnRefusal Outcome `json:"onRefusal,omitempty"`
-	OnFailure Outcome `json:"onFailure,omitempty"`
-	OnMissing Outcome `json:"onMissing,omitempty"`
+	Field        string  `json:"field,omitempty"`
+	OutcomeField string  `json:"outcomeField,omitempty"`
+	WhenTrue     Outcome `json:"whenTrue,omitempty"`
+	WhenFalse    Outcome `json:"whenFalse,omitempty"`
+	OnRefusal    Outcome `json:"onRefusal,omitempty"`
+	OnFailure    Outcome `json:"onFailure,omitempty"`
+	OnMissing    Outcome `json:"onMissing,omitempty"`
 }
 
 // LoadConfig reads exactly one configuration document. Unknown fields are
@@ -145,6 +154,9 @@ func (c *Config) normalize() error {
 		}
 		if len(route.Argv) == 0 {
 			return invalid("route %s has no command", route.Name)
+		}
+		if route.Outcome.Field != "" && route.Outcome.OutcomeField != "" {
+			return invalid("route %s declares both a boolean field and an outcome field; one route states its outcome one way", route.Name)
 		}
 		if route.TimeoutSeconds <= 0 {
 			route.TimeoutSeconds = defaultTimeoutSeconds

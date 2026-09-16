@@ -1,0 +1,24 @@
+{
+  "contract": {
+    "id": "pf.contract.heartime.test.rollover",
+    "generation": 1
+  },
+  "coverageThrough": "2026-09-17T13:23:26Z",
+  "directionDecision": null,
+  "invocations": 1,
+  "nextReviewAt": "2026-09-17T00:53:39Z",
+  "occurrence": "sha256:c24ed2be0826b2c22bda22f10aef625a3bfe26c5b1c9d44967b5d27a98a4a773",
+  "outcome": "verified",
+  "plan": {
+    "digest": "sha256:54b9c64ea21b2031ebefe0dac703de1e3904f0709efcf2139f6a2916f62baaad",
+    "mediaType": "application/json",
+    "size": 1317
+  },
+  "reason": "Heartime accepted the renewal: coverage runs to 2026-09-17T13:23:26Z and the next planning evaluation is armed at 2026-09-17T00:53:39Z",
+  "renewal": {
+    "digest": "sha256:dbd66ff13ce566a10dcfad75442de7fb8f6f95727911ceb91496615bb904949b",
+    "mediaType": "application/json",
+    "size": 606
+  },
+  "renewed": true
+}

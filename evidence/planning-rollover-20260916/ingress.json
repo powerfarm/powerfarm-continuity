@@ -1,0 +1,53 @@
+{
+  "listen": "127.0.0.1:8801",
+  "tokenFile": "/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/rollover/token",
+  "state": "/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/rollover/ingress-state",
+  "report": [
+    "/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/heartime",
+    "-db",
+    "/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/rollover/heartime.db",
+    "report"
+  ],
+  "sweepSeconds": 5,
+  "routes": [
+    {
+      "name": "rollover-work",
+      "handoff": "pf.contract.exec.test.rollover-work",
+      "kinds": [
+        "work"
+      ],
+      "argv": [
+        "/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/rollover/route.sh",
+        "{occurrence}"
+      ],
+      "timeoutSeconds": 60,
+      "outcome": {
+        "field": "verified"
+      }
+    },
+    {
+      "name": "rollover-planning",
+      "handoff": "pf.contract.exec.test.rollover-planning",
+      "kinds": [
+        "planning-review"
+      ],
+      "argv": [
+        "/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/planning-turn",
+        "-state",
+        "{stateDir}",
+        "-assets",
+        "/Users/ubl-ops/platform-four/powerfarm-continuity/examples/institution",
+        "-mandate",
+        "/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/rollover/planning-mandate.json",
+        "-delivery",
+        "{deliveryPath}",
+        "-ledger",
+        "[\"/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/heartime\", \"-db\", \"/private/tmp/claude-503/-Users-ubl-ops-coloured-places/67a87ad9-9005-4e32-be3d-5033860b357a/scratchpad/rollover/heartime.db\"]"
+      ],
+      "timeoutSeconds": 120,
+      "outcome": {
+        "outcomeField": "outcome"
+      }
+    }
+  ]
+}

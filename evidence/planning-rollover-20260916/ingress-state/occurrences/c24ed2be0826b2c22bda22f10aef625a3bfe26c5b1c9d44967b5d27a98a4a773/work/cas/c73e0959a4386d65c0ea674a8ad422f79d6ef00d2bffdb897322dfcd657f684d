@@ -1,0 +1,94 @@
+{
+  "at": "2026-09-16T12:53:39Z",
+  "due": [
+    {
+      "id": "sha256:c24ed2be0826b2c22bda22f10aef625a3bfe26c5b1c9d44967b5d27a98a4a773",
+      "contract": {
+        "id": "pf.contract.heartime.test.rollover",
+        "generation": 1
+      },
+      "kind": "planning-review",
+      "nominal": "2026-09-16T12:53:16Z",
+      "coveredCount": 1,
+      "state": "acknowledged",
+      "attempts": 1,
+      "acknowledged": true,
+      "reviewAt": "2026-09-16T13:03:38Z"
+    },
+    {
+      "id": "sha256:2090b5a717c3dc578696b103319cb2e8fa6da66c0ca3447dc3729d7060314b16",
+      "contract": {
+        "id": "pf.contract.heartime.test.rollover",
+        "generation": 1
+      },
+      "kind": "work",
+      "nominal": "2026-09-16T12:53:26Z",
+      "coveredCount": 3,
+      "state": "acknowledged",
+      "attempts": 1,
+      "acknowledged": true,
+      "reviewAt": "2026-09-16T13:03:38Z"
+    }
+  ],
+  "emitted": [
+    "sha256:c24ed2be0826b2c22bda22f10aef625a3bfe26c5b1c9d44967b5d27a98a4a773",
+    "sha256:2090b5a717c3dc578696b103319cb2e8fa6da66c0ca3447dc3729d7060314b16"
+  ],
+  "mayHaveExecuted": [
+    "sha256:c24ed2be0826b2c22bda22f10aef625a3bfe26c5b1c9d44967b5d27a98a4a773",
+    "sha256:2090b5a717c3dc578696b103319cb2e8fa6da66c0ca3447dc3729d7060314b16"
+  ],
+  "unresolved": [
+    "sha256:c24ed2be0826b2c22bda22f10aef625a3bfe26c5b1c9d44967b5d27a98a4a773",
+    "sha256:2090b5a717c3dc578696b103319cb2e8fa6da66c0ca3447dc3729d7060314b16"
+  ],
+  "next": [
+    {
+      "contract": {
+        "id": "pf.contract.heartime.test.rollover",
+        "generation": 1
+      },
+      "subject": "work",
+      "at": "2026-09-16T12:54:26Z",
+      "overdue": false
+    },
+    {
+      "contract": {
+        "id": "pf.contract.heartime.test.rollover",
+        "generation": 1
+      },
+      "subject": "return:sha256:2090b5a717c3dc578696b103319cb2e8fa6da66c0ca3447dc3729d7060314b16",
+      "at": "2026-09-16T13:03:38Z",
+      "overdue": false
+    },
+    {
+      "contract": {
+        "id": "pf.contract.heartime.test.rollover",
+        "generation": 1
+      },
+      "subject": "return:sha256:c24ed2be0826b2c22bda22f10aef625a3bfe26c5b1c9d44967b5d27a98a4a773",
+      "at": "2026-09-16T13:03:38Z",
+      "overdue": false
+    },
+    {
+      "contract": {
+        "id": "pf.contract.heartime.test.rollover",
+        "generation": 1
+      },
+      "subject": "planning-review",
+      "at": "2026-09-17T00:53:39Z",
+      "overdue": false
+    }
+  ],
+  "coverage": [
+    {
+      "contract": {
+        "id": "pf.contract.heartime.test.rollover",
+        "generation": 1
+      },
+      "validUntil": "2026-09-17T13:23:26Z",
+      "ended": false
+    }
+  ],
+  "uncovered": []
+}

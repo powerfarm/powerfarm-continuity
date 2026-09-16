@@ -132,16 +132,24 @@ func TestTheShippedExampleConfigurationIsValid(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	// The example wires the two responsibilities that exist today, and leaves
-	// each route's own placeholders untouched for that route to expand.
-	if len(config.Routes) != 2 {
-		t.Fatalf("the example wires %d route(s)", len(config.Routes))
-	}
+	// The example wires the responsibilities that exist today, and leaves each
+	// route's own placeholders untouched for that route to expand.
 	delivered, _ := evidence(t, censusContract, 1, obligation, KindWork, nominal, "")
 	delivered.Handoff.ID = "pf.contract.exec.build-powerfarm"
 	route, found := config.Route(delivered)
 	if !found {
 		t.Fatal("the example does not serve the work responsibility it documents")
+	}
+	// A responsibility that cannot renew its coverage cannot stay alive, so the
+	// example must serve planning reviews too.
+	planning, _ := evidence(t, censusContract, 1, obligation, KindPlanningReview, nominal, "")
+	planning.Handoff.ID = "pf.contract.exec.prepare-next-period"
+	renewal, found := config.Route(planning)
+	if !found {
+		t.Fatal("the example serves no planning review, so its responsibilities run out of coverage")
+	}
+	if renewal.Outcome.OutcomeField == "" {
+		t.Fatal("a planning route must be able to state which of Heartime's four outcomes it reached")
 	}
 	if !strings.Contains(strings.Join(expand(route.Argv, delivered, "/state", "/state/delivery.json"), " "), "{schema}") {
 		t.Fatal("the ingress consumed a placeholder that belongs to the route it invokes")
