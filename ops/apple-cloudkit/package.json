@@ -1,0 +1,15 @@
+{
+  "name": "@powerfarm/cloudkit-provisioner",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Powerfarm Continuity CloudKit provisioning adapter",
+  "license": "UNLICENSED",
+  "scripts": {
+    "check": "node --check provision-private-zone.js",
+    "provision": "node provision-private-zone.js"
+  },
+  "dependencies": {
+    "@apple/cktool.database": "1.3.2",
+    "@apple/cktool.target.nodejs": "1.3.2"
+  }
+}
